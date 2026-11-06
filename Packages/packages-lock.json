@@ -1,0 +1,49 @@
+{
+  "dependencies": {
+    "com.unity.feature.2d": {
+      "version": "2.0.1",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.2d.animation": "10.1.4",
+        "com.unity.2d.pixel-perfect": "5.0.3",
+        "com.unity.2d.psdimporter": "9.0.3",
+        "com.unity.2d.sprite": "1.0.0",
+        "com.unity.2d.spriteshape": "10.0.7",
+        "com.unity.2d.tilemap": "1.0.0",
+        "com.unity.2d.tilemap.extras": "4.0.2",
+        "com.unity.2d.aseprite": "1.1.6"
+      }
+    },
+    "com.unity.test-framework": {
+      "version": "1.4.6",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.ext.nunit": "2.0.3",
+        "com.unity.modules.imgui": "1.0.0",
+        "com.unity.modules.jsonserialize": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.ugui": {
+      "version": "2.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.modules.ui": "1.0.0",
+        "com.unity.modules.imgui": "1.0.0"
+      }
+    },
+    "com.unity.modules.animation": { "version": "1.0.0", "depth": 0, "source": "builtin", "dependencies": {} },
+    "com.unity.modules.audio": { "version": "1.0.0", "depth": 0, "source": "builtin", "dependencies": {} },
+    "com.unity.modules.imageconversion": { "version": "1.0.0", "depth": 0, "source": "builtin", "dependencies": {} },
+    "com.unity.modules.imgui": { "version": "1.0.0", "depth": 0, "source": "builtin", "dependencies": {} },
+    "com.unity.modules.physics2d": { "version": "1.0.0", "depth": 0, "source": "builtin", "dependencies": {} },
+    "com.unity.modules.ui": { "version": "1.0.0", "depth": 0, "source": "builtin", "dependencies": {} },
+    "com.unity.modules.uielements": { "version": "1.0.0", "depth": 0, "source": "builtin", "dependencies": {} },
+    "com.unity.modules.unitywebrequest": { "version": "1.0.0", "depth": 0, "source": "builtin", "dependencies": {} },
+    "com.unity.modules.jsonserialize": { "version": "1.0.0", "depth": 1, "source": "builtin", "dependencies": {} },
+    "com.unity.ext.nunit": { "version": "2.0.3", "depth": 1, "source": "registry", "dependencies": {}, "url": "https://packages.unity.com" }
+  }
+}
