@@ -1,0 +1,61 @@
+{
+ "_doc": "DIFFICULTY. Enemy stats scale with: the chosen level (levels.<id>), the stage (stages[idx]), the room's step within the stage (step_ramp per step), room kind (kinds.elite/boss), and a gentle TUTORIAL floor for the first rooms of stage 1. hp = base * level.hp * stage.hp * (1 + step_ramp*step) * kind.hp; flat damage bonus = level.dmg + stage.dmg + kind.dmg (never below -1 / the tutorial value). 'extra' = chance (per fought normal room, seeded, never in tutorial rooms) that one more enemy of the room's own kind joins; level.extra adds to it. 'hunger' multiplies the hunger paid per room (not in the tutorial). 'forage' multiplies hunger from forage/corpses. Changing numbers here is the way to rebalance; tests/sim.gd reports win rates.",
+ "default": "normal",
+ "levels": {
+  "normal": {
+   "name": "Normal",
+   "hp": 1.0,
+   "dmg": 0,
+   "extra": 0.0,
+   "hunger": 1.0,
+   "forage": 1.0,
+   "desc": "Intended challenge: punishing for careless play."
+  },
+  "hard": {
+   "name": "Hard",
+   "hp": 1.2,
+   "dmg": 1,
+   "extra": 0.2,
+   "hunger": 1.2,
+   "forage": 0.9,
+   "desc": "Tougher beasts, more of them, hungrier trek."
+  }
+ },
+ "stages": [
+  {
+   "hp": 1.0,
+   "dmg": 0,
+   "extra": 0.2,
+   "step_ramp": 0.08
+  },
+  {
+   "hp": 2.0,
+   "dmg": 5,
+   "extra": 0.4,
+   "step_ramp": 0.04
+  }
+ ],
+ "tutorial": {
+  "steps": 2,
+  "hp": 0.7,
+  "dmg": -1
+ },
+ "kinds": {
+  "battle": {
+   "hp": 1.0,
+   "dmg": 0
+  },
+  "elite": {
+   "hp": 1.2,
+   "dmg": 0
+  },
+  "boss": {
+   "hp": 1.15,
+   "dmg": 1
+  },
+  "cave": {
+   "hp": 1.1,
+   "dmg": 0
+  }
+ }
+}

@@ -1,0 +1,889 @@
+{
+ "_infection": {
+  "hp_mult": 1.3,
+  "damage_bonus": 2,
+  "spread_every": 3,
+  "spread_range": 2,
+  "extra_ability": {
+   "name": "Spore Lash",
+   "kind": "attack",
+   "range": 2,
+   "damage": 2,
+   "spores": 1
+  }
+ },
+ "beetle": {
+  "name": "Dung Beetle",
+  "tier": 1,
+  "tags": [
+   "insect"
+  ],
+  "hp": 12,
+  "speed": 5,
+  "move": 2,
+  "perception": 2,
+  "xp": 4,
+  "food": 8,
+  "sprite": "beetle",
+  "ai": "bruiser",
+  "desc": "Slow and armoured. Teaches movement and attacking.",
+  "abilities": [
+   {
+    "name": "Pinch",
+    "kind": "attack",
+    "range": 1,
+    "damage": 3
+   },
+   {
+    "name": "Harden",
+    "kind": "block",
+    "amount": 5
+   }
+  ],
+  "facing": {
+   "front": 0.6,
+   "side": 1.0,
+   "back": 1.6,
+   "note": "Hard head-shield; soft rear."
+  },
+  "nutrition": {
+   "protein": 1,
+   "fat": 0,
+   "minerals": 3,
+   "fiber": 0,
+   "toxin": 0
+  },
+  "armor": 1,
+  "behavior": "tank"
+ },
+ "dragonfly": {
+  "name": "Dragonfly",
+  "tier": 1,
+  "tags": [
+   "insect",
+   "flying"
+  ],
+  "hp": 7,
+  "speed": 14,
+  "move": 4,
+  "perception": 5,
+  "xp": 5,
+  "food": 6,
+  "sprite": "dragonfly",
+  "ai": "skittish",
+  "desc": "Very fast. Teaches speed and turn order.",
+  "abilities": [
+   {
+    "name": "Dart",
+    "kind": "attack",
+    "range": 1,
+    "damage": 2,
+    "hit_and_run": 2
+   }
+  ],
+  "facing": {
+   "front": 1.0,
+   "side": 1.0,
+   "back": 1.5,
+   "vision": {
+    "front": 1.0,
+    "side": 1.0,
+    "back": 0.6
+   },
+   "note": "Compound eyes: sees almost all around."
+  },
+  "nutrition": {
+   "protein": 1,
+   "fat": 0,
+   "minerals": 1,
+   "fiber": 0,
+   "toxin": 0
+  },
+  "retreat_hp": 0.4,
+  "behavior": "skirmisher"
+ },
+ "skink": {
+  "name": "Skink",
+  "tier": 1,
+  "tags": [
+   "reptile",
+   "ambusher"
+  ],
+  "hp": 10,
+  "speed": 9,
+  "move": 3,
+  "perception": 3,
+  "xp": 5,
+  "food": 9,
+  "sprite": "skink",
+  "ai": "bruiser",
+  "desc": "Small lizard. Teaches stealth and grass cover.",
+  "abilities": [
+   {
+    "name": "Bite",
+    "kind": "attack",
+    "range": 1,
+    "damage": 4
+   },
+   {
+    "name": "Tail Lash",
+    "kind": "attack",
+    "range": 1,
+    "damage": 2,
+    "bleed": 1
+   },
+   {
+    "name": "Tail Drop",
+    "kind": "attack",
+    "damage": 2,
+    "range": 1,
+    "weak": 1
+   }
+  ],
+  "nutrition": {
+   "protein": 3,
+   "fat": 2,
+   "minerals": 0,
+   "fiber": 0,
+   "toxin": 0
+  },
+  "behavior": "ambusher",
+  "surprise": 3
+ },
+ "shrew": {
+  "name": "Early Mammal",
+  "tier": 1,
+  "tags": [
+   "mammal",
+   "scent"
+  ],
+  "hp": 9,
+  "speed": 12,
+  "move": 3,
+  "perception": 4,
+  "xp": 5,
+  "food": 8,
+  "sprite": "shrew",
+  "ai": "skittish",
+  "desc": "Sniffs you out through fog.",
+  "abilities": [
+   {
+    "name": "Gnaw",
+    "kind": "attack",
+    "range": 1,
+    "damage": 3,
+    "bleed": 1
+   }
+  ],
+  "nutrition": {
+   "protein": 3,
+   "fat": 3,
+   "minerals": 1,
+   "fiber": 0,
+   "toxin": 0
+  },
+  "retreat_hp": 0.35
+ },
+ "spore_drone": {
+  "name": "Spore Drone",
+  "tier": 1,
+  "tags": [
+   "insect",
+   "flying",
+   "infected"
+  ],
+  "hp": 6,
+  "speed": 12,
+  "move": 3,
+  "perception": 6,
+  "xp": 2,
+  "food": 2,
+  "sprite": "spore_drone",
+  "ai": "bruiser",
+  "infected": true,
+  "immune": true,
+  "desc": "Bud of the asteroid brood.",
+  "abilities": [
+   {
+    "name": "Burst",
+    "kind": "attack",
+    "range": 1,
+    "damage": 3,
+    "spores": 1
+   }
+  ],
+  "facing": {
+   "front": 1.0,
+   "side": 1.0,
+   "back": 1.4,
+   "vision": {
+    "front": 1.0,
+    "side": 1.0,
+    "back": 0.6
+   }
+  },
+  "nutrition": {
+   "protein": 1,
+   "fat": 1,
+   "minerals": 1,
+   "fiber": 0,
+   "toxin": 3
+  }
+ },
+ "meganeura": {
+  "name": "Meganeura",
+  "tier": 2,
+  "tags": [
+   "insect",
+   "flying"
+  ],
+  "hp": 34,
+  "speed": 15,
+  "move": 5,
+  "perception": 6,
+  "xp": 16,
+  "food": 18,
+  "sprite": "meganeura",
+  "ai": "bruiser",
+  "elite": true,
+  "infected_chance": 0.5,
+  "desc": "Giant predatory dragonfly. Acts very often.",
+  "abilities": [
+   {
+    "name": "Rip",
+    "kind": "attack",
+    "damage": 5,
+    "range": 1
+   },
+   {
+    "name": "Dive",
+    "kind": "attack",
+    "damage": 6,
+    "range": 4,
+    "leap": true,
+    "min_range": 2,
+    "hit_and_run": 3
+   },
+   {
+    "name": "Wing Gale",
+    "kind": "aoe",
+    "damage": 5,
+    "radius": 2,
+    "windup": true,
+    "windup_mult": 1.4,
+    "weak": 2
+   }
+  ],
+  "facing": {
+   "front": 1.0,
+   "side": 1.0,
+   "back": 1.5,
+   "vision": {
+    "front": 1.0,
+    "side": 1.0,
+    "back": 0.6
+   },
+   "note": "Compound eyes: sees almost all around."
+  },
+  "nutrition": {
+   "protein": 3,
+   "fat": 0,
+   "minerals": 1,
+   "fiber": 0,
+   "toxin": 0
+  },
+  "phases": [
+   {
+    "hp_pct": 0.5,
+    "text": "Meganeura buzzes in a frenzy!",
+    "bonus_damage": 2,
+    "speed": 3,
+    "popup": "FRENZY"
+   }
+  ]
+ },
+ "husk_queen": {
+  "name": "Husk Queen",
+  "tier": 2,
+  "tags": [
+   "insect",
+   "infected",
+   "boss"
+  ],
+  "hp": 64,
+  "speed": 7,
+  "move": 2,
+  "perception": 8,
+  "xp": 30,
+  "food": 25,
+  "sprite": "husk_queen",
+  "ai": "bruiser",
+  "boss": true,
+  "infected": true,
+  "immune": true,
+  "spreader": true,
+  "desc": "A beetle queen overrun by the asteroid parasite. Spreads infection and broods drones.",
+  "abilities": [
+   {
+    "name": "Spore Spit",
+    "kind": "infect",
+    "damage": 3,
+    "range": 4
+   },
+   {
+    "name": "Brood",
+    "kind": "summon",
+    "summon": "spore_drone",
+    "count": 2,
+    "limit": 3
+   },
+   {
+    "name": "Chitin Slam",
+    "kind": "attack",
+    "damage": 9,
+    "range": 1,
+    "windup": true,
+    "windup_mult": 1.5
+   },
+   {
+    "name": "Spore Spit",
+    "kind": "infect",
+    "damage": 3,
+    "range": 4
+   }
+  ],
+  "facing": {
+   "front": 1.0,
+   "side": 1.0,
+   "back": 1.75,
+   "turn": "slow",
+   "note": "Bloated abdomen: very weak from behind, slow to turn."
+  },
+  "nutrition": {
+   "protein": 5,
+   "fat": 1,
+   "minerals": 3,
+   "fiber": 0,
+   "toxin": 3
+  },
+  "phases": [
+   {
+    "hp_pct": 0.5,
+    "text": "The Husk Queen shrieks: the brood answers!",
+    "summon": "spore_drone",
+    "count": 2,
+    "bonus_damage": 2,
+    "popup": "BROOD CALL"
+   }
+  ]
+ },
+ "compy": {
+  "name": "Compsognathus",
+  "tier": 2,
+  "tags": [
+   "reptile",
+   "dinosaur"
+  ],
+  "hp": 16,
+  "speed": 13,
+  "move": 4,
+  "perception": 5,
+  "xp": 7,
+  "food": 12,
+  "sprite": "compy",
+  "ai": "skittish",
+  "desc": "Pack hunter. Fast and nippy.",
+  "abilities": [
+   {
+    "name": "Peck",
+    "kind": "attack",
+    "range": 1,
+    "damage": 4
+   },
+   {
+    "name": "Nip",
+    "kind": "attack",
+    "range": 1,
+    "damage": 3,
+    "bleed": 1,
+    "hit_and_run": 2
+   }
+  ],
+  "nutrition": {
+   "protein": 3,
+   "fat": 2,
+   "minerals": 1,
+   "fiber": 0,
+   "toxin": 0
+  },
+  "behavior": "pack",
+  "pack": 1,
+  "retreat_hp": 0.3
+ },
+ "dire_pup": {
+  "name": "Dire Wolf Pup",
+  "tier": 2,
+  "tags": [
+   "mammal",
+   "scent",
+   "iceage"
+  ],
+  "hp": 24,
+  "speed": 10,
+  "move": 3,
+  "perception": 5,
+  "xp": 9,
+  "food": 16,
+  "sprite": "dire_pup",
+  "ai": "bruiser",
+  "desc": "Follows your scent through anything.",
+  "abilities": [
+   {
+    "name": "Bite",
+    "kind": "attack",
+    "damage": 5,
+    "range": 1,
+    "bleed": 1
+   },
+   {
+    "name": "Lunge",
+    "kind": "attack",
+    "damage": 6,
+    "range": 3,
+    "leap": true,
+    "min_range": 2
+   }
+  ],
+  "facing": {
+   "front": 1.0,
+   "side": 1.25,
+   "back": 1.5,
+   "vision": {
+    "front": 1.0,
+    "side": 0.8,
+    "back": 0.0
+   },
+   "note": "Keen nose: notices you from the side too."
+  },
+  "nutrition": {
+   "protein": 4,
+   "fat": 3,
+   "minerals": 1,
+   "fiber": 0,
+   "toxin": 0
+  },
+  "behavior": "pack",
+  "pack": 1
+ },
+ "glyptodon": {
+  "name": "Glyptodon",
+  "tier": 2,
+  "tags": [
+   "mammal",
+   "iceage"
+  ],
+  "hp": 40,
+  "speed": 5,
+  "move": 2,
+  "perception": 3,
+  "xp": 10,
+  "food": 24,
+  "sprite": "glyptodon",
+  "ai": "bruiser",
+  "desc": "Armoured tank. Slow but hits hard.",
+  "abilities": [
+   {
+    "name": "Shell Up",
+    "kind": "block",
+    "amount": 5
+   },
+   {
+    "name": "Bash",
+    "kind": "attack",
+    "damage": 9,
+    "range": 1,
+    "windup": true,
+    "windup_mult": 1.5
+   },
+   {
+    "name": "Tail Swing",
+    "kind": "attack",
+    "damage": 5,
+    "range": 1
+   }
+  ],
+  "facing": {
+   "front": 0.75,
+   "side": 1.0,
+   "back": 1.5,
+   "turn": "slow",
+   "note": "Armoured shell: -2 damage and x0.75 from the front, slow to turn. Flank it!"
+  },
+  "nutrition": {
+   "protein": 1,
+   "fat": 0,
+   "minerals": 3,
+   "fiber": 0,
+   "toxin": 0
+  },
+  "armor": 2,
+  "behavior": "tank"
+ },
+ "smilodon": {
+  "name": "Smilodon",
+  "tier": 3,
+  "tags": [
+   "mammal",
+   "scent",
+   "iceage"
+  ],
+  "hp": 70,
+  "speed": 11,
+  "move": 4,
+  "perception": 6,
+  "xp": 26,
+  "food": 30,
+  "sprite": "smilodon",
+  "ai": "bruiser",
+  "elite": true,
+  "infected_chance": 0.35,
+  "desc": "Sabertooth cat. Leaps and bleeds.",
+  "abilities": [
+   {
+    "name": "Saber Bite",
+    "kind": "attack",
+    "damage": 8,
+    "range": 1,
+    "bleed": 2
+   },
+   {
+    "name": "Ambush Pounce",
+    "kind": "attack",
+    "damage": 9,
+    "range": 5,
+    "leap": true,
+    "min_range": 2,
+    "bleed": 1
+   }
+  ],
+  "facing": {
+   "front": 1.0,
+   "side": 1.25,
+   "back": 1.5,
+   "note": "Fierce but exposed from behind."
+  },
+  "nutrition": {
+   "protein": 8,
+   "fat": 4,
+   "minerals": 1,
+   "fiber": 0,
+   "toxin": 0
+  },
+  "phases": [
+   {
+    "hp_pct": 0.5,
+    "text": "Smilodon snarls, blood in its eyes!",
+    "bonus_damage": 3,
+    "move": 1,
+    "popup": "ENRAGED"
+   }
+  ]
+ },
+ "infected_mammoth": {
+  "name": "Hollow Mammoth",
+  "tier": 3,
+  "tags": [
+   "mammal",
+   "iceage",
+   "infected",
+   "boss"
+  ],
+  "hp": 110,
+  "speed": 6,
+  "move": 2,
+  "perception": 7,
+  "xp": 60,
+  "food": 50,
+  "sprite": "infected_mammoth",
+  "ai": "bruiser",
+  "boss": true,
+  "infected": true,
+  "immune": true,
+  "spreader": true,
+  "desc": "A mammoth hollowed out by the asteroid parasite. Its corpse spreads infection.",
+  "abilities": [
+   {
+    "name": "Tusk Gore",
+    "kind": "attack",
+    "damage": 12,
+    "range": 1,
+    "windup": true,
+    "windup_mult": 1.4
+   },
+   {
+    "name": "Spore Cloud",
+    "kind": "infect",
+    "damage": 0,
+    "range": 5
+   },
+   {
+    "name": "Stomp",
+    "kind": "aoe",
+    "damage": 9,
+    "radius": 2,
+    "windup": true,
+    "windup_mult": 1.3
+   },
+   {
+    "name": "Brood",
+    "kind": "summon",
+    "summon": "spore_drone",
+    "count": 2,
+    "limit": 4
+   }
+  ],
+  "facing": {
+   "front": 0.75,
+   "side": 1.0,
+   "back": 1.5,
+   "turn": "slow",
+   "note": "Huge and slow to turn; thick hide up front."
+  },
+  "nutrition": {
+   "protein": 3,
+   "fat": 2,
+   "minerals": 3,
+   "fiber": 0,
+   "toxin": 3
+  },
+  "phases": [
+   {
+    "hp_pct": 0.5,
+    "text": "The mammoth roars. The ground shakes: it charges its stomps!",
+    "bonus_damage": 3,
+    "move": 1,
+    "popup": "RAMPAGE"
+   }
+  ]
+ },
+ "spitter": {
+  "name": "Frill Spitter",
+  "tier": 1,
+  "tags": [
+   "reptile",
+   "dinosaur",
+   "ranged"
+  ],
+  "hp": 14,
+  "speed": 11,
+  "move": 3,
+  "perception": 5,
+  "xp": 6,
+  "food": 10,
+  "sprite": "spitter",
+  "ai": "skittish",
+  "desc": "Spits venom from range and keeps its distance. Flank it: its frill guards the front, not the rear.",
+  "abilities": [
+   {
+    "name": "Venom Spit",
+    "kind": "attack",
+    "range": 4,
+    "damage": 3,
+    "weak": 1,
+    "projectile": "spit"
+   }
+  ],
+  "facing": {
+   "front": 1.0,
+   "side": 1.25,
+   "back": 1.5,
+   "note": "Frilled head, soft flanks."
+  },
+  "nutrition": {
+   "protein": 2,
+   "fat": 1,
+   "minerals": 1,
+   "fiber": 0,
+   "toxin": 1
+  },
+  "behavior": "kiter"
+ },
+ "cave_spider": {
+  "name": "Cave Spider",
+  "tier": 2,
+  "tags": [
+   "arachnid",
+   "cave"
+  ],
+  "hp": 12,
+  "speed": 12,
+  "move": 4,
+  "perception": 5,
+  "xp": 7,
+  "food": 10,
+  "sprite": "cave_spider",
+  "ai": "skittish",
+  "desc": "Small and quick. Bites for poison. Eight eyes: it sees you from the side too, but never behind.",
+  "abilities": [
+   {
+    "name": "Venom Bite",
+    "kind": "attack",
+    "range": 1,
+    "damage": 3,
+    "poison": 2
+   },
+   {
+    "name": "Pounce",
+    "kind": "attack",
+    "range": 3,
+    "damage": 4,
+    "leap": true,
+    "min_range": 2
+   }
+  ],
+  "facing": {
+   "front": 1.0,
+   "side": 1.25,
+   "back": 1.5,
+   "vision": {
+    "front": 1.0,
+    "side": 0.9,
+    "back": 0.0
+   },
+   "note": "Thin carapace; weakest from behind."
+  },
+  "nutrition": {
+   "protein": 2,
+   "fat": 0,
+   "minerals": 1,
+   "fiber": 0,
+   "toxin": 2
+  },
+  "behavior": "ambusher",
+  "surprise": 3
+ },
+ "web_spitter": {
+  "name": "Web Spitter",
+  "tier": 2,
+  "tags": [
+   "arachnid",
+   "cave",
+   "ranged"
+  ],
+  "hp": 14,
+  "speed": 9,
+  "move": 3,
+  "perception": 6,
+  "xp": 8,
+  "food": 12,
+  "sprite": "web_spitter",
+  "ai": "skittish",
+  "desc": "Keeps its distance and spits webs that slow you and venom that burns. Flank it.",
+  "abilities": [
+   {
+    "name": "Web Spit",
+    "kind": "attack",
+    "range": 4,
+    "damage": 2,
+    "web": 2,
+    "projectile": "web"
+   },
+   {
+    "name": "Venom Spit",
+    "kind": "attack",
+    "range": 4,
+    "damage": 3,
+    "poison": 3,
+    "projectile": "spit"
+   }
+  ],
+  "facing": {
+   "front": 1.0,
+   "side": 1.25,
+   "back": 1.6,
+   "note": "Bloated spinneret abdomen: soft from behind."
+  },
+  "nutrition": {
+   "protein": 2,
+   "fat": 0,
+   "minerals": 1,
+   "fiber": 0,
+   "toxin": 2
+  },
+  "behavior": "kiter"
+ },
+ "tomb_widow": {
+  "name": "Tomb Widow",
+  "tier": 3,
+  "tags": [
+   "arachnid",
+   "cave"
+  ],
+  "hp": 36,
+  "speed": 8,
+  "move": 3,
+  "perception": 7,
+  "xp": 22,
+  "food": 24,
+  "sprite": "tomb_widow",
+  "ai": "bruiser",
+  "desc": "The den's matriarch. Poisonous fangs, web shots and a brood of spiderlings. Slow to turn: circle behind her.",
+  "abilities": [
+   {
+    "name": "Web Shot",
+    "kind": "attack",
+    "damage": 1,
+    "range": 4,
+    "web": 2
+   },
+   {
+    "name": "Widow Fang",
+    "kind": "attack",
+    "damage": 6,
+    "range": 1,
+    "poison": 3
+   },
+   {
+    "name": "Brood",
+    "kind": "summon",
+    "summon": "cave_spider",
+    "count": 1,
+    "limit": 3
+   },
+   {
+    "name": "Venom Burst",
+    "kind": "aoe",
+    "damage": 4,
+    "radius": 2,
+    "windup": true,
+    "windup_mult": 1.4,
+    "poison": 3
+   }
+  ],
+  "facing": {
+   "front": 1.0,
+   "side": 1.0,
+   "back": 1.75,
+   "turn": "slow",
+   "note": "Huge abdomen: very weak from behind, slow to turn."
+  },
+  "boss": false,
+  "nutrition": {
+   "protein": 4,
+   "fat": 1,
+   "minerals": 1,
+   "fiber": 0,
+   "toxin": 2
+  },
+  "phases": [
+   {
+    "hp_pct": 0.5,
+    "text": "The Tomb Widow skitters wildly: spiderlings pour out!",
+    "summon": "cave_spider",
+    "count": 2,
+    "bonus_damage": 2,
+    "popup": "BROOD CALL"
+   }
+  ]
+ }
+}

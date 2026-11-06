@@ -1,0 +1,46 @@
+# Unity generated
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]serSettings/
+/[Mm]emoryCaptures/
+/[Rr]ecordings/
+.vs/
+.idea/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+sysinfo.txt
+crashlytics-buildid.txt
+*.apk
+*.aab
+*.unitypackage
+!tools/RulesTests/RulesTests.csproj
+
+# Test and package output
+tools/RulesTests/bin/
+tools/RulesTests/obj/
+tools/RulesTests/.vs/
+
+# Godot reference captures and editor junk (scripts, data, art and tests are kept)
+reference-source/screenshots/
+reference-source/screenshots_text/
+reference-source/**/*.uid
+reference-source/.godot/
+
+# OS
+.DS_Store
+Thumbs.db

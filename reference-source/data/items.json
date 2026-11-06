@@ -1,0 +1,526 @@
+{
+ "_doc": "Items are permanent run bonuses (passive) or once-per-battle abilities (active). effects = flat numeric keys read via RunState.item_bonus(key): max_hp, move, stamina, back_damage (+dmg on hits from behind), unaware_damage (+dmg vs unaware), water_cost (water costs this much less to enter, min 1), hunger_save (hunger lost per room reduced), nutrition_pct (% more nutrition from meals), weather_resist (1 = no weather penalties), kill_heal (HP on a kill), turn_block (block at the start of each of your turns), stealth (enemy sight range -N), poison_bonus (+N poison you apply). Active items have use:{ops:[...], text}. Sources: see 'sources' (chance = drop chance after a cleared room, choices = how many to pick from). 'only' restricts an item to certain sources. Items with only:['branch'] are the permanent bonuses of evolution branches (data/nutrition.json) and never drop. New keys: grass_evasion (+% evasion on tall grass), ambush_bonus (+dmg on the free ambush strike), mark_bonus, bleed_bonus (+N bleed applied), bleed_vuln (+dmg vs bleeding), side_damage (+dmg from side/back), momentum_dmg (+1 per 2 tiles moved, max 3), free_draw (first 0-cost card each turn draws), retreat_bonus (+tiles to retreat/dash), eat_heal (+HP when eating), toxin_immune, diet_damage (+dmg per diet tier). tags = archetype ids (data/archetypes.json).",
+ "rarity_color": {
+  "common": "#9aa8b8",
+  "uncommon": "#6fc24e",
+  "rare": "#6fa8e8",
+  "legendary": "#f0b030"
+ },
+ "sources": {
+  "battle": {
+   "chance": 0.07,
+   "choices": 1,
+   "weights": {
+    "common": 6,
+    "uncommon": 3,
+    "rare": 1
+   },
+   "title": "A rare find!"
+  },
+  "elite": {
+   "chance": 0.3,
+   "choices": 1,
+   "weights": {
+    "uncommon": 4,
+    "rare": 3,
+    "legendary": 0.3
+   },
+   "title": "Trophy of a mighty foe"
+  },
+  "cave": {
+   "chance": 1.0,
+   "choices": 3,
+   "weights": {
+    "uncommon": 3,
+    "rare": 4,
+    "legendary": 1
+   },
+   "title": "The spiders' treasure"
+  },
+  "boss": {
+   "chance": 1.0,
+   "choices": 3,
+   "weights": {
+    "uncommon": 2,
+    "rare": 4,
+    "legendary": 2
+   },
+   "title": "The boss's hoard"
+  }
+ },
+ "items": {
+  "silk_wrap": {
+   "name": "Spider-Silk Wrap",
+   "rarity": "common",
+   "icon": "icon_shield",
+   "color": "#d8d8f0",
+   "text": "+8 max HP",
+   "effects": {
+    "max_hp": 8
+   }
+  },
+  "chitin_charm": {
+   "name": "Chitin Charm",
+   "rarity": "common",
+   "icon": "icon_move",
+   "color": "#c8a060",
+   "text": "+1 move point each turn",
+   "effects": {
+    "move": 1
+   },
+   "tags": [
+    "speed"
+   ]
+  },
+  "chitin_plates": {
+   "name": "Chitin Plates",
+   "rarity": "common",
+   "icon": "icon_shield",
+   "color": "#a08060",
+   "text": "Start each of your turns with 2 block",
+   "effects": {
+    "turn_block": 2
+   },
+   "tags": [
+    "hitrun"
+   ]
+  },
+  "glow_cap": {
+   "name": "Glow-Cap Spore",
+   "rarity": "uncommon",
+   "icon": "icon_stamina",
+   "color": "#46c0a0",
+   "text": "+1 stamina each turn",
+   "effects": {
+    "stamina": 1
+   },
+   "tags": [
+    "speed"
+   ]
+  },
+  "assassin_fang": {
+   "name": "Assassin's Fang",
+   "rarity": "uncommon",
+   "icon": "icon_claw",
+   "color": "#e04050",
+   "text": "+3 damage on hits from behind (Backstab synergy)",
+   "effects": {
+    "back_damage": 3
+   },
+   "tags": [
+    "flank"
+   ]
+  },
+  "shadow_pelt": {
+   "name": "Shadow Pelt",
+   "rarity": "uncommon",
+   "icon": "icon_eye",
+   "color": "#6a6a9a",
+   "text": "Enemy sight range -1 (helps you stay Unspotted)",
+   "effects": {
+    "stealth": 1
+   },
+   "tags": [
+    "ambush"
+   ]
+  },
+  "marsh_pads": {
+   "name": "Marsh-Walker Pads",
+   "rarity": "uncommon",
+   "icon": "icon_foot",
+   "color": "#4a90c8",
+   "text": "Water costs 1 move to enter instead of 2",
+   "effects": {
+    "water_cost": 1
+   },
+   "tags": [
+    "hitrun"
+   ]
+  },
+  "thick_pelt": {
+   "name": "Thick Pelt",
+   "rarity": "uncommon",
+   "icon": "icon_cold",
+   "color": "#c8c8e0",
+   "text": "Immune to weather penalties",
+   "effects": {
+    "weather_resist": 1
+   }
+  },
+  "bloodlust": {
+   "name": "Bloodlust Charm",
+   "rarity": "uncommon",
+   "icon": "icon_drop",
+   "color": "#c02030",
+   "text": "Heal 3 HP whenever you defeat an enemy",
+   "effects": {
+    "kill_heal": 3
+   },
+   "tags": [
+    "bleed",
+    "scavenger"
+   ]
+  },
+  "lean_gut": {
+   "name": "Lean Gut",
+   "rarity": "rare",
+   "icon": "icon_meat",
+   "color": "#d88a3a",
+   "text": "Lose 2 less Hunger every room",
+   "effects": {
+    "hunger_save": 2
+   },
+   "tags": [
+    "scavenger"
+   ]
+  },
+  "gut_flora": {
+   "name": "Gut Flora",
+   "rarity": "rare",
+   "icon": "icon_spore",
+   "color": "#8dd860",
+   "text": "+40% nutrition from every meal (Diet)",
+   "effects": {
+    "nutrition_pct": 40
+   },
+   "tags": [
+    "scavenger"
+   ]
+  },
+  "ambusher_talisman": {
+   "name": "Ambusher's Talisman",
+   "rarity": "rare",
+   "icon": "icon_leap",
+   "color": "#f0b030",
+   "text": "+4 damage against Unspotted enemies",
+   "effects": {
+    "unaware_damage": 4
+   },
+   "tags": [
+    "ambush"
+   ]
+  },
+  "venom_gland": {
+   "name": "Venom Gland",
+   "rarity": "rare",
+   "icon": "icon_spore",
+   "color": "#9aff5a",
+   "text": "Poison you apply is +2 stronger",
+   "effects": {
+    "poison_bonus": 2
+   },
+   "only": [
+    "cave"
+   ],
+   "tags": [
+    "bleed"
+   ]
+  },
+  "adrenal_gland": {
+   "name": "Adrenal Gland",
+   "rarity": "rare",
+   "icon": "icon_bolt",
+   "color": "#f0c050",
+   "text": "ACTIVE, once per battle: +2 stamina now",
+   "effects": {},
+   "use": {
+    "ops": [
+     {
+      "op": "gain_stamina",
+      "amount": 2
+     }
+    ],
+    "text": "+2 stamina"
+   },
+   "tags": [
+    "speed"
+   ]
+  },
+  "bandage_moss": {
+   "name": "Bandage Moss",
+   "rarity": "uncommon",
+   "icon": "icon_heart",
+   "color": "#6fc24e",
+   "text": "ACTIVE, once per battle: heal 8 HP",
+   "effects": {},
+   "use": {
+    "ops": [
+     {
+      "op": "heal",
+      "amount": 8
+     }
+    ],
+    "text": "Heal 8"
+   },
+   "tags": [
+    "scavenger"
+   ]
+  },
+  "apex_heart": {
+   "name": "Apex Heart",
+   "rarity": "legendary",
+   "icon": "icon_heart",
+   "color": "#ff4a5a",
+   "text": "+12 max HP, +1 stamina, +1 move",
+   "effects": {
+    "max_hp": 12,
+    "stamina": 1,
+    "move": 1
+   },
+   "only": [
+    "boss"
+   ]
+  },
+  "br_swift_stalker": {
+   "name": "Swift Stalker form",
+   "rarity": "rare",
+   "icon": "icon_speed",
+   "color": "#6fa8e8",
+   "text": "+1 move, enemy sight -1",
+   "effects": {
+    "move": 1,
+    "stealth": 1
+   },
+   "only": [
+    "branch"
+   ],
+   "tags": [
+    "ambush",
+    "speed"
+   ]
+  },
+  "br_thick_boned": {
+   "name": "Thick-Boned form",
+   "rarity": "rare",
+   "icon": "icon_shield",
+   "color": "#9ab8e0",
+   "text": "+14 max HP, 2 block each turn",
+   "effects": {
+    "max_hp": 14,
+    "turn_block": 2
+   },
+   "only": [
+    "branch"
+   ],
+   "tags": [
+    "hitrun"
+   ]
+  },
+  "br_apex_predator": {
+   "name": "Apex Predator form",
+   "rarity": "legendary",
+   "icon": "icon_claw",
+   "color": "#e05a4a",
+   "text": "+4 Backstab damage, +1 stamina",
+   "effects": {
+    "back_damage": 4,
+    "stamina": 1
+   },
+   "only": [
+    "branch"
+   ],
+   "tags": [
+    "flank",
+    "ambush"
+   ]
+  },
+  "br_armored_hunter": {
+   "name": "Armored Hunter form",
+   "rarity": "legendary",
+   "icon": "icon_shield",
+   "color": "#9ab8e0",
+   "text": "+20 max HP, 3 block each turn",
+   "effects": {
+    "max_hp": 20,
+    "turn_block": 3
+   },
+   "only": [
+    "branch"
+   ],
+   "tags": [
+    "hitrun"
+   ]
+  },
+  "br_alpha_raptor": {
+   "name": "Alpha Raptor form",
+   "rarity": "legendary",
+   "icon": "icon_bolt",
+   "color": "#f0b030",
+   "text": "+1 stamina, +1 move, +12 max HP",
+   "effects": {
+    "stamina": 1,
+    "move": 1,
+    "max_hp": 12
+   },
+   "only": [
+    "branch"
+   ],
+   "tags": [
+    "speed"
+   ]
+  },
+  "br_shadow_hunter": {
+   "name": "Shadow Hunter form",
+   "rarity": "legendary",
+   "icon": "icon_eye",
+   "color": "#8a7ae0",
+   "text": "Enemy sight -1, +5 damage vs Unspotted enemies",
+   "effects": {
+    "stealth": 1,
+    "unaware_damage": 5
+   },
+   "only": [
+    "branch"
+   ],
+   "tags": [
+    "ambush"
+   ]
+  },
+  "grass_cloak": {
+   "name": "Grass Cloak",
+   "rarity": "uncommon",
+   "icon": "icon_eye",
+   "color": "#5aa04a",
+   "text": "+15% Evasion while standing in tall grass (stacks with the grass's 25%).",
+   "effects": {
+    "grass_evasion": 15
+   },
+   "tags": [
+    "ambush",
+    "hitrun"
+   ]
+  },
+  "hunters_lens": {
+   "name": "Hunter's Lens",
+   "rarity": "uncommon",
+   "icon": "icon_eye",
+   "color": "#c8e060",
+   "text": "+5 damage on your free Ambush strike and +1 on Mark.",
+   "effects": {
+    "ambush_bonus": 5,
+    "mark_bonus": 1
+   },
+   "tags": [
+    "ambush"
+   ]
+  },
+  "rending_claws": {
+   "name": "Rending Claws",
+   "rarity": "uncommon",
+   "icon": "icon_claw",
+   "color": "#d04040",
+   "text": "Every Bleed you apply is +1 stronger.",
+   "effects": {
+    "bleed_bonus": 1
+   },
+   "tags": [
+    "bleed"
+   ]
+  },
+  "blood_sigil": {
+   "name": "Blood Sigil",
+   "rarity": "rare",
+   "icon": "icon_drop",
+   "color": "#a01830",
+   "text": "Your attacks deal +2 damage to enemies with Bleed.",
+   "effects": {
+    "bleed_vuln": 2
+   },
+   "tags": [
+    "bleed",
+    "flank"
+   ]
+  },
+  "flank_talon": {
+   "name": "Flank Talon",
+   "rarity": "uncommon",
+   "icon": "icon_claw",
+   "color": "#e8c040",
+   "text": "+2 damage on Flank hits (side or back).",
+   "effects": {
+    "side_damage": 2
+   },
+   "tags": [
+    "flank"
+   ]
+  },
+  "momentum_boots": {
+   "name": "Momentum Boots",
+   "rarity": "rare",
+   "icon": "icon_speed",
+   "color": "#50b8e8",
+   "text": "Your attacks deal +1 damage per 2 tiles of Momentum (max +3).",
+   "effects": {
+    "momentum_dmg": 1
+   },
+   "tags": [
+    "speed"
+   ]
+  },
+  "tempo_charm": {
+   "name": "Tempo Charm",
+   "rarity": "uncommon",
+   "icon": "icon_stamina",
+   "color": "#70d0f0",
+   "text": "The first 0-cost card you play each turn draws 1 card.",
+   "effects": {
+    "free_draw": 1
+   },
+   "tags": [
+    "speed"
+   ]
+  },
+  "hit_run_spurs": {
+   "name": "Hit-and-Run Spurs",
+   "rarity": "uncommon",
+   "icon": "icon_leap",
+   "color": "#b080e0",
+   "text": "Retreats and dashes go 1 tile farther.",
+   "effects": {
+    "retreat_bonus": 1
+   },
+   "tags": [
+    "hitrun"
+   ]
+  },
+  "scavengers_satchel": {
+   "name": "Scavenger's Satchel",
+   "rarity": "uncommon",
+   "icon": "icon_meat",
+   "color": "#c89050",
+   "text": "Eating a corpse heals +3 HP.",
+   "effects": {
+    "eat_heal": 3
+   },
+   "tags": [
+    "scavenger"
+   ]
+  },
+  "iron_stomach": {
+   "name": "Iron Stomach",
+   "rarity": "rare",
+   "icon": "icon_meat",
+   "color": "#98a060",
+   "text": "Toxic meals no longer hurt you (Diet).",
+   "effects": {
+    "toxin_immune": 1
+   },
+   "tags": [
+    "scavenger"
+   ]
+  },
+  "gourmand_fang": {
+   "name": "Gourmand's Fang",
+   "rarity": "rare",
+   "icon": "icon_meat",
+   "color": "#e0a050",
+   "text": "+1 damage on all attacks per Diet tier (Fair 1, Good 2, Excellent 3).",
+   "effects": {
+    "diet_damage": 1
+   },
+   "tags": [
+    "scavenger"
+   ]
+  }
+ }
+}

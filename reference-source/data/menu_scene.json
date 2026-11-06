@@ -1,0 +1,272 @@
+{
+ "doc": "Main-menu forest scene (scripts/ui/MenuForest.gd). World coords = the 640x360 frame; layers are drawn in order, back to front. Sprites are the supplied jungle art; designer PNGs override by name: menu_bg_back.png, menu_bg_floor.png (one 32x16 iso tile) and menu_bg_<category>_<n>.png (n = 1..12; if any exist they replace that category's whole list). Categories: tree, bush, fern, rock, log. Leaves are drawn procedurally from the small bitmaps in leaves.shapes (green / golden); menu_bg_leaf_<n>.png (n = 1..12) replaces them with your own leaf sprites (drawn untinted). All drawn at whole-number scales with nearest filtering.",
+ "horizon": 220,
+ "back": {
+  "sprite": "bg_jungle_0",
+  "scale": 1,
+  "par": 0.06,
+  "tint": "#a9c2a6"
+ },
+ "floor": {
+  "scale": 1,
+  "par": 0.55,
+  "tint": "#d6e6c8",
+  "haze": "#8fb08c",
+  "haze_rows": 5,
+  "pool": [
+   9,
+   0,
+   24,
+   4,
+   8,
+   21,
+   30,
+   28,
+   9,
+   0,
+   24,
+   4,
+   8,
+   21,
+   30,
+   28,
+   5,
+   6,
+   7,
+   12,
+   13,
+   14
+  ]
+ },
+ "categories": {
+  "tree": [
+   "deco_tree_01",
+   "deco_tree_02",
+   "deco_tree_03",
+   "deco_tree_04",
+   "deco_tree_05",
+   "deco_tree_06",
+   "deco_tree_07",
+   "deco_tree_08",
+   "deco_tree_09",
+   "deco_tree_10",
+   "deco_tree_11",
+   "deco_tree_12"
+  ],
+  "bush": [
+   "deco_bush_01",
+   "deco_bush_02",
+   "deco_bush_03",
+   "deco_bush_04",
+   "deco_bush_05",
+   "deco_bush_06",
+   "deco_bush_07",
+   "deco_bush_08",
+   "deco_bush_09"
+  ],
+  "fern": [
+   "foliage_02",
+   "foliage_03",
+   "foliage_05",
+   "foliage_08",
+   "foliage_11",
+   "foliage_12",
+   "foliage_14",
+   "foliage_17",
+   "foliage_20",
+   "foliage_22",
+   "foliage_25",
+   "foliage_28"
+  ],
+  "rock": [
+   "deco_rock_01",
+   "deco_rock_02",
+   "deco_rock_03",
+   "deco_rock_04",
+   "deco_rock_05",
+   "deco_rock_06",
+   "deco_rock_07"
+  ],
+  "log": [
+   "log_01",
+   "log_02",
+   "log_03",
+   "log_04",
+   "deco_hollowlog_01",
+   "deco_stump_01",
+   "deco_log_01"
+  ]
+ },
+ "layers": [
+  {
+   "id": "trees_far",
+   "cat": "tree",
+   "scale": 1,
+   "par": 0.18,
+   "y": 214,
+   "spacing": 34,
+   "jitter": 12,
+   "y_jitter": 4,
+   "tint": "#7ea386",
+   "seed": 11
+  },
+  {
+   "id": "trees_mid",
+   "cat": "tree",
+   "scale": 1,
+   "par": 0.34,
+   "y": 232,
+   "spacing": 62,
+   "jitter": 20,
+   "y_jitter": 5,
+   "tint": "#b4d0b0",
+   "side_only": 170,
+   "seed": 23,
+   "sway": 0.0
+  },
+  {
+   "id": "props",
+   "cat": "rock",
+   "cat2": "log",
+   "scale": 1,
+   "par": 0.62,
+   "y": 300,
+   "spacing": 120,
+   "jitter": 30,
+   "y_jitter": 24,
+   "tint": "#d8e4d0",
+   "side_only": 150,
+   "prob": 0.7,
+   "seed": 37
+  },
+  {
+   "id": "bushes_mid",
+   "cat": "bush",
+   "scale": 1,
+   "par": 0.72,
+   "y": 280,
+   "spacing": 70,
+   "jitter": 18,
+   "y_jitter": 6,
+   "tint": "#c4dcbc",
+   "side_only": 140,
+   "prob": 0.85,
+   "seed": 41,
+   "sway": 1.0
+  },
+  {
+   "id": "ferns_front",
+   "cat": "fern",
+   "scale": 2,
+   "par": 1.0,
+   "y": 364,
+   "anchor": "bottom",
+   "spacing": 80,
+   "jitter": 22,
+   "y_jitter": 5,
+   "tint": "#e6f2dc",
+   "seed": 53,
+   "sway": 1.0
+  },
+  {
+   "id": "bushes_frame",
+   "cat": "bush",
+   "scale": 2,
+   "par": 1.15,
+   "y": 378,
+   "anchor": "bottom",
+   "spacing": 130,
+   "jitter": 20,
+   "y_jitter": 6,
+   "tint": "#f2ffe8",
+   "side_only": 230,
+   "seed": 67,
+   "sway": 1.0
+  },
+  {
+   "id": "trees_frame",
+   "cat": "tree",
+   "scale": 2,
+   "par": 0.9,
+   "y": 312,
+   "anchor": "bottom",
+   "spacing": 170,
+   "jitter": 26,
+   "y_jitter": 4,
+   "tint": "#d4e8cc",
+   "side_only": 185,
+   "prob": 0.8,
+   "seed": 71
+  }
+ ],
+ "leaves": {
+  "count": 14,
+  "fall": [
+   8,
+   15
+  ],
+  "drift": [
+   3,
+   6
+  ],
+  "sway": [
+   7,
+   15
+  ],
+  "freq": [
+   0.35,
+   0.7
+  ],
+  "scales": [
+   1,
+   2,
+   2
+  ],
+  "colors": [
+   "#b8e868",
+   "#9ad850",
+   "#d0f080",
+   "#86cc4a"
+  ],
+  "gold": "#e8c050",
+  "gold_chance": 0.2,
+  "max_fall": 27,
+  "shapes": [
+   [
+    "..bbbb...",
+    ".bhhbbbb.",
+    "rrrrrrrrb",
+    ".bbbbbbb.",
+    "..bbb...."
+   ],
+   [
+    "..bbb..",
+    ".bhhbb.",
+    "rrrrrrb",
+    ".bbbbb.",
+    "..bb..."
+   ],
+   [
+    ".bbb.",
+    "rrrrb",
+    ".bb.."
+   ]
+  ]
+ },
+ "readability": {
+  "panel": [
+   236,
+   176,
+   168,
+   106
+  ],
+  "panel_alpha": 0.4,
+  "glow_alpha": 0.1,
+  "vignette_alpha": 0.5
+ },
+ "parallax": {
+  "mouse": 13.0,
+  "auto": 5.0,
+  "auto_speed": 0.12
+ }
+}
