@@ -1,0 +1,12 @@
+{
+  "level_xp": [0, 10, 24, 42, 66, 96, 130],
+  "hp_per_level": 3,
+  "level_up_heal_pct": 0.3,
+  "forms": [
+    {"id": "baby",     "name": "Hatchling", "min_level": 1, "tier": 1, "hp": 0,  "speed": 0, "move": 0, "stamina": 0, "hunger_per_room": 6,  "sprite_px": 16},
+    {"id": "juvenile", "name": "Juvenile",  "min_level": 3, "tier": 2, "hp": 10, "speed": 1, "move": 0, "stamina": 0, "hunger_per_room": 8,  "sprite_px": 20},
+    {"id": "adult",    "name": "Adult",     "min_level": 5, "tier": 3, "hp": 22, "speed": 2, "move": 1, "stamina": 1, "hunger_per_room": 10, "sprite_px": 24},
+    {"id": "prime",    "name": "Prime",     "min_level": 7, "tier": 4, "hp": 38, "speed": 3, "move": 1, "stamina": 1, "hunger_per_room": 12, "sprite_px": 28}
+  ],
+  "hunger": {"max": 100, "low_threshold": 25, "low_stamina_penalty": 1, "low_speed_mult": 0.8, "starve_speed_mult": 0.7, "starve_hp_loss": 4}
+}

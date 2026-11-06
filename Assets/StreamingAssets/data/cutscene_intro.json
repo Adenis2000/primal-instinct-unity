@@ -1,0 +1,3408 @@
+{
+ "version": 1,
+ "doc": "Intro story cutscene timeline. World coords are the 640x360 design frame (y down); layers are drawn in order. Each layer: kind, par (parallax factor vs the camera), optional t0/t1 visibility window, and 'keys' = per-property keyframes [[t, value], ...] (shot-local seconds). Designer art: drop assets/sprites/cutscene_<layer id>.png (or cutscene_<shot id>_<layer id>.png) to replace an 'image' layer's sprite.",
+ "letterbox": {
+  "aspect": 2.2,
+  "min_bar": 35
+ },
+ "pixel": 2,
+ "skip_hold": 0.6,
+ "shots": [
+  {
+   "id": "egg",
+   "name": "Inside the egg",
+   "dur": 7.4,
+   "fade_in": 1.0,
+   "fade_out": 0.7,
+   "camera": {
+    "from": [
+     0,
+     9
+    ],
+    "to": [
+     0,
+     -7
+    ],
+    "ease": "smooth"
+   },
+   "captions": [
+    {
+     "text": "A quiet morning in the nest.",
+     "t": 1.7,
+     "dur": 4.6
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.3,
+     "id": "egg_crack_soft"
+    },
+    {
+     "t": 1.1,
+     "id": "birds_far"
+    },
+    {
+     "t": 5.0,
+     "id": "footsteps_far"
+    }
+   ],
+   "layers": [
+    {
+     "kind": "sky",
+     "id": "sky",
+     "top": "#8fd0e0",
+     "bottom": "#f2e8b0",
+     "y0": -107,
+     "y1": 347,
+     "par": 0.1,
+     "clouds": 0
+    },
+    {
+     "kind": "scene",
+     "id": "nest",
+     "img": "bg_customize_hi",
+     "scale": 1,
+     "x": 121,
+     "y": -60,
+     "par": 1.0
+    },
+    {
+     "kind": "image",
+     "id": "mother_far",
+     "img": "raptor_adult_sw",
+     "own_look": true,
+     "scale": 2,
+     "x": 507,
+     "y": 155,
+     "par": 1.0,
+     "tint": "#6f8a74",
+     "alpha": 0.0,
+     "keys": {
+      "x": [
+       [
+        4.4,
+        513
+       ],
+       [
+        7.4,
+        360
+       ]
+      ],
+      "alpha": [
+       [
+        4.4,
+        0.0
+       ],
+       [
+        5.2,
+        0.92
+       ]
+      ]
+     },
+     "hop": 1
+    },
+    {
+     "kind": "particles",
+     "id": "motes",
+     "mode": "motes",
+     "rect": [
+      -67,
+      80,
+      773,
+      240
+     ],
+     "n": 26,
+     "color": "#fff6c8",
+     "size": 2,
+     "speed": [
+      3,
+      -4
+     ],
+     "par": 0.9
+    },
+    {
+     "kind": "shell",
+     "id": "shell",
+     "center": [
+      320,
+      200
+     ],
+     "par": 0.0,
+     "keys": {
+      "open": [
+       [
+        0.0,
+        0.0
+       ],
+       [
+        0.6,
+        0.12
+       ],
+       [
+        1.2,
+        0.2
+       ],
+       [
+        3.8,
+        0.7
+       ],
+       [
+        5.6,
+        1.0
+       ]
+      ]
+     },
+     "rx": [
+      47,
+      287
+     ],
+     "ry": [
+      31,
+      167
+     ]
+    },
+    {
+     "kind": "eyelid",
+     "id": "eyelid",
+     "par": 0.0,
+     "keys": {
+      "open": [
+       [
+        0.0,
+        0.0
+       ],
+       [
+        0.5,
+        0.0
+       ],
+       [
+        1.6,
+        1.0
+       ],
+       [
+        4.3,
+        1.0
+       ],
+       [
+        4.5,
+        0.25
+       ],
+       [
+        4.8,
+        1.0
+       ]
+      ]
+     }
+    },
+    {
+     "kind": "overlay",
+     "id": "warm",
+     "color": "#fff0b8",
+     "par": 0.0,
+     "keys": {
+      "alpha": [
+       [
+        0.0,
+        0.18
+       ],
+       [
+        7.4,
+        0.04
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "mother",
+   "name": "Mother feeds the baby",
+   "dur": 9.6,
+   "fade_in": 0.7,
+   "fade_out": 0.6,
+   "camera": {
+    "from": [
+     -33,
+     0
+    ],
+    "to": [
+     27,
+     0
+    ],
+    "ease": "smooth"
+   },
+   "captions": [
+    {
+     "text": "Mother always returned with food.",
+     "t": 1.0,
+     "dur": 5.2
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.6,
+     "id": "baby_chirp"
+    },
+    {
+     "t": 3.4,
+     "id": "mother_rumble"
+    },
+    {
+     "t": 5.4,
+     "id": "gulp"
+    },
+    {
+     "t": 5.8,
+     "id": "happy_chirp"
+    }
+   ],
+   "layers": [
+    {
+     "kind": "sky",
+     "id": "sky",
+     "top": "#7fc8dc",
+     "bottom": "#f0e6a8",
+     "y0": -107,
+     "y1": 251,
+     "par": 0.1,
+     "clouds": 5,
+     "cloud_col": "#ffffff",
+     "cloud_alpha": 0.5,
+     "cloud_y": [
+      13,
+      113
+     ]
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_01",
+     "x": -224,
+     "y": 220,
+     "scale": 1,
+     "par": 0.3,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_02",
+     "x": -136,
+     "y": 219,
+     "scale": 1,
+     "par": 0.3,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_03",
+     "x": -51,
+     "y": 217,
+     "scale": 1,
+     "par": 0.3,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_05",
+     "x": 19,
+     "y": 219,
+     "scale": 1,
+     "par": 0.3,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_08",
+     "x": 106,
+     "y": 223,
+     "scale": 1,
+     "par": 0.3,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_12",
+     "x": 157,
+     "y": 219,
+     "scale": 1,
+     "par": 0.3,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_04",
+     "x": 234,
+     "y": 215,
+     "scale": 1,
+     "par": 0.3,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_09",
+     "x": 338,
+     "y": 221,
+     "scale": 1,
+     "par": 0.3,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_01",
+     "x": 404,
+     "y": 219,
+     "scale": 1,
+     "par": 0.3,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_02",
+     "x": 485,
+     "y": 222,
+     "scale": 1,
+     "par": 0.3,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_03",
+     "x": 567,
+     "y": 216,
+     "scale": 1,
+     "par": 0.3,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_05",
+     "x": 621,
+     "y": 220,
+     "scale": 1,
+     "par": 0.3,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_08",
+     "x": 694,
+     "y": 215,
+     "scale": 1,
+     "par": 0.3,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_12",
+     "x": 775,
+     "y": 221,
+     "scale": 1,
+     "par": 0.3,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_04",
+     "x": 854,
+     "y": 218,
+     "scale": 1,
+     "par": 0.3,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_03",
+     "x": -191,
+     "y": 231,
+     "scale": 1,
+     "par": 0.45,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_12",
+     "x": -105,
+     "y": 236,
+     "scale": 1,
+     "par": 0.45,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_08",
+     "x": 3,
+     "y": 229,
+     "scale": 1,
+     "par": 0.45,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_01",
+     "x": 90,
+     "y": 234,
+     "scale": 1,
+     "par": 0.45,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_05",
+     "x": 202,
+     "y": 233,
+     "scale": 1,
+     "par": 0.45,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_02",
+     "x": 296,
+     "y": 237,
+     "scale": 1,
+     "par": 0.45,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_03",
+     "x": 402,
+     "y": 237,
+     "scale": 1,
+     "par": 0.45,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_12",
+     "x": 505,
+     "y": 232,
+     "scale": 1,
+     "par": 0.45,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_08",
+     "x": 577,
+     "y": 235,
+     "scale": 1,
+     "par": 0.45,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_01",
+     "x": 685,
+     "y": 233,
+     "scale": 1,
+     "par": 0.45,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_05",
+     "x": 786,
+     "y": 233,
+     "scale": 1,
+     "par": 0.45,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "ground",
+     "id": "ground",
+     "y": 224,
+     "h": 467,
+     "col": "#62923c",
+     "col2": "#578732",
+     "edge": "#3f6a2c",
+     "par": 0.6
+    },
+    {
+     "kind": "image",
+     "img": "deco_bush_01",
+     "x": -219,
+     "y": 277,
+     "scale": 2,
+     "par": 0.62,
+     "tint": "#78a860"
+    },
+    {
+     "kind": "image",
+     "img": "deco_bush_03",
+     "x": -98,
+     "y": 270,
+     "scale": 2,
+     "par": 0.62,
+     "tint": "#78a860"
+    },
+    {
+     "kind": "image",
+     "img": "deco_bush_05",
+     "x": 29,
+     "y": 272,
+     "scale": 2,
+     "par": 0.62,
+     "tint": "#78a860"
+    },
+    {
+     "kind": "image",
+     "img": "deco_bush_06",
+     "x": 156,
+     "y": 269,
+     "scale": 2,
+     "par": 0.62,
+     "tint": "#78a860"
+    },
+    {
+     "kind": "image",
+     "img": "deco_bush_08",
+     "x": 303,
+     "y": 270,
+     "scale": 2,
+     "par": 0.62,
+     "tint": "#78a860"
+    },
+    {
+     "kind": "image",
+     "img": "deco_bush_02",
+     "x": 415,
+     "y": 269,
+     "scale": 2,
+     "par": 0.62,
+     "tint": "#78a860"
+    },
+    {
+     "kind": "image",
+     "img": "deco_bush_07",
+     "x": 541,
+     "y": 268,
+     "scale": 2,
+     "par": 0.62,
+     "tint": "#78a860"
+    },
+    {
+     "kind": "image",
+     "img": "deco_bush_01",
+     "x": 689,
+     "y": 277,
+     "scale": 2,
+     "par": 0.62,
+     "tint": "#78a860"
+    },
+    {
+     "kind": "image",
+     "img": "deco_bush_03",
+     "x": 781,
+     "y": 270,
+     "scale": 2,
+     "par": 0.62,
+     "tint": "#78a860"
+    },
+    {
+     "kind": "particles",
+     "id": "pollen",
+     "mode": "motes",
+     "rect": [
+      -67,
+      107,
+      773,
+      227
+     ],
+     "n": 30,
+     "color": "#fff3b0",
+     "size": 2,
+     "speed": [
+      3,
+      -3
+     ],
+     "par": 0.8
+    },
+    {
+     "kind": "image",
+     "id": "mother",
+     "img": "raptor_adult_sw",
+     "own_look": true,
+     "scale": 3,
+     "x": 493,
+     "y": 323,
+     "par": 1.0,
+     "breathe": 1,
+     "tint": "#ffe9c8"
+    },
+    {
+     "kind": "image",
+     "id": "baby",
+     "img": "raptor_baby",
+     "scale": 2,
+     "x": 100,
+     "y": 323,
+     "par": 1.0,
+     "hop": 3,
+     "keys": {
+      "x": [
+       [
+        0.5,
+        87
+       ],
+       [
+        4.6,
+        291
+       ],
+       [
+        9.6,
+        291
+       ]
+      ],
+      "y": [
+       [
+        0,
+        323
+       ],
+       [
+        5.5,
+        323
+       ],
+       [
+        5.75,
+        311
+       ],
+       [
+        6.0,
+        323
+       ],
+       [
+        6.3,
+        313
+       ],
+       [
+        6.55,
+        323
+       ]
+      ]
+     }
+    },
+    {
+     "kind": "image",
+     "id": "meat",
+     "img": "icon_meat",
+     "scale": 2,
+     "x": 396,
+     "y": 280,
+     "par": 1.0,
+     "alpha": 0.0,
+     "keys": {
+      "alpha": [
+       [
+        3.3,
+        0.0
+       ],
+       [
+        3.5,
+        1.0
+       ],
+       [
+        5.3,
+        1.0
+       ],
+       [
+        5.45,
+        0.0
+       ]
+      ],
+      "x": [
+       [
+        3.4,
+        399
+       ],
+       [
+        4.2,
+        377
+       ],
+       [
+        5.2,
+        349
+       ]
+      ],
+      "y": [
+       [
+        3.4,
+        280
+       ],
+       [
+        4.2,
+        264
+       ],
+       [
+        5.2,
+        288
+       ]
+      ]
+     }
+    },
+    {
+     "kind": "image",
+     "id": "heart_a",
+     "img": "icon_heart",
+     "scale": 2,
+     "x": 347,
+     "y": 273,
+     "par": 1.0,
+     "alpha": 0.0,
+     "keys": {
+      "alpha": [
+       [
+        5.7,
+        0.0
+       ],
+       [
+        6.1,
+        1.0
+       ],
+       [
+        7.6,
+        0.0
+       ]
+      ],
+      "y": [
+       [
+        5.7,
+        273
+       ],
+       [
+        7.6,
+        227
+       ]
+      ],
+      "x": [
+       [
+        5.7,
+        347
+       ],
+       [
+        7.6,
+        355
+       ]
+      ]
+     }
+    },
+    {
+     "kind": "image",
+     "id": "heart_b",
+     "img": "icon_heart",
+     "scale": 2,
+     "x": 313,
+     "y": 280,
+     "par": 1.0,
+     "alpha": 0.0,
+     "keys": {
+      "alpha": [
+       [
+        6.3,
+        0.0
+       ],
+       [
+        6.7,
+        1.0
+       ],
+       [
+        8.1,
+        0.0
+       ]
+      ],
+      "y": [
+       [
+        6.3,
+        280
+       ],
+       [
+        8.1,
+        240
+       ]
+      ],
+      "x": [
+       [
+        6.3,
+        313
+       ],
+       [
+        8.1,
+        305
+       ]
+      ]
+     }
+    },
+    {
+     "kind": "overlay",
+     "id": "warm",
+     "color": "#ffe9b0",
+     "par": 0.0,
+     "keys": {
+      "alpha": [
+       [
+        0,
+        0.06
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "meteor",
+   "name": "The sky breaks",
+   "dur": 7.2,
+   "fade_in": 0.7,
+   "fade_out": 0.5,
+   "camera": {
+    "from": [
+     0,
+     -60
+    ],
+    "to": [
+     0,
+     0
+    ],
+    "ease": "smooth"
+   },
+   "shake": [
+    {
+     "t": 3.1,
+     "dur": 2.2,
+     "amp": 6
+    }
+   ],
+   "flash": [
+    {
+     "t": 3.1,
+     "dur": 1.1,
+     "color": "#fff4d8",
+     "peak": 1.0
+    }
+   ],
+   "captions": [
+    {
+     "text": "Then the sky broke.",
+     "t": 0.9,
+     "dur": 3.4
+    }
+   ],
+   "sfx": [
+    {
+     "t": 1.2,
+     "id": "meteor_whoosh"
+    },
+    {
+     "t": 3.1,
+     "id": "impact_boom"
+    },
+    {
+     "t": 3.3,
+     "id": "rumble_low"
+    }
+   ],
+   "layers": [
+    {
+     "kind": "sky",
+     "id": "sky",
+     "top": "#4a78b8",
+     "bottom": "#efd9a0",
+     "y0": -87,
+     "y1": 264,
+     "par": 0.55,
+     "clouds": 6,
+     "cloud_col": "#ffffff",
+     "cloud_alpha": 0.55,
+     "cloud_y": [
+      -133,
+      120
+     ]
+    },
+    {
+     "kind": "glow",
+     "id": "crash_glow",
+     "x": 467,
+     "y": 244,
+     "r": 127,
+     "col": "#ff8a3a",
+     "par": 1.0,
+     "keys": {
+      "alpha": [
+       [
+        3.0,
+        0.0
+       ],
+       [
+        3.15,
+        0.95
+       ],
+       [
+        7.2,
+        0.5
+       ]
+      ]
+     }
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_01",
+     "x": -243,
+     "y": 240,
+     "scale": 1,
+     "par": 1.0,
+     "tint": "#7a9a8a",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_02",
+     "x": -139,
+     "y": 241,
+     "scale": 1,
+     "par": 1.0,
+     "tint": "#7a9a8a",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_03",
+     "x": -48,
+     "y": 242,
+     "scale": 1,
+     "par": 1.0,
+     "tint": "#7a9a8a",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_05",
+     "x": 33,
+     "y": 242,
+     "scale": 1,
+     "par": 1.0,
+     "tint": "#7a9a8a",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_08",
+     "x": 107,
+     "y": 244,
+     "scale": 1,
+     "par": 1.0,
+     "tint": "#7a9a8a",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_12",
+     "x": 205,
+     "y": 241,
+     "scale": 1,
+     "par": 1.0,
+     "tint": "#7a9a8a",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_04",
+     "x": 288,
+     "y": 242,
+     "scale": 1,
+     "par": 1.0,
+     "tint": "#7a9a8a",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_09",
+     "x": 356,
+     "y": 248,
+     "scale": 1,
+     "par": 1.0,
+     "tint": "#7a9a8a",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_01",
+     "x": 443,
+     "y": 240,
+     "scale": 1,
+     "par": 1.0,
+     "tint": "#7a9a8a",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_02",
+     "x": 516,
+     "y": 244,
+     "scale": 1,
+     "par": 1.0,
+     "tint": "#7a9a8a",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_03",
+     "x": 626,
+     "y": 247,
+     "scale": 1,
+     "par": 1.0,
+     "tint": "#7a9a8a",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_05",
+     "x": 691,
+     "y": 240,
+     "scale": 1,
+     "par": 1.0,
+     "tint": "#7a9a8a",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_08",
+     "x": 772,
+     "y": 245,
+     "scale": 1,
+     "par": 1.0,
+     "tint": "#7a9a8a",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_12",
+     "x": 843,
+     "y": 248,
+     "scale": 1,
+     "par": 1.0,
+     "tint": "#7a9a8a",
+     "alpha": 1.0
+    },
+    {
+     "kind": "ground",
+     "id": "ground",
+     "y": 251,
+     "h": 467,
+     "col": "#587e3a",
+     "col2": "#4d7232",
+     "edge": "#37592a",
+     "par": 1.0
+    },
+    {
+     "kind": "meteor",
+     "id": "meteor",
+     "from": [
+      -53,
+      -347
+     ],
+     "to": [
+      467,
+      248
+     ],
+     "t0": 1.2,
+     "t1": 3.1,
+     "col": "#ffcf6a",
+     "par": 1.0,
+     "tail": 253
+    },
+    {
+     "kind": "plume",
+     "id": "plume",
+     "x": 467,
+     "y": 248,
+     "h": 220,
+     "w": 47,
+     "t0": 3.1,
+     "col": "#3c3040",
+     "col2": "#8a7468",
+     "par": 1.0,
+     "keys": {
+      "grow": [
+       [
+        3.1,
+        0.0
+       ],
+       [
+        7.2,
+        1.0
+       ]
+      ]
+     }
+    },
+    {
+     "kind": "particles",
+     "id": "embers",
+     "mode": "embers",
+     "rect": [
+      407,
+      224,
+      120,
+      27
+     ],
+     "n": 22,
+     "color": "#ffb04a",
+     "size": 2,
+     "speed": [
+      7,
+      -47
+     ],
+     "t0": 3.1,
+     "par": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_bush_01",
+     "x": -206,
+     "y": 337,
+     "scale": 2,
+     "par": 1.0,
+     "tint": "#6a9a58"
+    },
+    {
+     "kind": "image",
+     "img": "deco_bush_03",
+     "x": -52,
+     "y": 329,
+     "scale": 2,
+     "par": 1.0,
+     "tint": "#6a9a58"
+    },
+    {
+     "kind": "image",
+     "img": "deco_bush_05",
+     "x": 78,
+     "y": 330,
+     "scale": 2,
+     "par": 1.0,
+     "tint": "#6a9a58"
+    },
+    {
+     "kind": "image",
+     "img": "deco_bush_06",
+     "x": 266,
+     "y": 330,
+     "scale": 2,
+     "par": 1.0,
+     "tint": "#6a9a58"
+    },
+    {
+     "kind": "image",
+     "img": "deco_bush_08",
+     "x": 405,
+     "y": 331,
+     "scale": 2,
+     "par": 1.0,
+     "tint": "#6a9a58"
+    },
+    {
+     "kind": "image",
+     "img": "deco_bush_02",
+     "x": 561,
+     "y": 333,
+     "scale": 2,
+     "par": 1.0,
+     "tint": "#6a9a58"
+    },
+    {
+     "kind": "image",
+     "img": "deco_bush_07",
+     "x": 705,
+     "y": 333,
+     "scale": 2,
+     "par": 1.0,
+     "tint": "#6a9a58"
+    },
+    {
+     "kind": "image",
+     "img": "deco_bush_01",
+     "x": 849,
+     "y": 337,
+     "scale": 2,
+     "par": 1.0,
+     "tint": "#6a9a58"
+    },
+    {
+     "kind": "overlay",
+     "id": "dim",
+     "color": "#2a1010",
+     "par": 0.0,
+     "keys": {
+      "alpha": [
+       [
+        3.1,
+        0.0
+       ],
+       [
+        7.2,
+        0.22
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "emerge",
+   "name": "Something crawled out",
+   "dur": 8.2,
+   "fade_in": 0.6,
+   "fade_out": 0.6,
+   "camera": {
+    "from": [
+     0,
+     0
+    ],
+    "to": [
+     -20,
+     0
+    ],
+    "ease": "smooth"
+   },
+   "shake": [
+    {
+     "t": 0.0,
+     "dur": 2.2,
+     "amp": 2
+    },
+    {
+     "t": 3.2,
+     "dur": 0.6,
+     "amp": 3
+    }
+   ],
+   "flash": [
+    {
+     "t": 3.3,
+     "dur": 0.5,
+     "color": "#b86aff",
+     "peak": 0.45
+    }
+   ],
+   "captions": [
+    {
+     "text": "Something crawled out of the fire.",
+     "t": 1.0,
+     "dur": 5.6
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.5,
+     "id": "crackle"
+    },
+    {
+     "t": 1.8,
+     "id": "screech_far"
+    },
+    {
+     "t": 3.3,
+     "id": "infect_pulse"
+    }
+   ],
+   "layers": [
+    {
+     "kind": "sky",
+     "id": "sky",
+     "top": "#33244f",
+     "bottom": "#d26a38",
+     "y0": -173,
+     "y1": 253,
+     "par": 0.3,
+     "clouds": 4,
+     "cloud_col": "#2a1a30",
+     "cloud_alpha": 0.8,
+     "cloud_y": [
+      13,
+      127
+     ],
+     "keys": {
+      "top": [
+       [
+        0,
+        "#4a4070"
+       ],
+       [
+        8.2,
+        "#2b1a48"
+       ]
+      ],
+      "bottom": [
+       [
+        0,
+        "#e89050"
+       ],
+       [
+        8.2,
+        "#b0505a"
+       ]
+      ]
+     }
+    },
+    {
+     "kind": "glow",
+     "id": "fire",
+     "x": 467,
+     "y": 248,
+     "r": 173,
+     "col": "#ff7a30",
+     "par": 0.9,
+     "keys": {
+      "alpha": [
+       [
+        0,
+        0.8
+       ],
+       [
+        8.2,
+        0.55
+       ]
+      ]
+     }
+    },
+    {
+     "kind": "plume",
+     "id": "plume",
+     "x": 467,
+     "y": 251,
+     "h": 253,
+     "w": 60,
+     "col": "#2a2030",
+     "col2": "#6a5460",
+     "par": 0.9,
+     "keys": {
+      "grow": [
+       [
+        0,
+        1.0
+       ]
+      ]
+     },
+     "t0": 0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_01",
+     "x": -235,
+     "y": 251,
+     "scale": 1,
+     "par": 0.5,
+     "tint": "#4e6a58",
+     "alpha": 1.0,
+     "keys": {
+      "tint": [
+       [
+        0,
+        "#4e6a58"
+       ],
+       [
+        3.3,
+        "#4e6a58"
+       ],
+       [
+        6.5,
+        "#5a3f78"
+       ]
+      ]
+     }
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_02",
+     "x": -157,
+     "y": 246,
+     "scale": 1,
+     "par": 0.5,
+     "tint": "#4e6a58",
+     "alpha": 1.0,
+     "keys": {
+      "tint": [
+       [
+        0,
+        "#4e6a58"
+       ],
+       [
+        3.3,
+        "#4e6a58"
+       ],
+       [
+        6.5,
+        "#5a3f78"
+       ]
+      ]
+     }
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_03",
+     "x": -55,
+     "y": 246,
+     "scale": 1,
+     "par": 0.5,
+     "tint": "#4e6a58",
+     "alpha": 1.0,
+     "keys": {
+      "tint": [
+       [
+        0,
+        "#4e6a58"
+       ],
+       [
+        3.3,
+        "#4e6a58"
+       ],
+       [
+        6.5,
+        "#5a3f78"
+       ]
+      ]
+     }
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_05",
+     "x": 13,
+     "y": 245,
+     "scale": 1,
+     "par": 0.5,
+     "tint": "#4e6a58",
+     "alpha": 1.0,
+     "keys": {
+      "tint": [
+       [
+        0,
+        "#4e6a58"
+       ],
+       [
+        3.3,
+        "#4e6a58"
+       ],
+       [
+        6.5,
+        "#5a3f78"
+       ]
+      ]
+     }
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_08",
+     "x": 117,
+     "y": 249,
+     "scale": 1,
+     "par": 0.5,
+     "tint": "#4e6a58",
+     "alpha": 1.0,
+     "keys": {
+      "tint": [
+       [
+        0,
+        "#4e6a58"
+       ],
+       [
+        3.3,
+        "#4e6a58"
+       ],
+       [
+        6.5,
+        "#5a3f78"
+       ]
+      ]
+     }
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_12",
+     "x": 194,
+     "y": 248,
+     "scale": 1,
+     "par": 0.5,
+     "tint": "#4e6a58",
+     "alpha": 1.0,
+     "keys": {
+      "tint": [
+       [
+        0,
+        "#4e6a58"
+       ],
+       [
+        3.3,
+        "#4e6a58"
+       ],
+       [
+        6.5,
+        "#5a3f78"
+       ]
+      ]
+     }
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_04",
+     "x": 275,
+     "y": 250,
+     "scale": 1,
+     "par": 0.5,
+     "tint": "#4e6a58",
+     "alpha": 1.0,
+     "keys": {
+      "tint": [
+       [
+        0,
+        "#4e6a58"
+       ],
+       [
+        3.3,
+        "#4e6a58"
+       ],
+       [
+        6.5,
+        "#5a3f78"
+       ]
+      ]
+     }
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_09",
+     "x": 344,
+     "y": 244,
+     "scale": 1,
+     "par": 0.5,
+     "tint": "#4e6a58",
+     "alpha": 1.0,
+     "keys": {
+      "tint": [
+       [
+        0,
+        "#4e6a58"
+       ],
+       [
+        3.3,
+        "#4e6a58"
+       ],
+       [
+        6.5,
+        "#5a3f78"
+       ]
+      ]
+     }
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_01",
+     "x": 403,
+     "y": 244,
+     "scale": 1,
+     "par": 0.5,
+     "tint": "#4e6a58",
+     "alpha": 1.0,
+     "keys": {
+      "tint": [
+       [
+        0,
+        "#4e6a58"
+       ],
+       [
+        3.3,
+        "#4e6a58"
+       ],
+       [
+        6.5,
+        "#5a3f78"
+       ]
+      ]
+     }
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_02",
+     "x": 491,
+     "y": 246,
+     "scale": 1,
+     "par": 0.5,
+     "tint": "#4e6a58",
+     "alpha": 1.0,
+     "keys": {
+      "tint": [
+       [
+        0,
+        "#4e6a58"
+       ],
+       [
+        3.3,
+        "#4e6a58"
+       ],
+       [
+        6.5,
+        "#5a3f78"
+       ]
+      ]
+     }
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_03",
+     "x": 597,
+     "y": 248,
+     "scale": 1,
+     "par": 0.5,
+     "tint": "#4e6a58",
+     "alpha": 1.0,
+     "keys": {
+      "tint": [
+       [
+        0,
+        "#4e6a58"
+       ],
+       [
+        3.3,
+        "#4e6a58"
+       ],
+       [
+        6.5,
+        "#5a3f78"
+       ]
+      ]
+     }
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_05",
+     "x": 660,
+     "y": 250,
+     "scale": 1,
+     "par": 0.5,
+     "tint": "#4e6a58",
+     "alpha": 1.0,
+     "keys": {
+      "tint": [
+       [
+        0,
+        "#4e6a58"
+       ],
+       [
+        3.3,
+        "#4e6a58"
+       ],
+       [
+        6.5,
+        "#5a3f78"
+       ]
+      ]
+     }
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_08",
+     "x": 735,
+     "y": 249,
+     "scale": 1,
+     "par": 0.5,
+     "tint": "#4e6a58",
+     "alpha": 1.0,
+     "keys": {
+      "tint": [
+       [
+        0,
+        "#4e6a58"
+       ],
+       [
+        3.3,
+        "#4e6a58"
+       ],
+       [
+        6.5,
+        "#5a3f78"
+       ]
+      ]
+     }
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_12",
+     "x": 828,
+     "y": 245,
+     "scale": 1,
+     "par": 0.5,
+     "tint": "#4e6a58",
+     "alpha": 1.0,
+     "keys": {
+      "tint": [
+       [
+        0,
+        "#4e6a58"
+       ],
+       [
+        3.3,
+        "#4e6a58"
+       ],
+       [
+        6.5,
+        "#5a3f78"
+       ]
+      ]
+     }
+    },
+    {
+     "kind": "ground",
+     "id": "ground",
+     "y": 251,
+     "h": 467,
+     "col": "#3f5a30",
+     "col2": "#365028",
+     "edge": "#27391f",
+     "par": 1.0,
+     "keys": {
+      "col": [
+       [
+        0,
+        "#3f5a30"
+       ],
+       [
+        8.2,
+        "#3c3446"
+       ]
+      ]
+     }
+    },
+    {
+     "kind": "creep",
+     "id": "creep",
+     "x": 467,
+     "y": 267,
+     "rx": 0,
+     "ry": 0,
+     "col": "#8a3fd0",
+     "par": 1.0,
+     "keys": {
+      "r": [
+       [
+        1.0,
+        0.0
+       ],
+       [
+        8.2,
+        1.0
+       ]
+      ]
+     },
+     "max": 547
+    },
+    {
+     "kind": "glow",
+     "id": "queen_glow",
+     "x": 467,
+     "y": 260,
+     "r": 87,
+     "col": "#9a4aff",
+     "par": 1.0,
+     "keys": {
+      "alpha": [
+       [
+        0.8,
+        0.0
+       ],
+       [
+        3.0,
+        0.5
+       ],
+       [
+        8.2,
+        0.35
+       ]
+      ]
+     }
+    },
+    {
+     "kind": "image",
+     "id": "queen",
+     "img": "husk_queen",
+     "scale": 2,
+     "x": 467,
+     "y": 373,
+     "par": 1.0,
+     "flip": true,
+     "clip_y": 259,
+     "tint": "#1e1228",
+     "keys": {
+      "y": [
+       [
+        0.8,
+        373
+       ],
+       [
+        3.4,
+        261
+       ],
+       [
+        8.2,
+        261
+       ]
+      ],
+      "x": [
+       [
+        3.4,
+        467
+       ],
+       [
+        8.2,
+        367
+       ]
+      ]
+     }
+    },
+    {
+     "kind": "image",
+     "id": "drone_a",
+     "img": "spore_drone",
+     "scale": 2,
+     "x": 467,
+     "y": 253,
+     "par": 1.0,
+     "flip": true,
+     "tint": "#1a0f24",
+     "alpha": 0.0,
+     "keys": {
+      "alpha": [
+       [
+        3.4,
+        0.0
+       ],
+       [
+        3.6,
+        1.0
+       ]
+      ],
+      "x": [
+       [
+        3.4,
+        467
+       ],
+       [
+        8.2,
+        153
+       ]
+      ],
+      "y": [
+       [
+        3.4,
+        253
+       ],
+       [
+        5.0,
+        200
+       ],
+       [
+        8.2,
+        220
+       ]
+      ]
+     },
+     "breathe": 2
+    },
+    {
+     "kind": "image",
+     "id": "drone_b",
+     "img": "spore_drone",
+     "scale": 2,
+     "x": 467,
+     "y": 253,
+     "par": 1.0,
+     "flip": true,
+     "tint": "#1a0f24",
+     "alpha": 0.0,
+     "keys": {
+      "alpha": [
+       [
+        4.2,
+        0.0
+       ],
+       [
+        4.4,
+        1.0
+       ]
+      ],
+      "x": [
+       [
+        4.2,
+        480
+       ],
+       [
+        8.2,
+        240
+       ]
+      ],
+      "y": [
+       [
+        4.2,
+        253
+       ],
+       [
+        5.6,
+        180
+       ],
+       [
+        8.2,
+        193
+       ]
+      ]
+     },
+     "breathe": 2
+    },
+    {
+     "kind": "image",
+     "id": "drone_c",
+     "img": "spore_drone",
+     "scale": 2,
+     "x": 467,
+     "y": 253,
+     "par": 1.0,
+     "flip": true,
+     "tint": "#1a0f24",
+     "alpha": 0.0,
+     "keys": {
+      "alpha": [
+       [
+        5.0,
+        0.0
+       ],
+       [
+        5.2,
+        1.0
+       ]
+      ],
+      "x": [
+       [
+        5.0,
+        493
+       ],
+       [
+        8.2,
+        347
+       ]
+      ],
+      "y": [
+       [
+        5.0,
+        253
+       ],
+       [
+        6.4,
+        160
+       ],
+       [
+        8.2,
+        168
+       ]
+      ]
+     },
+     "breathe": 2
+    },
+    {
+     "kind": "particles",
+     "id": "spores",
+     "mode": "spores",
+     "rect": [
+      -67,
+      93,
+      773,
+      173
+     ],
+     "n": 36,
+     "color": "#c07aff",
+     "size": 2,
+     "speed": [
+      -5,
+      -9
+     ],
+     "t0": 2.5,
+     "par": 1.0
+    },
+    {
+     "kind": "overlay",
+     "id": "sick",
+     "color": "#3a1060",
+     "par": 0.0,
+     "keys": {
+      "alpha": [
+       [
+        0,
+        0.0
+       ],
+       [
+        8.2,
+        0.28
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "fight",
+   "name": "Mother fights",
+   "dur": 8.6,
+   "fade_in": 0.6,
+   "fade_out": 0.7,
+   "camera": {
+    "from": [
+     20,
+     0
+    ],
+    "to": [
+     -13,
+     0
+    ],
+    "ease": "smooth"
+   },
+   "shake": [
+    {
+     "t": 3.0,
+     "dur": 0.5,
+     "amp": 3
+    },
+    {
+     "t": 4.2,
+     "dur": 0.6,
+     "amp": 4
+    },
+    {
+     "t": 5.5,
+     "dur": 0.5,
+     "amp": 3
+    }
+   ],
+   "flash": [
+    {
+     "t": 4.2,
+     "dur": 0.5,
+     "color": "#c07aff",
+     "peak": 0.55
+    },
+    {
+     "t": 5.5,
+     "dur": 0.4,
+     "color": "#a05aff",
+     "peak": 0.4
+    }
+   ],
+   "captions": [
+    {
+     "text": "Mother fought. It wasn't enough.",
+     "t": 1.3,
+     "dur": 5.8
+    }
+   ],
+   "sfx": [
+    {
+     "t": 1.2,
+     "id": "screech_near"
+    },
+    {
+     "t": 3.0,
+     "id": "mother_roar"
+    },
+    {
+     "t": 4.2,
+     "id": "infect_hit"
+    },
+    {
+     "t": 5.5,
+     "id": "infect_hit"
+    },
+    {
+     "t": 6.6,
+     "id": "mother_whimper"
+    }
+   ],
+   "layers": [
+    {
+     "kind": "sky",
+     "id": "sky",
+     "top": "#7fc8dc",
+     "bottom": "#f0e6a8",
+     "y0": -107,
+     "y1": 251,
+     "par": 0.1,
+     "clouds": 5,
+     "cloud_col": "#ffffff",
+     "cloud_alpha": 0.5,
+     "cloud_y": [
+      13,
+      113
+     ]
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_01",
+     "x": -233,
+     "y": 219,
+     "scale": 1,
+     "par": 0.3,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_02",
+     "x": -135,
+     "y": 221,
+     "scale": 1,
+     "par": 0.3,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_03",
+     "x": -77,
+     "y": 217,
+     "scale": 1,
+     "par": 0.3,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_05",
+     "x": 2,
+     "y": 222,
+     "scale": 1,
+     "par": 0.3,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_08",
+     "x": 65,
+     "y": 217,
+     "scale": 1,
+     "par": 0.3,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_12",
+     "x": 159,
+     "y": 217,
+     "scale": 1,
+     "par": 0.3,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_04",
+     "x": 212,
+     "y": 216,
+     "scale": 1,
+     "par": 0.3,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_09",
+     "x": 301,
+     "y": 220,
+     "scale": 1,
+     "par": 0.3,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_01",
+     "x": 373,
+     "y": 215,
+     "scale": 1,
+     "par": 0.3,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_02",
+     "x": 449,
+     "y": 219,
+     "scale": 1,
+     "par": 0.3,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_03",
+     "x": 548,
+     "y": 222,
+     "scale": 1,
+     "par": 0.3,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_05",
+     "x": 626,
+     "y": 221,
+     "scale": 1,
+     "par": 0.3,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_08",
+     "x": 701,
+     "y": 215,
+     "scale": 1,
+     "par": 0.3,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_12",
+     "x": 765,
+     "y": 218,
+     "scale": 1,
+     "par": 0.3,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_04",
+     "x": 842,
+     "y": 215,
+     "scale": 1,
+     "par": 0.3,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_03",
+     "x": -191,
+     "y": 236,
+     "scale": 1,
+     "par": 0.45,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_12",
+     "x": -104,
+     "y": 230,
+     "scale": 1,
+     "par": 0.45,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_08",
+     "x": -5,
+     "y": 233,
+     "scale": 1,
+     "par": 0.45,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_01",
+     "x": 78,
+     "y": 230,
+     "scale": 1,
+     "par": 0.45,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_05",
+     "x": 198,
+     "y": 233,
+     "scale": 1,
+     "par": 0.45,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_02",
+     "x": 283,
+     "y": 237,
+     "scale": 1,
+     "par": 0.45,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_03",
+     "x": 417,
+     "y": 231,
+     "scale": 1,
+     "par": 0.45,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_12",
+     "x": 509,
+     "y": 233,
+     "scale": 1,
+     "par": 0.45,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_08",
+     "x": 615,
+     "y": 234,
+     "scale": 1,
+     "par": 0.45,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_01",
+     "x": 699,
+     "y": 233,
+     "scale": 1,
+     "par": 0.45,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_05",
+     "x": 804,
+     "y": 234,
+     "scale": 1,
+     "par": 0.45,
+     "tint": "#a6c8a2",
+     "alpha": 1.0
+    },
+    {
+     "kind": "ground",
+     "id": "ground",
+     "y": 224,
+     "h": 467,
+     "col": "#62923c",
+     "col2": "#578732",
+     "edge": "#3f6a2c",
+     "par": 0.6
+    },
+    {
+     "kind": "image",
+     "img": "deco_bush_01",
+     "x": -220,
+     "y": 274,
+     "scale": 2,
+     "par": 0.62,
+     "tint": "#78a860"
+    },
+    {
+     "kind": "image",
+     "img": "deco_bush_03",
+     "x": -75,
+     "y": 274,
+     "scale": 2,
+     "par": 0.62,
+     "tint": "#78a860"
+    },
+    {
+     "kind": "image",
+     "img": "deco_bush_05",
+     "x": 48,
+     "y": 269,
+     "scale": 2,
+     "par": 0.62,
+     "tint": "#78a860"
+    },
+    {
+     "kind": "image",
+     "img": "deco_bush_06",
+     "x": 143,
+     "y": 275,
+     "scale": 2,
+     "par": 0.62,
+     "tint": "#78a860"
+    },
+    {
+     "kind": "image",
+     "img": "deco_bush_08",
+     "x": 268,
+     "y": 277,
+     "scale": 2,
+     "par": 0.62,
+     "tint": "#78a860"
+    },
+    {
+     "kind": "image",
+     "img": "deco_bush_02",
+     "x": 419,
+     "y": 271,
+     "scale": 2,
+     "par": 0.62,
+     "tint": "#78a860"
+    },
+    {
+     "kind": "image",
+     "img": "deco_bush_07",
+     "x": 557,
+     "y": 275,
+     "scale": 2,
+     "par": 0.62,
+     "tint": "#78a860"
+    },
+    {
+     "kind": "image",
+     "img": "deco_bush_01",
+     "x": 675,
+     "y": 273,
+     "scale": 2,
+     "par": 0.62,
+     "tint": "#78a860"
+    },
+    {
+     "kind": "image",
+     "img": "deco_bush_03",
+     "x": 823,
+     "y": 273,
+     "scale": 2,
+     "par": 0.62,
+     "tint": "#78a860"
+    },
+    {
+     "kind": "overlay",
+     "id": "dusk",
+     "color": "#2a1050",
+     "par": 0.0,
+     "keys": {
+      "alpha": [
+       [
+        0,
+        0.08
+       ],
+       [
+        8.6,
+        0.4
+       ]
+      ]
+     }
+    },
+    {
+     "kind": "creep",
+     "id": "creep",
+     "x": 733,
+     "y": 293,
+     "col": "#8a3fd0",
+     "par": 1.0,
+     "max": 867,
+     "keys": {
+      "r": [
+       [
+        0,
+        0.45
+       ],
+       [
+        8.6,
+        0.95
+       ]
+      ]
+     }
+    },
+    {
+     "kind": "image",
+     "id": "mother",
+     "img": "raptor_adult_sw",
+     "img_b": "raptor_adult_sw",
+     "infect_b": true,
+     "own_look": true,
+     "scale": 3,
+     "x": 427,
+     "y": 323,
+     "par": 1.0,
+     "breathe": 1,
+     "tint": "#ffe9c8",
+     "shake_when": [
+      3.0,
+      3.5,
+      4.2,
+      4.8,
+      5.5,
+      6.0
+     ],
+     "keys": {
+      "x": [
+       [
+        0,
+        427
+       ],
+       [
+        2.8,
+        427
+       ],
+       [
+        3.1,
+        400
+       ],
+       [
+        3.6,
+        427
+       ],
+       [
+        4.1,
+        427
+       ],
+       [
+        4.3,
+        440
+       ],
+       [
+        8.6,
+        460
+       ]
+      ],
+      "mix": [
+       [
+        0,
+        0.0
+       ],
+       [
+        4.2,
+        0.0
+       ],
+       [
+        6.0,
+        1.0
+       ]
+      ],
+      "tint": [
+       [
+        0,
+        "#ffe9c8"
+       ],
+       [
+        4.2,
+        "#ffe9c8"
+       ],
+       [
+        6.0,
+        "#c9a8e8"
+       ],
+       [
+        7.8,
+        "#2a1838"
+       ]
+      ]
+     }
+    },
+    {
+     "kind": "image",
+     "id": "baby",
+     "img": "raptor_baby_sw",
+     "scale": 2,
+     "x": 220,
+     "y": 323,
+     "par": 1.0,
+     "jitter": 1,
+     "keys": {
+      "x": [
+       [
+        0,
+        253
+       ],
+       [
+        2.6,
+        220
+       ],
+       [
+        6.5,
+        200
+       ],
+       [
+        8.6,
+        193
+       ]
+      ]
+     }
+    },
+    {
+     "kind": "image",
+     "id": "queen",
+     "img": "husk_queen",
+     "scale": 2,
+     "x": 747,
+     "y": 313,
+     "par": 1.0,
+     "flip": true,
+     "tint": "#1e1228",
+     "keys": {
+      "x": [
+       [
+        0.8,
+        787
+       ],
+       [
+        3.2,
+        600
+       ],
+       [
+        8.6,
+        553
+       ]
+      ]
+     }
+    },
+    {
+     "kind": "image",
+     "id": "drone_a",
+     "img": "spore_drone",
+     "scale": 2,
+     "x": 733,
+     "y": 220,
+     "par": 1.0,
+     "flip": true,
+     "tint": "#1a0f24",
+     "breathe": 3,
+     "keys": {
+      "x": [
+       [
+        1.2,
+        747
+       ],
+       [
+        3.0,
+        547
+       ],
+       [
+        4.2,
+        513
+       ],
+       [
+        8.6,
+        507
+       ]
+      ],
+      "y": [
+       [
+        1.2,
+        200
+       ],
+       [
+        3.0,
+        253
+       ],
+       [
+        4.2,
+        267
+       ],
+       [
+        8.6,
+        240
+       ]
+      ]
+     }
+    },
+    {
+     "kind": "image",
+     "id": "drone_b",
+     "img": "spore_drone",
+     "scale": 2,
+     "x": 733,
+     "y": 200,
+     "par": 1.0,
+     "flip": true,
+     "tint": "#1a0f24",
+     "breathe": 3,
+     "keys": {
+      "x": [
+       [
+        1.8,
+        773
+       ],
+       [
+        3.6,
+        587
+       ],
+       [
+        5.0,
+        467
+       ],
+       [
+        8.6,
+        460
+       ]
+      ],
+      "y": [
+       [
+        1.8,
+        173
+       ],
+       [
+        3.6,
+        220
+       ],
+       [
+        5.0,
+        253
+       ],
+       [
+        8.6,
+        220
+       ]
+      ]
+     }
+    },
+    {
+     "kind": "particles",
+     "id": "spores",
+     "mode": "spores",
+     "rect": [
+      293,
+      167,
+      347,
+      167
+     ],
+     "n": 30,
+     "color": "#c07aff",
+     "size": 2,
+     "speed": [
+      -4,
+      -13
+     ],
+     "t0": 3.6,
+     "par": 1.0
+    },
+    {
+     "kind": "overlay",
+     "id": "vig",
+     "color": "#12001e",
+     "par": 0.0,
+     "mode": "vignette",
+     "keys": {
+      "alpha": [
+       [
+        0,
+        0.0
+       ],
+       [
+        8.6,
+        0.55
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "id": "flee",
+   "name": "Run",
+   "dur": 6.8,
+   "fade_in": 0.6,
+   "fade_out": 1.2,
+   "camera": {
+    "from": [
+     13,
+     0
+    ],
+    "to": [
+     60,
+     0
+    ],
+    "ease": "smooth"
+   },
+   "captions": [
+    {
+     "text": "Run.",
+     "t": 1.6,
+     "dur": 3.4
+    }
+   ],
+   "sfx": [
+    {
+     "t": 0.4,
+     "id": "wind_low"
+    },
+    {
+     "t": 2.2,
+     "id": "footsteps_run"
+    }
+   ],
+   "layers": [
+    {
+     "kind": "sky",
+     "id": "sky",
+     "top": "#4a3a70",
+     "bottom": "#b86a74",
+     "y0": -107,
+     "y1": 251,
+     "par": 0.1,
+     "clouds": 5,
+     "cloud_col": "#ffffff",
+     "cloud_alpha": 0.5,
+     "cloud_y": [
+      13,
+      113
+     ]
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_01",
+     "x": -221,
+     "y": 223,
+     "scale": 1,
+     "par": 0.3,
+     "tint": "#5a4a78",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_02",
+     "x": -162,
+     "y": 217,
+     "scale": 1,
+     "par": 0.3,
+     "tint": "#5a4a78",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_03",
+     "x": -77,
+     "y": 219,
+     "scale": 1,
+     "par": 0.3,
+     "tint": "#5a4a78",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_05",
+     "x": -2,
+     "y": 222,
+     "scale": 1,
+     "par": 0.3,
+     "tint": "#5a4a78",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_08",
+     "x": 81,
+     "y": 223,
+     "scale": 1,
+     "par": 0.3,
+     "tint": "#5a4a78",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_12",
+     "x": 170,
+     "y": 219,
+     "scale": 1,
+     "par": 0.3,
+     "tint": "#5a4a78",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_04",
+     "x": 217,
+     "y": 218,
+     "scale": 1,
+     "par": 0.3,
+     "tint": "#5a4a78",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_09",
+     "x": 298,
+     "y": 221,
+     "scale": 1,
+     "par": 0.3,
+     "tint": "#5a4a78",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_01",
+     "x": 382,
+     "y": 220,
+     "scale": 1,
+     "par": 0.3,
+     "tint": "#5a4a78",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_02",
+     "x": 479,
+     "y": 218,
+     "scale": 1,
+     "par": 0.3,
+     "tint": "#5a4a78",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_03",
+     "x": 549,
+     "y": 219,
+     "scale": 1,
+     "par": 0.3,
+     "tint": "#5a4a78",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_05",
+     "x": 628,
+     "y": 218,
+     "scale": 1,
+     "par": 0.3,
+     "tint": "#5a4a78",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_08",
+     "x": 723,
+     "y": 217,
+     "scale": 1,
+     "par": 0.3,
+     "tint": "#5a4a78",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_12",
+     "x": 795,
+     "y": 219,
+     "scale": 1,
+     "par": 0.3,
+     "tint": "#5a4a78",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_03",
+     "x": -184,
+     "y": 231,
+     "scale": 1,
+     "par": 0.45,
+     "tint": "#5a4a78",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_12",
+     "x": -98,
+     "y": 233,
+     "scale": 1,
+     "par": 0.45,
+     "tint": "#5a4a78",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_08",
+     "x": 13,
+     "y": 233,
+     "scale": 1,
+     "par": 0.45,
+     "tint": "#5a4a78",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_01",
+     "x": 89,
+     "y": 231,
+     "scale": 1,
+     "par": 0.45,
+     "tint": "#5a4a78",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_05",
+     "x": 199,
+     "y": 229,
+     "scale": 1,
+     "par": 0.45,
+     "tint": "#5a4a78",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_02",
+     "x": 292,
+     "y": 232,
+     "scale": 1,
+     "par": 0.45,
+     "tint": "#5a4a78",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_03",
+     "x": 404,
+     "y": 230,
+     "scale": 1,
+     "par": 0.45,
+     "tint": "#5a4a78",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_12",
+     "x": 517,
+     "y": 232,
+     "scale": 1,
+     "par": 0.45,
+     "tint": "#5a4a78",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_08",
+     "x": 609,
+     "y": 233,
+     "scale": 1,
+     "par": 0.45,
+     "tint": "#5a4a78",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_01",
+     "x": 718,
+     "y": 234,
+     "scale": 1,
+     "par": 0.45,
+     "tint": "#5a4a78",
+     "alpha": 1.0
+    },
+    {
+     "kind": "image",
+     "img": "deco_tree_05",
+     "x": 814,
+     "y": 237,
+     "scale": 1,
+     "par": 0.45,
+     "tint": "#5a4a78",
+     "alpha": 1.0
+    },
+    {
+     "kind": "ground",
+     "id": "ground",
+     "y": 224,
+     "h": 467,
+     "col": "#3c3a4a",
+     "col2": "#35334a",
+     "edge": "#26243a",
+     "par": 0.6
+    },
+    {
+     "kind": "image",
+     "img": "deco_bush_01",
+     "x": -185,
+     "y": 274,
+     "scale": 2,
+     "par": 0.62,
+     "tint": "#4d3a66"
+    },
+    {
+     "kind": "image",
+     "img": "deco_bush_03",
+     "x": -75,
+     "y": 269,
+     "scale": 2,
+     "par": 0.62,
+     "tint": "#4d3a66"
+    },
+    {
+     "kind": "image",
+     "img": "deco_bush_05",
+     "x": 38,
+     "y": 277,
+     "scale": 2,
+     "par": 0.62,
+     "tint": "#4d3a66"
+    },
+    {
+     "kind": "image",
+     "img": "deco_bush_06",
+     "x": 167,
+     "y": 275,
+     "scale": 2,
+     "par": 0.62,
+     "tint": "#4d3a66"
+    },
+    {
+     "kind": "image",
+     "img": "deco_bush_08",
+     "x": 314,
+     "y": 271,
+     "scale": 2,
+     "par": 0.62,
+     "tint": "#4d3a66"
+    },
+    {
+     "kind": "image",
+     "img": "deco_bush_02",
+     "x": 443,
+     "y": 276,
+     "scale": 2,
+     "par": 0.62,
+     "tint": "#4d3a66"
+    },
+    {
+     "kind": "image",
+     "img": "deco_bush_07",
+     "x": 554,
+     "y": 275,
+     "scale": 2,
+     "par": 0.62,
+     "tint": "#4d3a66"
+    },
+    {
+     "kind": "image",
+     "img": "deco_bush_01",
+     "x": 689,
+     "y": 273,
+     "scale": 2,
+     "par": 0.62,
+     "tint": "#4d3a66"
+    },
+    {
+     "kind": "image",
+     "img": "deco_bush_03",
+     "x": 794,
+     "y": 276,
+     "scale": 2,
+     "par": 0.62,
+     "tint": "#4d3a66"
+    },
+    {
+     "kind": "creep",
+     "id": "creep",
+     "x": 667,
+     "y": 293,
+     "col": "#8a3fd0",
+     "par": 1.0,
+     "max": 867,
+     "keys": {
+      "r": [
+       [
+        0,
+        1.0
+       ]
+      ]
+     }
+    },
+    {
+     "kind": "image",
+     "id": "mother",
+     "img": "raptor_adult_sw",
+     "img_b": "raptor_adult_sw",
+     "infect_b": true,
+     "own_look": true,
+     "scale": 3,
+     "x": 520,
+     "y": 323,
+     "par": 1.0,
+     "breathe": 1,
+     "tint": "#2a1838",
+     "keys": {
+      "mix": [
+       [
+        0,
+        1.0
+       ]
+      ]
+     }
+    },
+    {
+     "kind": "glow",
+     "id": "mother_glow",
+     "x": 520,
+     "y": 280,
+     "r": 80,
+     "col": "#9a4aff",
+     "par": 1.0,
+     "keys": {
+      "alpha": [
+       [
+        0,
+        0.35
+       ],
+       [
+        6.8,
+        0.25
+       ]
+      ]
+     }
+    },
+    {
+     "kind": "image",
+     "id": "queen",
+     "img": "husk_queen",
+     "scale": 2,
+     "x": 667,
+     "y": 313,
+     "par": 1.0,
+     "flip": true,
+     "tint": "#1e1228",
+     "keys": {
+      "x": [
+       [
+        0,
+        667
+       ],
+       [
+        6.8,
+        627
+       ]
+      ]
+     }
+    },
+    {
+     "kind": "image",
+     "id": "baby",
+     "img": "raptor_baby_sw",
+     "scale": 2,
+     "x": 220,
+     "y": 323,
+     "par": 1.0,
+     "jitter": 1,
+     "hop": 5,
+     "keys": {
+      "x": [
+       [
+        0,
+        220
+       ],
+       [
+        1.7,
+        220
+       ],
+       [
+        2.3,
+        217
+       ],
+       [
+        5.6,
+        -147
+       ]
+      ]
+     }
+    },
+    {
+     "kind": "particles",
+     "id": "spores",
+     "mode": "spores",
+     "rect": [
+      200,
+      133,
+      533,
+      200
+     ],
+     "n": 28,
+     "color": "#c07aff",
+     "size": 2,
+     "speed": [
+      -7,
+      -11
+     ],
+     "par": 1.0
+    },
+    {
+     "kind": "overlay",
+     "id": "dusk",
+     "color": "#1a0830",
+     "par": 0.0,
+     "keys": {
+      "alpha": [
+       [
+        0,
+        0.35
+       ],
+       [
+        6.8,
+        0.5
+       ]
+      ]
+     }
+    },
+    {
+     "kind": "overlay",
+     "id": "vig",
+     "color": "#0a0010",
+     "par": 0.0,
+     "mode": "vignette",
+     "keys": {
+      "alpha": [
+       [
+        0,
+        0.5
+       ],
+       [
+        6.8,
+        0.75
+       ]
+      ]
+     }
+    }
+   ]
+  }
+ ],
+ "frame": [
+  640,
+  360
+ ]
+}

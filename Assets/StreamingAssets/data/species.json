@@ -1,0 +1,86 @@
+{
+ "velociraptor": {
+  "name": "Velociraptor",
+  "era": "Late Cretaceous",
+  "playable": true,
+  "tags": [
+   "reptile",
+   "dinosaur",
+   "stealthy"
+  ],
+  "blurb": "Fast, feathered ambush hunter. Wins by striking unseen: pounce, bleed, hit-and-run, and extra turns from raw speed.",
+  "playstyle": "STEALTH / AMBUSH",
+  "base": {
+   "max_hp": 26,
+   "speed": 11,
+   "move": 3,
+   "stamina": 3,
+   "hand_size": 5
+  },
+  "start_hunger": 90,
+  "starter_deck": {
+   "claw_slash": 4,
+   "skitter": 2,
+   "crouch": 2,
+   "pounce": 2
+  },
+  "sprites": {
+   "egg": "egg_raptor",
+   "baby": "raptor_baby",
+   "juvenile": "raptor_juvenile",
+   "adult": "raptor_adult",
+   "prime": "raptor_prime"
+  },
+  "facing": {
+   "front": 1.0,
+   "side": 1.15,
+   "back": 1.3
+  },
+  "diet": "carnivore"
+ },
+ "tyrannosaurus": {
+  "name": "Tyrannosaurus",
+  "era": "Late Cretaceous",
+  "playable": false,
+  "tags": [
+   "reptile",
+   "dinosaur"
+  ],
+  "blurb": "Brute force apex predator. (locked)",
+  "playstyle": "BRUISER",
+  "sprites": {
+   "egg": "egg_locked"
+  },
+  "diet": "carnivore"
+ },
+ "triceratops": {
+  "name": "Triceratops",
+  "era": "Late Cretaceous",
+  "playable": false,
+  "tags": [
+   "reptile",
+   "dinosaur"
+  ],
+  "blurb": "Armoured charger. (locked)",
+  "playstyle": "TANK / CHARGE",
+  "sprites": {
+   "egg": "egg_locked"
+  },
+  "diet": "herbivore"
+ },
+ "stegosaurus": {
+  "name": "Stegosaurus",
+  "era": "Late Jurassic",
+  "playable": false,
+  "tags": [
+   "reptile",
+   "dinosaur"
+  ],
+  "blurb": "Spiked tail, slow and sturdy. (locked)",
+  "playstyle": "THORNS / CONTROL",
+  "sprites": {
+   "egg": "egg_locked"
+  },
+  "diet": "herbivore"
+ }
+}

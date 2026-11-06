@@ -1,0 +1,343 @@
+{
+ "_doc": "CHARACTER CUSTOMIZATION (per species). Sprites are recoloured at runtime (scripts/core/Look.gd), so every growth stage keeps the chosen look: SKIN picks the base colour (luminance of the original shading is kept, so the art still reads), PATTERN paints stripes/spots/mottling in PATTERN COLOUR on the skin pixels only, GENDER is cosmetic (crest tint) with no gameplay effect. 'sprites' lists every sprite that carries the look: skin_hue [lo,hi] (degrees) = which source hues count as skin; crest pixels are the red/orange hues; portrait=true sprites have a background that is flood-filled away from the borders and left untouched. A designer who paints real layered art can instead drop assets/sprites/<sprite>_skin.png / _pattern.png masks later: the options below keep their ids. Choice 'classic' + 'solid' + 'male' reproduces the original art exactly.",
+ "velociraptor": {
+  "defaults": {
+   "skin": "classic",
+   "pattern": "solid",
+   "pcolor": "cream",
+   "gender": "male"
+  },
+  "skins": [
+   {
+    "id": "classic",
+    "name": "Classic",
+    "color": null
+   },
+   {
+    "id": "jungle",
+    "name": "Jungle Green",
+    "color": "#5d9a4a"
+   },
+   {
+    "id": "teal",
+    "name": "Lagoon Teal",
+    "color": "#3a9a98"
+   },
+   {
+    "id": "azure",
+    "name": "Azure",
+    "color": "#4a78c0"
+   },
+   {
+    "id": "ember",
+    "name": "Ember",
+    "color": "#c8742e"
+   },
+   {
+    "id": "sand",
+    "name": "Dune Sand",
+    "color": "#c2a468"
+   },
+   {
+    "id": "crimson",
+    "name": "Crimson",
+    "color": "#b04842"
+   },
+   {
+    "id": "violet",
+    "name": "Violet",
+    "color": "#7e5cb0"
+   },
+   {
+    "id": "slate",
+    "name": "Slate",
+    "color": "#707c88"
+   },
+   {
+    "id": "shadow",
+    "name": "Shadow",
+    "color": "#3f424a"
+   }
+  ],
+  "patterns": [
+   {
+    "id": "solid",
+    "name": "Solid",
+    "kind": "none"
+   },
+   {
+    "id": "stripes",
+    "name": "Stripes",
+    "kind": "stripes",
+    "period": 4,
+    "width": 1
+   },
+   {
+    "id": "spots",
+    "name": "Spots",
+    "kind": "spots",
+    "cell": 4,
+    "radius": 1.25,
+    "density": 0.75
+   },
+   {
+    "id": "mottled",
+    "name": "Mottled",
+    "kind": "mottled",
+    "cell": 1,
+    "density": 0.36
+   }
+  ],
+  "pcolors": [
+   {
+    "id": "cream",
+    "name": "Cream",
+    "color": "#e6dca8"
+   },
+   {
+    "id": "charcoal",
+    "name": "Charcoal",
+    "color": "#33363d"
+   },
+   {
+    "id": "rust",
+    "name": "Rust",
+    "color": "#a8501e"
+   },
+   {
+    "id": "white",
+    "name": "Bone White",
+    "color": "#f0efe6"
+   },
+   {
+    "id": "gold",
+    "name": "Gold",
+    "color": "#d8a830"
+   },
+   {
+    "id": "crimson",
+    "name": "Crimson",
+    "color": "#a83030"
+   },
+   {
+    "id": "azure",
+    "name": "Azure",
+    "color": "#4a82d0"
+   },
+   {
+    "id": "lime",
+    "name": "Lime",
+    "color": "#8cc83c"
+   }
+  ],
+  "genders": [
+   {
+    "id": "male",
+    "name": "Male",
+    "desc": "Dark, bold dorsal stripe.",
+    "crest_sat": 1.0,
+    "crest_val": 1.0,
+    "cosmetic": true
+   },
+   {
+    "id": "female",
+    "name": "Female",
+    "desc": "Softer, paler dorsal stripe.",
+    "crest_sat": 0.6,
+    "crest_val": 1.15,
+    "crest_lift": 0.45,
+    "cosmetic": true
+   }
+  ],
+  "stage_tone": {
+   "baby": 1.12,
+   "juvenile": 1.0,
+   "adult": 0.92,
+   "prime": 0.84
+  },
+  "sprites": {
+   "raptor_baby": {
+    "stage": "baby",
+    "mode": "brown",
+    "skin_hue": [
+     0,
+     60
+    ]
+   },
+   "raptor_baby_sw": {
+    "stage": "baby",
+    "mode": "brown",
+    "skin_hue": [
+     0,
+     60
+    ]
+   },
+   "raptor_baby_b": {
+    "stage": "baby",
+    "mode": "brown",
+    "skin_hue": [
+     0,
+     60
+    ]
+   },
+   "raptor_baby_nw": {
+    "stage": "baby",
+    "mode": "brown",
+    "skin_hue": [
+     0,
+     60
+    ]
+   },
+   "portrait_baby": {
+    "stage": "baby",
+    "mode": "brown",
+    "skin_hue": [
+     0,
+     60
+    ],
+    "portrait": true,
+    "bg_ref": "portrait_bg_raptor"
+   },
+   "raptor_juvenile": {
+    "stage": "juvenile",
+    "mode": "brown",
+    "skin_hue": [
+     0,
+     60
+    ]
+   },
+   "raptor_juvenile_sw": {
+    "stage": "juvenile",
+    "mode": "brown",
+    "skin_hue": [
+     0,
+     60
+    ]
+   },
+   "raptor_juvenile_b": {
+    "stage": "juvenile",
+    "mode": "brown",
+    "skin_hue": [
+     0,
+     60
+    ]
+   },
+   "raptor_juvenile_nw": {
+    "stage": "juvenile",
+    "mode": "brown",
+    "skin_hue": [
+     0,
+     60
+    ]
+   },
+   "portrait_juvenile": {
+    "stage": "juvenile",
+    "mode": "brown",
+    "skin_hue": [
+     0,
+     60
+    ],
+    "portrait": true,
+    "bg_ref": "portrait_bg_raptor"
+   },
+   "raptor_adult": {
+    "stage": "adult",
+    "mode": "brown",
+    "skin_hue": [
+     0,
+     60
+    ]
+   },
+   "raptor_adult_sw": {
+    "stage": "adult",
+    "mode": "brown",
+    "skin_hue": [
+     0,
+     60
+    ]
+   },
+   "raptor_adult_b": {
+    "stage": "adult",
+    "mode": "brown",
+    "skin_hue": [
+     0,
+     60
+    ]
+   },
+   "raptor_adult_nw": {
+    "stage": "adult",
+    "mode": "brown",
+    "skin_hue": [
+     0,
+     60
+    ]
+   },
+   "portrait_adult": {
+    "stage": "adult",
+    "mode": "brown",
+    "skin_hue": [
+     0,
+     60
+    ],
+    "portrait": true,
+    "bg_ref": "portrait_bg_raptor"
+   },
+   "raptor_prime": {
+    "stage": "prime",
+    "mode": "brown",
+    "skin_hue": [
+     0,
+     60
+    ]
+   },
+   "raptor_prime_sw": {
+    "stage": "prime",
+    "mode": "brown",
+    "skin_hue": [
+     0,
+     60
+    ]
+   },
+   "raptor_prime_b": {
+    "stage": "prime",
+    "mode": "brown",
+    "skin_hue": [
+     0,
+     60
+    ]
+   },
+   "raptor_prime_nw": {
+    "stage": "prime",
+    "mode": "brown",
+    "skin_hue": [
+     0,
+     60
+    ]
+   },
+   "portrait_prime": {
+    "stage": "prime",
+    "mode": "brown",
+    "skin_hue": [
+     0,
+     60
+    ],
+    "portrait": true,
+    "bg_ref": "portrait_bg_raptor"
+   }
+  },
+  "stage_sprites": [
+   "raptor_baby",
+   "raptor_juvenile",
+   "raptor_adult",
+   "raptor_prime"
+  ],
+  "preview": {
+   "egg": "egg_raptor",
+   "head": "portrait_adult",
+   "eye": [
+    20,
+    25
+   ]
+  }
+ }
+}

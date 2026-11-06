@@ -1,0 +1,127 @@
+{
+ "ground": {
+  "name": "Ground",
+  "move_cost": 1,
+  "blocks_move": false,
+  "blocks_sight": false,
+  "detect_mod": 1.0,
+  "desc": "Open ground."
+ },
+ "grass": {
+  "name": "Tall Grass",
+  "move_cost": 1,
+  "blocks_move": false,
+  "blocks_sight": false,
+  "detect_mod": 0.5,
+  "evasion": 0.25,
+  "desc": "Cover: halves how far enemies can spot you, needed to hide. Anyone standing here has 25% evasion: single-target attacks miss 1 time in 4 (area attacks always hit)."
+ },
+ "water": {
+  "name": "Water",
+  "move_cost": 2,
+  "blocks_move": false,
+  "blocks_sight": false,
+  "detect_mod": 1.25,
+  "desc": "Slows movement (cost 2). Splashing is noisy. Washes off spores."
+ },
+ "obstacle": {
+  "name": "Obstacle",
+  "move_cost": 99,
+  "blocks_move": true,
+  "blocks_sight": true,
+  "detect_mod": 1.0,
+  "desc": "Blocks movement and line of sight."
+ },
+ "themes": {
+  "jungle": {
+   "ground": [
+    "#5b7a3a",
+    "#4f6d33",
+    "#6a8a44"
+   ],
+   "grass": [
+    "#3f8a3a",
+    "#2f6e30",
+    "#6fc24e"
+   ],
+   "water": [
+    "#2f6fb0",
+    "#3f86c8",
+    "#8fc8f0"
+   ],
+   "obstacle": [
+    "#6b6558",
+    "#4d483f",
+    "#8d877a"
+   ],
+   "bg": "#16210f"
+  },
+  "tundra": {
+   "ground": [
+    "#c9d6df",
+    "#b6c6d2",
+    "#dde7ee"
+   ],
+   "grass": [
+    "#7da08a",
+    "#5f8670",
+    "#a9c9b2"
+   ],
+   "water": [
+    "#3b6fa3",
+    "#4f86bb",
+    "#b5d8f0"
+   ],
+   "obstacle": [
+    "#6a7684",
+    "#4b5562",
+    "#98a4b2"
+   ],
+   "bg": "#0f1a24"
+  },
+  "cave": {
+   "ground": [
+    "#4a4458",
+    "#3e384c",
+    "#5e5870"
+   ],
+   "grass": [
+    "#1c5a52",
+    "#2a8a7c",
+    "#46c0a0"
+   ],
+   "water": [
+    "#14304a",
+    "#1f5878",
+    "#58c4c8"
+   ],
+   "obstacle": [
+    "#5a5468",
+    "#3e384c",
+    "#7a7490"
+   ],
+   "bg": "#0c0814"
+  }
+ },
+ "traits": {
+  "_doc": "Per-tag terrain move-cost overrides {tile_id: cost}; a species/enemy def may also carry its own \"terrain_cost\". Costs never go below 1. Water base cost is 2 in this file; any tile can get move_cost >= 1 (e.g. mud, deep snow = 2).",
+  "aquatic": {
+   "water": 1
+  },
+  "semi_aquatic": {
+   "water": 1
+  },
+  "flying": {
+   "water": 1
+  }
+ },
+ "void": {
+  "name": "Void",
+  "move_cost": 99,
+  "blocks_move": true,
+  "blocks_sight": false,
+  "detect_mod": 1.0,
+  "no_draw": true,
+  "desc": "Outside the arena."
+ }
+}

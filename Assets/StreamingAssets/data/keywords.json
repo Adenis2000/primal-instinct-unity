@@ -1,0 +1,341 @@
+{
+ "_doc": "KEYWORD GLOSSARY. Words in card / item / hint / branch text that match a keyword's name or alias (case-sensitive, whole word; longest first) are shown BOLD + coloured, and hovering one for ~0.7s shows its tooltip (text includes numbers and stacking rules). In the battle hand, hovering a card also lists its keywords beside the zoomed card. 'ops' links card effect ops to a keyword (tests require the keyword to appear highlighted in that card's text). Add a keyword = add an entry here; no code change.",
+ "keywords": {
+  "bleed": {
+   "name": "Bleed",
+   "color": "#e8504a",
+   "aliases": [
+    "bleeding"
+   ],
+   "text": "Damage over time. At the start of its turn the unit takes damage equal to its Bleed stacks, then loses 1 stack. Stacks add up, so apply it early. Payoffs: Gore, Open Vein, Blood Sigil. Hits from behind can add more."
+  },
+  "poison": {
+   "name": "Poison",
+   "color": "#9aff5a",
+   "aliases": [
+    "poisoned"
+   ],
+   "text": "Damage over time: 2 damage at the start of each turn. Each stack is one turn, so stacks add duration. Not removed by blocking."
+  },
+  "weaken": {
+   "name": "Weaken",
+   "color": "#b0b0d8",
+   "aliases": [
+    "Weak",
+    "Weakened",
+    "weak",
+    "weakened"
+   ],
+   "text": "The unit deals 25% less damage. Counts down 1 each turn; stacks add turns."
+  },
+  "expose": {
+   "name": "Expose",
+   "color": "#f0b030",
+   "aliases": [
+    "Exposed",
+    "exposed"
+   ],
+   "text": "The unit takes 50% more damage (and ignores Armor). Counts down 1 each turn."
+  },
+  "stun": {
+   "name": "Stun",
+   "color": "#ffe060",
+   "aliases": [
+    "Stunned",
+    "stunned"
+   ],
+   "text": "The unit skips its next turn and any charging attack is interrupted. Counts down 1 per turn."
+  },
+  "web": {
+   "name": "Web",
+   "color": "#e8e8ff",
+   "aliases": [
+    "Webbed",
+    "webbed"
+   ],
+   "text": "Sticky silk: -2 movement for the number of turns shown. Slows prey so you can catch (or escape) it."
+  },
+  "slow": {
+   "name": "Slow",
+   "color": "#a8c8e8",
+   "aliases": [
+    "Slowed",
+    "slow"
+   ],
+   "text": "Reduced movement or turn rate. Web takes 2 movement away; Daze halves it; slow turners need extra turns to face you, so circle around behind them."
+  },
+  "daze": {
+   "name": "Daze",
+   "color": "#c8a0ff",
+   "aliases": [
+    "Dazed",
+    "dazed"
+   ],
+   "text": "The unit deals half damage and moves half as far. Counts down 1 each turn."
+  },
+  "fear": {
+   "name": "Fear",
+   "color": "#d890ff",
+   "aliases": [
+    "Feared",
+    "feared"
+   ],
+   "text": "The unit flees instead of attacking and any charge is cancelled. Bosses resist Fear."
+  },
+  "mark": {
+   "name": "Mark",
+   "color": "#ffb060",
+   "aliases": [
+    "Marked",
+    "marked"
+   ],
+   "text": "Your next hit on a Marked enemy deals +3 damage (more with Hunter's Lens); the Mark is then used up. Lasts a few turns."
+  },
+  "infection": {
+   "name": "Infection",
+   "color": "#8dff6a",
+   "aliases": [
+    "Infected",
+    "infected",
+    "Spores",
+    "spores",
+    "Spore"
+   ],
+   "text": "The asteroid parasite. Infected enemies have +30% HP, +2 damage and spread it to neighbours. Spores on you deal 1 damage per turn (wash off in water); eating an infected corpse gives you spores."
+  },
+  "exhaust": {
+   "name": "Exhaust",
+   "color": "#c0c0c0",
+   "aliases": [
+    "Exhausted",
+    "exhausted"
+   ],
+   "text": "The card is removed from your draw cycle for the rest of this battle after it is played. Powers always exhaust."
+  },
+  "ambush": {
+   "name": "Ambush",
+   "color": "#8fd070",
+   "aliases": [
+    "ambush",
+    "Ambushes"
+   ],
+   "text": "Strike from hiding before they notice you: your first hit on an unaware enemy is free and hits hard (base x2 plus Stalker, items). Staying in tall grass keeps you hidden."
+  },
+  "unspotted": {
+   "name": "Unspotted",
+   "color": "#8fd070",
+   "aliases": [
+    "unspotted",
+    "Unaware",
+    "unaware",
+    "hidden",
+    "Hidden"
+   ],
+   "text": "No enemy has noticed you. Many cards deal bonus damage to enemies that have not spotted you, and unaware enemies cannot dodge."
+  },
+  "backstab": {
+   "name": "Backstab",
+   "color": "#7dff8a",
+   "aliases": [
+    "backstab",
+    "Behind",
+    "behind",
+    "BEHIND"
+   ],
+   "text": "Hitting an enemy from behind multiplies damage (x1.5 by default; some cards go x2 or x3). Enemies face one of four directions: walk around them."
+  },
+  "flank": {
+   "name": "Flank",
+   "color": "#ffd24a",
+   "aliases": [
+    "Flanking",
+    "flanking",
+    "side",
+    "Side"
+   ],
+   "text": "Hits from the side deal +25% damage (x1.25) and from behind +50% unless a card says otherwise. Many cards and items add flat bonus damage for flanking."
+  },
+  "evasion": {
+   "name": "Evasion",
+   "color": "#9ae8ff",
+   "aliases": [
+    "Dodge",
+    "dodge",
+    "evasion"
+   ],
+   "text": "Chance to avoid a single-target attack (and its Bleed, Poison, Web...). Tall grass gives 25%. Area attacks cannot be dodged and unaware enemies cannot dodge."
+  },
+  "stalker": {
+   "name": "Stalker",
+   "color": "#6fc24e",
+   "aliases": [
+    "stalker"
+   ],
+   "text": "While no enemy has spotted you, your attacks deal extra damage (+3 per Stalker played). Lost the moment you are spotted."
+  },
+  "calm": {
+   "name": "Calm",
+   "color": "#6fc24e",
+   "aliases": [],
+   "text": "The first attack each turn made while unspotted refunds 1 stamina."
+  },
+  "hide": {
+   "name": "Hide",
+   "color": "#8fd070",
+   "aliases": [
+    "hide",
+    "Vanish",
+    "vanish"
+   ],
+   "text": "Vanish into tall grass: enemies 2+ tiles away lose sight of you. You stay hidden until you attack or are found."
+  },
+  "block": {
+   "name": "Block",
+   "color": "#6fb4ff",
+   "aliases": [
+    "block"
+   ],
+   "text": "Absorbs damage before HP is lost. Block is removed at the start of your next turn."
+  },
+  "momentum": {
+   "name": "Momentum",
+   "color": "#6fc8f0",
+   "aliases": [],
+   "text": "Tiles you have moved this turn. Cards like Rending Charge and Second Wind, and items like Momentum Boots, turn distance travelled into damage."
+  },
+  "armor": {
+   "name": "Armor",
+   "color": "#b0b8c8",
+   "aliases": [
+    "Armored",
+    "armored",
+    "armour"
+   ],
+   "text": "Flat damage taken off every hit from the front. Flank it, or Expose it to ignore armor."
+  },
+  "stamina": {
+   "name": "Stamina",
+   "color": "#f0b030",
+   "aliases": [
+    "stamina"
+   ],
+   "text": "Pays for cards. Refills fully at the start of your turn; Low hunger costs 1."
+  },
+  "hunger": {
+   "name": "Hunger",
+   "color": "#e8a060",
+   "aliases": [
+    "hunger"
+   ],
+   "text": "Drops every room you enter. Low hunger slows you and costs stamina; starving hurts. Eat corpses and forage to refill."
+  },
+  "diet": {
+   "name": "Diet",
+   "color": "#e0a050",
+   "aliases": [
+    "Diet",
+    "diet",
+    "nutrition",
+    "Nutrition"
+   ],
+   "text": "Rolling quality of your last meals: Poor, Fair, Good, Excellent. Better diets earn bonus XP, power Scavenger cards and unlock evolution branches."
+  },
+  "area": {
+   "name": "Area attack",
+   "color": "#ff9a6a",
+   "aliases": [
+    "Area attack",
+    "area attack",
+    "ALL adjacent",
+    "Cannot be dodged"
+   ],
+   "text": "Hits everything in its area. Cannot be Evaded."
+  },
+  "leap": {
+   "name": "Leap",
+   "color": "#c890f0",
+   "aliases": [
+    "Leap",
+    "leap",
+    "Pounce",
+    "pounce",
+    "dash",
+    "Dash"
+   ],
+   "text": "Jumps over obstacles to land next to a target. Needs a minimum distance (not usable at melee range) and may land you behind the target."
+  },
+  "retreat": {
+   "name": "Retreat",
+   "color": "#c890f0",
+   "aliases": [
+    "retreat",
+    "Retreats"
+   ],
+   "text": "Move away from enemies after acting, preferring tall grass. Hit-and-Run cards combine strike + retreat."
+  },
+  "telegraph": {
+   "name": "Telegraph",
+   "color": "#ff8060",
+   "aliases": [
+    "charging",
+    "Charging",
+    "charges",
+    "winds up"
+   ],
+   "text": "Heavy attacks are announced a turn ahead: the danger tiles turn red. Step out of them (or Stun / Fear the enemy) and the blow is wasted."
+  },
+  "pack": {
+   "name": "Pack",
+   "color": "#ffb060",
+   "aliases": [
+    "pack",
+    "Pack tactics"
+   ],
+   "text": "Pack hunters deal +1 damage for each ally also adjacent to you (max +2). Fight them in a corridor or pick them off one by one."
+  },
+  "power": {
+   "name": "Power",
+   "color": "#b878ff",
+   "aliases": [
+    "Power"
+   ],
+   "text": "Stays active for the rest of the battle once played; then exhausts."
+  },
+  "scavenger": {
+   "name": "Scavenger",
+   "color": "#d8a060",
+   "aliases": [],
+   "text": "Archetype: eat well. Cards and items that pay off a Good diet and heal or draw when you feed."
+  },
+  "tempo": {
+   "name": "Tempo",
+   "color": "#6fc8f0",
+   "aliases": [
+    "Tempo"
+   ],
+   "text": "Archetype: cheap, fast cards, extra moves and extra turns."
+  }
+ },
+ "ops": {
+  "bleed": "bleed",
+  "poison": "poison",
+  "weak": "weaken",
+  "expose": "expose",
+  "stun": "stun",
+  "web": "web",
+  "daze": "daze",
+  "fear": "fear",
+  "mark": "mark",
+  "double_bleed": "bleed",
+  "stalker": "stalker",
+  "calm": "calm",
+  "hide": "hide",
+  "damage_adjacent": "area",
+  "pounce": "leap",
+  "dash": "leap",
+  "retreat": "retreat",
+  "patient": "unspotted",
+  "evade": "evasion",
+  "block": "block"
+ }
+}
