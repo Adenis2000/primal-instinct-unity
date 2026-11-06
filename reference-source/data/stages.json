@@ -1,0 +1,506 @@
+{
+ "order": [
+  "stage_1",
+  "stage_2"
+ ],
+ "defs": {
+  "stage_1": {
+   "name": "Hatchling Hollow",
+   "subtitle": "A lush hollow teeming with tiny creatures. Learn the ropes.",
+   "theme": "jungle",
+   "weather_weights": {
+    "clear": 2,
+    "fog": 2,
+    "rain": 2,
+    "storm": 1,
+    "heat": 1,
+    "cold": 1
+   },
+   "terrain": {
+    "grass_blobs": [
+     3,
+     5
+    ],
+    "grass_size": [
+     3,
+     7
+    ],
+    "water_blobs": [
+     0,
+     2
+    ],
+    "water_size": [
+     3,
+     6
+    ],
+    "obstacles": [
+     4,
+     8
+    ]
+   },
+   "unspotted_chance": 0.7,
+   "trap_chance": 0.12,
+   "required": [
+    "elite",
+    "puzzle",
+    "event",
+    "forage"
+   ],
+   "steps": [
+    {
+     "doors": 1,
+     "types": {
+      "battle": 1
+     },
+     "force": {
+      "enemies": [
+       "beetle"
+      ],
+      "unspotted": true,
+      "teach": "movement"
+     }
+    },
+    {
+     "doors": [
+      1,
+      3
+     ],
+     "types": {
+      "battle": 5,
+      "forage": 2,
+      "event": 2,
+      "puzzle": 1
+     }
+    },
+    {
+     "doors": [
+      1,
+      3
+     ],
+     "types": {
+      "battle": 4,
+      "event": 2,
+      "puzzle": 2,
+      "forage": 1
+     }
+    },
+    {
+     "doors": [
+      1,
+      3
+     ],
+     "types": {
+      "battle": 3,
+      "elite": 2,
+      "event": 1,
+      "forage": 1
+     }
+    },
+    {
+     "doors": [
+      1,
+      3
+     ],
+     "types": {
+      "battle": 3,
+      "forage": 2,
+      "event": 2,
+      "elite": 1
+     }
+    },
+    {
+     "doors": 1,
+     "types": {
+      "forage": 2,
+      "event": 1,
+      "battle": 1
+     }
+    },
+    {
+     "doors": 1,
+     "types": {
+      "boss": 1
+     }
+    }
+   ],
+   "battle_groups": [
+    {
+     "enemies": [
+      "beetle"
+     ],
+     "weight": 3,
+     "min_step": 2
+    },
+    {
+     "enemies": [
+      "skink"
+     ],
+     "weight": 3,
+     "min_step": 2
+    },
+    {
+     "enemies": [
+      "dragonfly"
+     ],
+     "weight": 2,
+     "min_step": 2
+    },
+    {
+     "enemies": [
+      "shrew"
+     ],
+     "weight": 2,
+     "min_step": 2
+    },
+    {
+     "enemies": [
+      "beetle",
+      "dragonfly"
+     ],
+     "weight": 2,
+     "min_step": 3
+    },
+    {
+     "enemies": [
+      "skink",
+      "shrew"
+     ],
+     "weight": 2,
+     "min_step": 3
+    },
+    {
+     "enemies": [
+      "dragonfly",
+      "dragonfly",
+      "beetle"
+     ],
+     "weight": 1,
+     "min_step": 4
+    },
+    {
+     "enemies": [
+      "spitter"
+     ],
+     "weight": 2,
+     "min_step": 3
+    },
+    {
+     "enemies": [
+      "spitter",
+      "beetle"
+     ],
+     "weight": 1,
+     "min_step": 4
+    }
+   ],
+   "elite_groups": [
+    {
+     "enemies": [
+      "meganeura"
+     ],
+     "weight": 3
+    },
+    {
+     "enemies": [
+      "meganeura",
+      "dragonfly"
+     ],
+     "weight": 1
+    }
+   ],
+   "boss": {
+    "enemies": [
+     "husk_queen"
+    ]
+   },
+   "secret": {
+    "chance": 0.12,
+    "theme": "cave",
+    "terrain": {
+     "grass_blobs": [
+      0,
+      1
+     ],
+     "grass_size": [
+      2,
+      4
+     ],
+     "water_blobs": [
+      1,
+      2
+     ],
+     "water_size": [
+      2,
+      4
+     ],
+     "obstacles": [
+      6,
+      10
+     ]
+    },
+    "groups": [
+     {
+      "enemies": [
+       "cave_spider",
+       "cave_spider",
+       "web_spitter"
+      ],
+      "weight": 3
+     },
+     {
+      "enemies": [
+       "cave_spider",
+       "web_spitter",
+       "web_spitter"
+      ],
+      "weight": 2
+     },
+     {
+      "enemies": [
+       "tomb_widow",
+       "cave_spider"
+      ],
+      "weight": 1
+     }
+    ],
+    "reward": {
+     "hunger": 25,
+     "drafts": [
+      "cave",
+      "elite"
+     ],
+     "item": "cave"
+    }
+   }
+  },
+  "stage_2": {
+   "name": "The Frozen Verge",
+   "subtitle": "Wind-scoured tundra. Bigger beasts, and something fell from the sky.",
+   "theme": "tundra",
+   "weather_weights": {
+    "cold": 4,
+    "fog": 1,
+    "clear": 1,
+    "storm": 1
+   },
+   "terrain": {
+    "grass_blobs": [
+     2,
+     4
+    ],
+    "grass_size": [
+     3,
+     6
+    ],
+    "water_blobs": [
+     1,
+     2
+    ],
+    "water_size": [
+     3,
+     5
+    ],
+    "obstacles": [
+     5,
+     9
+    ]
+   },
+   "unspotted_chance": 0.55,
+   "trap_chance": 0.2,
+   "required": [
+    "elite",
+    "puzzle",
+    "event",
+    "forage"
+   ],
+   "steps": [
+    {
+     "doors": [
+      1,
+      3
+     ],
+     "types": {
+      "battle": 4,
+      "event": 1,
+      "forage": 1
+     }
+    },
+    {
+     "doors": [
+      1,
+      3
+     ],
+     "types": {
+      "battle": 3,
+      "puzzle": 2,
+      "event": 1,
+      "forage": 1
+     }
+    },
+    {
+     "doors": [
+      1,
+      3
+     ],
+     "types": {
+      "battle": 3,
+      "elite": 2,
+      "event": 1
+     }
+    },
+    {
+     "doors": [
+      1,
+      3
+     ],
+     "types": {
+      "forage": 2,
+      "event": 2,
+      "battle": 2
+     }
+    },
+    {
+     "doors": [
+      1,
+      3
+     ],
+     "types": {
+      "elite": 1,
+      "battle": 3,
+      "forage": 1
+     }
+    },
+    {
+     "doors": 1,
+     "types": {
+      "boss": 1
+     }
+    }
+   ],
+   "battle_groups": [
+    {
+     "enemies": [
+      "compy",
+      "compy"
+     ],
+     "weight": 3,
+     "min_step": 1
+    },
+    {
+     "enemies": [
+      "dire_pup"
+     ],
+     "weight": 3,
+     "min_step": 1
+    },
+    {
+     "enemies": [
+      "glyptodon"
+     ],
+     "weight": 2,
+     "min_step": 1
+    },
+    {
+     "enemies": [
+      "compy",
+      "dire_pup"
+     ],
+     "weight": 2,
+     "min_step": 2
+    },
+    {
+     "enemies": [
+      "compy",
+      "compy",
+      "compy"
+     ],
+     "weight": 1,
+     "min_step": 3
+    },
+    {
+     "enemies": [
+      "spitter",
+      "glyptodon"
+     ],
+     "weight": 1,
+     "min_step": 2
+    }
+   ],
+   "elite_groups": [
+    {
+     "enemies": [
+      "smilodon"
+     ],
+     "weight": 3
+    },
+    {
+     "enemies": [
+      "smilodon",
+      "compy"
+     ],
+     "weight": 1
+    }
+   ],
+   "boss": {
+    "enemies": [
+     "infected_mammoth"
+    ]
+   },
+   "secret": {
+    "chance": 0.12,
+    "theme": "cave",
+    "terrain": {
+     "grass_blobs": [
+      0,
+      1
+     ],
+     "grass_size": [
+      2,
+      4
+     ],
+     "water_blobs": [
+      1,
+      2
+     ],
+     "water_size": [
+      2,
+      4
+     ],
+     "obstacles": [
+      6,
+      10
+     ]
+    },
+    "groups": [
+     {
+      "enemies": [
+       "cave_spider",
+       "cave_spider",
+       "web_spitter",
+       "web_spitter"
+      ],
+      "weight": 3
+     },
+     {
+      "enemies": [
+       "tomb_widow",
+       "cave_spider",
+       "web_spitter"
+      ],
+      "weight": 2
+     }
+    ],
+    "reward": {
+     "hunger": 30,
+     "drafts": [
+      "cave",
+      "elite"
+     ],
+     "item": "cave"
+    }
+   }
+  }
+ },
+ "_doc_exits": "A step's \"doors\" is either a fixed count or [min,max]; ranges are rolled with the seeded stage rng and capped at 3 (StageGen.MAX_EXITS). Each door becomes an exit gate on the edge of the battlefield (see ExitGen). Forced/boss steps stay at 1.",
+ "_doc_secret": "Secret cave (per stage). chance = seeded chance PER fought room (RARE). It is a normal path node: entering costs hunger like any room. Harder than a normal room (higher-tier spiders, tomb widow at the end), better rewards: unique cave cards + 'elite'-quality offers, bonus food, an item choice (3, better rarity odds)."
+}

@@ -1,0 +1,572 @@
+{
+ "events": {
+  "smoking_crater": {
+   "name": "Smoking Crater",
+   "stages": [
+    "stage_1",
+    "stage_2"
+   ],
+   "color": "#8a5fd0",
+   "text": "A small black rock has gouged the earth. It pulses with a faint green light, and the beetles nearby are behaving strangely.",
+   "choices": [
+    {
+     "label": "Lick the glowing rock",
+     "hint": "Gain XP. Risky.",
+     "outcomes": [
+      {
+       "weight": 1,
+       "text": "Strange visions flood your skull. You feel sharper, and a little feverish.",
+       "effects": [
+        {
+         "op": "xp",
+         "amount": 9
+        },
+        {
+         "op": "spores",
+         "amount": 3
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Pry loose a shard",
+     "hint": "Gain a card, lose HP.",
+     "outcomes": [
+      {
+       "weight": 3,
+       "text": "The shard hums in your claws and teaches you something new.",
+       "effects": [
+        {
+         "op": "add_card",
+         "pick": "tier_rare"
+        },
+        {
+         "op": "hp",
+         "amount": -4
+        }
+       ]
+      },
+      {
+       "weight": 1,
+       "text": "The shard bites back. Something crawls out and you flee.",
+       "effects": [
+        {
+         "op": "spores",
+         "amount": 4
+        },
+        {
+         "op": "hp",
+         "amount": -3
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Back away slowly",
+     "hint": "Nothing happens.",
+     "outcomes": [
+      {
+       "weight": 1,
+       "text": "Wise. You leave the crater behind.",
+       "effects": []
+      }
+     ]
+    }
+   ]
+  },
+  "tar_pit": {
+   "name": "The Tar Pit",
+   "stages": [
+    "stage_1",
+    "stage_2"
+   ],
+   "color": "#3a3a40",
+   "text": "A trapped carcass lies half-sunk in a glossy black tar pit, tantalisingly close to the edge.",
+   "choices": [
+    {
+     "label": "Reach for the carcass",
+     "hint": "Big meal. Might get stuck.",
+     "outcomes": [
+      {
+       "weight": 3,
+       "text": "You hook a haunch and drag it free. Feast!",
+       "effects": [
+        {
+         "op": "hunger",
+         "amount": 28
+        }
+       ]
+      },
+      {
+       "weight": 2,
+       "text": "The tar clamps your leg. You tear free, bruised but fed.",
+       "effects": [
+        {
+         "op": "hunger",
+         "amount": 18
+        },
+        {
+         "op": "hp",
+         "amount": -6
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Pick at the edges",
+     "hint": "Small safe meal.",
+     "outcomes": [
+      {
+       "weight": 1,
+       "text": "A few scraps of flesh. Better than nothing.",
+       "effects": [
+        {
+         "op": "hunger",
+         "amount": 10
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Move on",
+     "hint": "",
+     "outcomes": [
+      {
+       "weight": 1,
+       "text": "You skirt around the pit.",
+       "effects": []
+      }
+     ]
+    }
+   ]
+  },
+  "abandoned_nest": {
+   "name": "Abandoned Nest",
+   "stages": [
+    "stage_1",
+    "stage_2"
+   ],
+   "color": "#c9a24a",
+   "text": "A tidy nest of eggs sits unguarded. The parents could return at any moment.",
+   "choices": [
+    {
+     "label": "Steal the eggs",
+     "hint": "Food. Parents may return.",
+     "outcomes": [
+      {
+       "weight": 2,
+       "text": "Quick and quiet. You gorge on the eggs.",
+       "effects": [
+        {
+         "op": "hunger",
+         "amount": 30
+        }
+       ]
+      },
+      {
+       "weight": 1,
+       "text": "The parents return in a rage!",
+       "effects": [
+        {
+         "op": "battle",
+         "pool": "nest_guards"
+        },
+        {
+         "op": "hunger",
+         "amount": 20
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Study the nest",
+     "hint": "Gain XP.",
+     "outcomes": [
+      {
+       "weight": 1,
+       "text": "You learn how to hide better by studying how the nest is camouflaged.",
+       "effects": [
+        {
+         "op": "xp",
+         "amount": 7
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Rest in the nest",
+     "hint": "Heal.",
+     "outcomes": [
+      {
+       "weight": 1,
+       "text": "You curl up in the warm nest for a short rest.",
+       "effects": [
+        {
+         "op": "heal",
+         "amount": 10
+        },
+        {
+         "op": "hunger",
+         "amount": -4
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "frozen_carcass": {
+   "name": "Frozen Carcass",
+   "stages": [
+    "stage_2"
+   ],
+   "color": "#9fd8f0",
+   "text": "A mammoth calf lies frozen in the snow, strange violet veins spreading beneath its ice-glazed skin.",
+   "choices": [
+    {
+     "label": "Gnaw on the meat",
+     "hint": "Huge meal. Possibly infected.",
+     "outcomes": [
+      {
+       "weight": 2,
+       "text": "Cold, but filling. Your stomach settles.",
+       "effects": [
+        {
+         "op": "hunger",
+         "amount": 35
+        }
+       ]
+      },
+      {
+       "weight": 1,
+       "text": "The meat is laced with violet fibres. Your throat burns.",
+       "effects": [
+        {
+         "op": "hunger",
+         "amount": 35
+        },
+        {
+         "op": "spores",
+         "amount": 4
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Scrape the ice for water",
+     "hint": "Cleanse spores, heal.",
+     "outcomes": [
+      {
+       "weight": 1,
+       "text": "Clean meltwater. You feel better.",
+       "effects": [
+        {
+         "op": "cleanse"
+        },
+        {
+         "op": "heal",
+         "amount": 8
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Leave it",
+     "hint": "",
+     "outcomes": [
+      {
+       "weight": 1,
+       "text": "You walk on.",
+       "effects": []
+      }
+     ]
+    }
+   ]
+  },
+  "wolf_howl": {
+   "name": "Howl in the Dark",
+   "stages": [
+    "stage_2"
+   ],
+   "color": "#7f8fa4",
+   "text": "A distant howl. Pawprints in the snow lead to a ledge overlooking a wolf den.",
+   "choices": [
+    {
+     "label": "Ambush the den",
+     "hint": "Fight, but unspotted advantage.",
+     "outcomes": [
+      {
+       "weight": 1,
+       "text": "You creep close...",
+       "effects": [
+        {
+         "op": "battle",
+         "pool": "wolf_den",
+         "unspotted": true
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Raid the food cache",
+     "hint": "Meal, 50% a guard notices.",
+     "outcomes": [
+      {
+       "weight": 1,
+       "text": "You grab a haunch of venison and slip away.",
+       "effects": [
+        {
+         "op": "hunger",
+         "amount": 25
+        }
+       ]
+      },
+      {
+       "weight": 1,
+       "text": "A pup spots you!",
+       "effects": [
+        {
+         "op": "hunger",
+         "amount": 15
+        },
+        {
+         "op": "battle",
+         "pool": "wolf_den"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "label": "Sneak around",
+     "hint": "",
+     "outcomes": [
+      {
+       "weight": 1,
+       "text": "You circle wide and avoid the den.",
+       "effects": []
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "battle_pools": {
+  "nest_guards": {
+   "stage_1": [
+    "skink",
+    "skink"
+   ],
+   "stage_2": [
+    "compy",
+    "compy"
+   ]
+  },
+  "wolf_den": {
+   "stage_2": [
+    "dire_pup",
+    "compy"
+   ]
+  }
+ },
+ "forage": {
+  "berries": {
+   "label": "Sweet berries",
+   "hint": "+15 hunger. Safe.",
+   "stages": [
+    "stage_1",
+    "stage_2"
+   ],
+   "outcomes": [
+    {
+     "weight": 1,
+     "text": "Juicy and safe.",
+     "effects": [
+      {
+       "op": "hunger",
+       "amount": 15
+      }
+     ]
+    }
+   ],
+   "nutrition": {
+    "fiber": 5,
+    "minerals": 1
+   }
+  },
+  "carrion": {
+   "label": "Old carrion",
+   "hint": "+30 hunger. May bring spores.",
+   "stages": [
+    "stage_1",
+    "stage_2"
+   ],
+   "outcomes": [
+    {
+     "weight": 3,
+     "text": "Ripe, but it fills you up.",
+     "effects": [
+      {
+       "op": "hunger",
+       "amount": 30
+      }
+     ]
+    },
+    {
+     "weight": 1,
+     "text": "Ripe, and then some: spores.",
+     "effects": [
+      {
+       "op": "hunger",
+       "amount": 30
+      },
+      {
+       "op": "spores",
+       "amount": 3
+      }
+     ]
+    }
+   ],
+   "nutrition": {
+    "protein": 3,
+    "fat": 2,
+    "toxin": 2
+   }
+  },
+  "bug_nest": {
+   "label": "Grub nest",
+   "hint": "+18 hunger, +3 XP.",
+   "stages": [
+    "stage_1",
+    "stage_2"
+   ],
+   "outcomes": [
+    {
+     "weight": 1,
+     "text": "Wriggly, crunchy protein.",
+     "effects": [
+      {
+       "op": "hunger",
+       "amount": 18
+      },
+      {
+       "op": "xp",
+       "amount": 3
+      }
+     ]
+    }
+   ],
+   "nutrition": {
+    "protein": 4,
+    "fat": 1,
+    "minerals": 1
+   }
+  },
+  "waterhole": {
+   "label": "Waterhole",
+   "hint": "+8 hunger, heal 6, cleanse spores.",
+   "stages": [
+    "stage_1",
+    "stage_2"
+   ],
+   "outcomes": [
+    {
+     "weight": 1,
+     "text": "Cool water and a few minnows.",
+     "effects": [
+      {
+       "op": "hunger",
+       "amount": 8
+      },
+      {
+       "op": "heal",
+       "amount": 6
+      },
+      {
+       "op": "cleanse"
+      }
+     ]
+    }
+   ],
+   "nutrition": {
+    "minerals": 2
+   }
+  },
+  "stalk_rodent": {
+   "label": "Stalk a rodent",
+   "hint": "+22 hunger, might cost HP.",
+   "stages": [
+    "stage_1",
+    "stage_2"
+   ],
+   "outcomes": [
+    {
+     "weight": 2,
+     "text": "A clean kill.",
+     "effects": [
+      {
+       "op": "hunger",
+       "amount": 22
+      }
+     ]
+    },
+    {
+     "weight": 1,
+     "text": "It bites you before you finish it.",
+     "effects": [
+      {
+       "op": "hunger",
+       "amount": 22
+      },
+      {
+       "op": "hp",
+       "amount": -4
+      }
+     ]
+    }
+   ],
+   "nutrition": {
+    "protein": 4,
+    "fat": 3,
+    "minerals": 1
+   }
+  },
+  "ice_fish": {
+   "label": "Fish through the ice",
+   "hint": "+26 hunger, lose 3 HP to cold.",
+   "stages": [
+    "stage_2"
+   ],
+   "outcomes": [
+    {
+     "weight": 1,
+     "text": "You hook a fat fish, shivering.",
+     "effects": [
+      {
+       "op": "hunger",
+       "amount": 26
+      },
+      {
+       "op": "hp",
+       "amount": -3
+      }
+     ]
+    }
+   ],
+   "nutrition": {
+    "protein": 4,
+    "fat": 3,
+    "minerals": 2
+   }
+  }
+ }
+}

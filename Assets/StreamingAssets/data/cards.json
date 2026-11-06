@@ -1,0 +1,1145 @@
+{
+ "claw_slash": {
+  "name": "Claw Slash",
+  "cost": 1,
+  "type": "attack",
+  "tier": 1,
+  "rarity": "starter",
+  "target": "enemy",
+  "range": 1,
+  "icon": "icon_claw",
+  "text": "Deal 5 damage. +3 if the target is Unspotted.",
+  "effects": [
+   {
+    "op": "damage",
+    "amount": 5,
+    "unaware_bonus": 3
+   }
+  ],
+  "tags": [
+   "ambush"
+  ]
+ },
+ "skitter": {
+  "name": "Skitter",
+  "cost": 1,
+  "type": "skill",
+  "tier": 1,
+  "rarity": "starter",
+  "target": "self",
+  "icon": "icon_speed",
+  "text": "Gain 3 block. +3 movement this turn.",
+  "effects": [
+   {
+    "op": "block",
+    "amount": 3
+   },
+   {
+    "op": "gain_mp",
+    "amount": 3
+   }
+  ],
+  "tags": [
+   "speed",
+   "hitrun"
+  ]
+ },
+ "crouch": {
+  "name": "Crouch",
+  "cost": 1,
+  "type": "skill",
+  "tier": 1,
+  "rarity": "starter",
+  "target": "self",
+  "icon": "icon_eye",
+  "text": "Gain 4 block. In tall grass: vanish from enemies 2+ tiles away.",
+  "effects": [
+   {
+    "op": "block",
+    "amount": 4
+   },
+   {
+    "op": "hide"
+   }
+  ],
+  "tags": [
+   "ambush",
+   "hitrun"
+  ]
+ },
+ "pounce": {
+  "name": "Pounce",
+  "cost": 2,
+  "type": "attack",
+  "tier": 1,
+  "rarity": "starter",
+  "target": "enemy",
+  "range": 4,
+  "icon": "icon_leap",
+  "text": "Leap 2-4 tiles (not at melee range) and strike for 6. +6 if Unspotted.",
+  "effects": [
+   {
+    "op": "pounce"
+   },
+   {
+    "op": "damage",
+    "amount": 6,
+    "unaware_bonus": 6
+   }
+  ],
+  "min_range": 2,
+  "tags": [
+   "ambush"
+  ]
+ },
+ "nip": {
+  "name": "Nip",
+  "cost": 0,
+  "type": "attack",
+  "tier": 1,
+  "rarity": "common",
+  "target": "enemy",
+  "range": 1,
+  "icon": "icon_claw",
+  "text": "Deal 2 damage. +2 if Unspotted.",
+  "effects": [
+   {
+    "op": "damage",
+    "amount": 2,
+    "unaware_bonus": 2
+   }
+  ],
+  "tags": [
+   "ambush",
+   "speed"
+  ]
+ },
+ "rake": {
+  "name": "Rake",
+  "cost": 1,
+  "type": "attack",
+  "tier": 1,
+  "rarity": "common",
+  "target": "enemy",
+  "range": 1,
+  "icon": "icon_drop",
+  "text": "Deal 3 damage. Apply 3 Bleed.",
+  "effects": [
+   {
+    "op": "damage",
+    "amount": 3
+   },
+   {
+    "op": "bleed",
+    "amount": 3
+   }
+  ],
+  "tags": [
+   "bleed"
+  ]
+ },
+ "tail_whip": {
+  "name": "Tail Whip",
+  "cost": 1,
+  "type": "attack",
+  "tier": 1,
+  "rarity": "common",
+  "target": "enemy",
+  "range": 1,
+  "icon": "icon_claw",
+  "text": "Deal 3 damage. Weaken 2 turns (-25% damage).",
+  "effects": [
+   {
+    "op": "damage",
+    "amount": 3
+   },
+   {
+    "op": "weak",
+    "turns": 2
+   }
+  ],
+  "tags": [
+   "hitrun"
+  ]
+ },
+ "hit_and_run": {
+  "name": "Hit and Run",
+  "cost": 1,
+  "type": "attack",
+  "tier": 1,
+  "rarity": "common",
+  "target": "enemy",
+  "range": 1,
+  "icon": "icon_speed",
+  "text": "Deal 4 damage, then retreat up to 3 tiles (prefers tall grass).",
+  "effects": [
+   {
+    "op": "damage",
+    "amount": 4,
+    "unaware_bonus": 0
+   },
+   {
+    "op": "retreat",
+    "tiles": 3
+   }
+  ],
+  "tags": [
+   "hitrun"
+  ]
+ },
+ "grass_dive": {
+  "name": "Grass Dive",
+  "cost": 0,
+  "type": "skill",
+  "tier": 1,
+  "rarity": "common",
+  "target": "tile",
+  "range": 4,
+  "tile_filter": "grass",
+  "icon": "icon_eye",
+  "text": "Dash to a tall grass tile within 4 and hide. Not usable with an enemy adjacent.",
+  "effects": [
+   {
+    "op": "dash"
+   },
+   {
+    "op": "hide"
+   }
+  ],
+  "min_enemy_dist": 2,
+  "tags": [
+   "ambush",
+   "hitrun"
+  ]
+ },
+ "scavenge": {
+  "name": "Scavenge",
+  "cost": 1,
+  "type": "skill",
+  "tier": 1,
+  "rarity": "common",
+  "target": "self",
+  "icon": "icon_meat",
+  "text": "Draw 2 cards. Eat a morsel: +5 hunger.",
+  "effects": [
+   {
+    "op": "draw",
+    "amount": 2
+   },
+   {
+    "op": "hunger",
+    "amount": 5
+   }
+  ],
+  "tags": [
+   "scavenger"
+  ]
+ },
+ "quick_feet": {
+  "name": "Quick Feet",
+  "cost": 1,
+  "type": "power",
+  "tier": 1,
+  "rarity": "common",
+  "target": "self",
+  "icon": "icon_bolt",
+  "text": "Power. +2 speed for the rest of combat.",
+  "effects": [
+   {
+    "op": "speed_buff",
+    "amount": 2
+   }
+  ],
+  "tags": [
+   "speed"
+  ]
+ },
+ "sickle_claw": {
+  "name": "Sickle Claw",
+  "cost": 2,
+  "type": "attack",
+  "tier": 2,
+  "rarity": "uncommon",
+  "target": "enemy",
+  "range": 1,
+  "icon": "icon_claw",
+  "text": "Deal 7 damage, +7 if Unspotted. Apply 2 Bleed.",
+  "effects": [
+   {
+    "op": "damage",
+    "amount": 7,
+    "unaware_bonus": 7
+   },
+   {
+    "op": "bleed",
+    "amount": 2
+   }
+  ],
+  "tags": [
+   "ambush",
+   "bleed"
+  ]
+ },
+ "leaping_rake": {
+  "name": "Leaping Rake",
+  "cost": 1,
+  "type": "attack",
+  "tier": 2,
+  "rarity": "uncommon",
+  "target": "enemy",
+  "range": 3,
+  "icon": "icon_leap",
+  "text": "Leap 2-3 tiles (not at melee range), deal 4 and apply 2 Bleed. Hide if you land in tall grass.",
+  "effects": [
+   {
+    "op": "pounce"
+   },
+   {
+    "op": "damage",
+    "amount": 4
+   },
+   {
+    "op": "bleed",
+    "amount": 2
+   },
+   {
+    "op": "hide"
+   }
+  ],
+  "min_range": 2,
+  "tags": [
+   "bleed",
+   "hitrun"
+  ]
+ },
+ "adrenaline": {
+  "name": "Adrenaline",
+  "cost": 0,
+  "type": "skill",
+  "tier": 2,
+  "rarity": "uncommon",
+  "target": "self",
+  "icon": "icon_bolt",
+  "text": "Lose 2 HP. Gain 1 stamina and draw 1 card.",
+  "effects": [
+   {
+    "op": "self_damage",
+    "amount": 2
+   },
+   {
+    "op": "gain_stamina",
+    "amount": 1
+   },
+   {
+    "op": "draw",
+    "amount": 1
+   }
+  ],
+  "tags": [
+   "speed"
+  ]
+ },
+ "stalker": {
+  "name": "Stalker",
+  "cost": 1,
+  "type": "power",
+  "tier": 2,
+  "rarity": "uncommon",
+  "target": "self",
+  "icon": "icon_eye",
+  "text": "Power. While Unspotted, attacks deal +3 damage (Stalker).",
+  "effects": [
+   {
+    "op": "stalker",
+    "amount": 3
+   }
+  ],
+  "tags": [
+   "ambush"
+  ]
+ },
+ "twin_sickles": {
+  "name": "Twin Sickles",
+  "cost": 1,
+  "type": "attack",
+  "tier": 3,
+  "rarity": "rare",
+  "target": "enemy",
+  "range": 1,
+  "icon": "icon_claw",
+  "text": "Strike twice for 4, applying 1 Bleed each hit.",
+  "effects": [
+   {
+    "op": "damage",
+    "amount": 4,
+    "unaware_bonus": 2
+   },
+   {
+    "op": "bleed",
+    "amount": 1
+   },
+   {
+    "op": "damage",
+    "amount": 4
+   },
+   {
+    "op": "bleed",
+    "amount": 1
+   }
+  ],
+  "tags": [
+   "bleed"
+  ]
+ },
+ "shadow_rush": {
+  "name": "Shadow Rush",
+  "cost": 2,
+  "type": "attack",
+  "tier": 3,
+  "rarity": "rare",
+  "target": "enemy",
+  "range": 6,
+  "icon": "icon_leap",
+  "text": "Leap 2-6 tiles (not at melee range), deal 9 (+9 Unspotted). Hide if you land in grass.",
+  "effects": [
+   {
+    "op": "pounce"
+   },
+   {
+    "op": "damage",
+    "amount": 9,
+    "unaware_bonus": 9
+   },
+   {
+    "op": "hide"
+   }
+  ],
+  "min_range": 2,
+  "tags": [
+   "ambush"
+  ]
+ },
+ "predator_screech": {
+  "name": "Predator Screech",
+  "cost": 1,
+  "type": "skill",
+  "tier": 3,
+  "rarity": "rare",
+  "target": "all_enemies",
+  "icon": "icon_skull",
+  "text": "All enemies: Weaken 2 turns and Expose 1 turn (+50% damage taken).",
+  "effects": [
+   {
+    "op": "weak",
+    "turns": 2
+   },
+   {
+    "op": "expose",
+    "turns": 1
+   }
+  ],
+  "tags": [
+   "hitrun"
+  ]
+ },
+ "feast_bite": {
+  "name": "Feast Bite",
+  "cost": 2,
+  "type": "attack",
+  "tier": 3,
+  "rarity": "rare",
+  "target": "enemy",
+  "range": 1,
+  "icon": "icon_meat",
+  "text": "Deal 8 damage. If it kills: heal 6 and eat +12 hunger.",
+  "effects": [
+   {
+    "op": "damage",
+    "amount": 8,
+    "on_kill": [
+     {
+      "op": "heal",
+      "amount": 6
+     },
+     {
+      "op": "hunger",
+      "amount": 12
+     }
+    ]
+   }
+  ],
+  "tags": [
+   "scavenger"
+  ]
+ },
+ "apex_ambush": {
+  "name": "Apex Ambush",
+  "cost": 3,
+  "type": "attack",
+  "tier": 4,
+  "rarity": "legendary",
+  "target": "enemy",
+  "range": 7,
+  "icon": "icon_leap",
+  "text": "Leap 2-7 tiles (not at melee range) and deal 18 (+18 if Unspotted).",
+  "effects": [
+   {
+    "op": "pounce"
+   },
+   {
+    "op": "damage",
+    "amount": 18,
+    "unaware_bonus": 18
+   }
+  ],
+  "min_range": 2,
+  "tags": [
+   "ambush"
+  ]
+ },
+ "lightning_reflexes": {
+  "name": "Lightning Reflexes",
+  "cost": 2,
+  "type": "skill",
+  "tier": 4,
+  "rarity": "legendary",
+  "target": "self",
+  "icon": "icon_bolt",
+  "exhaust": true,
+  "text": "Take an extra turn immediately after this one. Exhaust.",
+  "effects": [
+   {
+    "op": "extra_turn"
+   }
+  ],
+  "tags": [
+   "speed"
+  ]
+ },
+ "death_roll": {
+  "name": "Death Roll",
+  "cost": 2,
+  "type": "attack",
+  "tier": 4,
+  "rarity": "legendary",
+  "target": "enemy",
+  "range": 1,
+  "icon": "icon_drop",
+  "text": "Apply 4 Bleed, then deal 5 plus 2 per Bleed on the target.",
+  "effects": [
+   {
+    "op": "bleed",
+    "amount": 4
+   },
+   {
+    "op": "damage",
+    "amount": 5,
+    "per_bleed": 2
+   }
+  ],
+  "tags": [
+   "bleed"
+  ]
+ },
+ "hunters_calm": {
+  "name": "Hunter's Calm",
+  "cost": 1,
+  "type": "power",
+  "tier": 4,
+  "rarity": "legendary",
+  "target": "self",
+  "icon": "icon_eye",
+  "text": "Power. Calm: the first attack each turn made while Unspotted refunds 1 stamina.",
+  "effects": [
+   {
+    "op": "calm"
+   }
+  ],
+  "tags": [
+   "ambush"
+  ]
+ },
+ "backstab": {
+  "name": "Backstab",
+  "cost": 1,
+  "type": "attack",
+  "tier": 1,
+  "rarity": "common",
+  "target": "enemy",
+  "range": 1,
+  "icon": "icon_claw",
+  "text": "Deal 4 damage. Backstab: x3 from behind, x1.25 from the side (+3 if Unspotted).",
+  "effects": [
+   {
+    "op": "damage",
+    "amount": 4,
+    "unaware_bonus": 3,
+    "facing": {
+     "front": 1.0,
+     "side": 1.25,
+     "back": 3.0
+    }
+   }
+  ],
+  "tags": [
+   "flank"
+  ]
+ },
+ "hamstring": {
+  "name": "Hamstring",
+  "cost": 1,
+  "type": "attack",
+  "tier": 2,
+  "rarity": "uncommon",
+  "target": "enemy",
+  "range": 1,
+  "icon": "icon_drop",
+  "text": "Deal 3 damage, apply 2 Bleed. Backstab: x2 damage, +4 Bleed, Weaken 2 turns.",
+  "effects": [
+   {
+    "op": "damage",
+    "amount": 3,
+    "facing": {
+     "front": 1.0,
+     "side": 1.25,
+     "back": 2.0
+    }
+   },
+   {
+    "op": "bleed",
+    "amount": 2,
+    "back_bonus": 4
+   },
+   {
+    "op": "weak",
+    "turns": 2,
+    "back_only": true
+   }
+  ],
+  "tags": [
+   "flank",
+   "bleed"
+  ]
+ },
+ "venom_fang": {
+  "name": "Venom Fang",
+  "cost": 1,
+  "type": "attack",
+  "tier": 2,
+  "rarity": "cave",
+  "target": "enemy",
+  "range": 1,
+  "icon": "icon_spore",
+  "text": "Deal 3 damage. Apply 4 Poison (2 damage a turn).",
+  "effects": [
+   {
+    "op": "damage",
+    "amount": 3
+   },
+   {
+    "op": "poison",
+    "amount": 4
+   }
+  ],
+  "tags": [
+   "bleed"
+  ]
+ },
+ "silk_snare": {
+  "name": "Silk Snare",
+  "cost": 1,
+  "type": "skill",
+  "tier": 2,
+  "rarity": "cave",
+  "target": "enemy",
+  "range": 3,
+  "icon": "icon_stun",
+  "text": "Range 3. Web 2 turns (-2 move). Weaken 1 turn.",
+  "effects": [
+   {
+    "op": "web",
+    "turns": 2
+   },
+   {
+    "op": "weak",
+    "turns": 1
+   }
+  ],
+  "tags": [
+   "hitrun"
+  ]
+ },
+ "chitin_plating": {
+  "name": "Chitin Plating",
+  "cost": 1,
+  "type": "skill",
+  "tier": 2,
+  "rarity": "cave",
+  "target": "self",
+  "icon": "icon_shield",
+  "text": "Gain 8 block. Draw 1 card.",
+  "effects": [
+   {
+    "op": "block",
+    "amount": 8
+   },
+   {
+    "op": "draw",
+    "amount": 1
+   }
+  ],
+  "tags": [
+   "hitrun"
+  ]
+ },
+ "widow_kiss": {
+  "name": "Widow's Kiss",
+  "cost": 2,
+  "type": "attack",
+  "tier": 3,
+  "rarity": "cave",
+  "target": "enemy",
+  "range": 1,
+  "icon": "icon_skull",
+  "text": "Deal 6 damage. Apply 6 Poison. Backstab: double Poison.",
+  "effects": [
+   {
+    "op": "damage",
+    "amount": 6
+   },
+   {
+    "op": "poison",
+    "amount": 6,
+    "back_mult": 2
+   }
+  ],
+  "tags": [
+   "bleed",
+   "flank"
+  ]
+ },
+ "mark_prey": {
+  "name": "Mark Prey",
+  "cost": 0,
+  "type": "skill",
+  "tier": 1,
+  "rarity": "common",
+  "target": "enemy",
+  "icon": "icon_eye",
+  "text": "Range 5. Mark the target for 3 turns: your next hit on it deals +3 damage.",
+  "effects": [
+   {
+    "op": "mark",
+    "turns": 3
+   }
+  ],
+  "tags": [
+   "ambush",
+   "flank"
+  ],
+  "range": 5
+ },
+ "patient_hunter": {
+  "name": "Patient Hunter",
+  "cost": 1,
+  "type": "power",
+  "tier": 2,
+  "rarity": "uncommon",
+  "target": "self",
+  "icon": "icon_eye",
+  "text": "Power. At the start of your turn, if you are Unspotted: +1 stamina and draw 1 card.",
+  "effects": [
+   {
+    "op": "patient"
+   }
+  ],
+  "tags": [
+   "ambush"
+  ]
+ },
+ "open_vein": {
+  "name": "Open Vein",
+  "cost": 1,
+  "type": "attack",
+  "tier": 2,
+  "rarity": "uncommon",
+  "target": "enemy",
+  "icon": "icon_drop",
+  "text": "Deal 2 damage and apply 2 Bleed, then double the target's Bleed.",
+  "effects": [
+   {
+    "op": "damage",
+    "amount": 2
+   },
+   {
+    "op": "bleed",
+    "amount": 2
+   },
+   {
+    "op": "double_bleed"
+   }
+  ],
+  "tags": [
+   "bleed"
+  ],
+  "range": 1
+ },
+ "gore": {
+  "name": "Gore",
+  "cost": 2,
+  "type": "attack",
+  "tier": 3,
+  "rarity": "rare",
+  "target": "enemy",
+  "icon": "icon_drop",
+  "text": "Deal 3 damage plus 2 per Bleed on the target, then remove all its Bleed.",
+  "effects": [
+   {
+    "op": "damage",
+    "amount": 3,
+    "per_bleed": 2,
+    "consume_bleed": true
+   }
+  ],
+  "tags": [
+   "bleed"
+  ],
+  "range": 1
+ },
+ "blood_scent": {
+  "name": "Blood Scent",
+  "cost": 0,
+  "type": "skill",
+  "tier": 2,
+  "rarity": "uncommon",
+  "target": "self",
+  "icon": "icon_meat",
+  "text": "Heal 2 per enemy with Bleed. Draw 1 card if any enemy has Bleed.",
+  "effects": [
+   {
+    "op": "heal_per_bleeding",
+    "amount": 2
+   },
+   {
+    "op": "draw_if_bleeding",
+    "amount": 1
+   }
+  ],
+  "tags": [
+   "bleed",
+   "scavenger"
+  ]
+ },
+ "flanking_strike": {
+  "name": "Flanking Strike",
+  "cost": 1,
+  "type": "attack",
+  "tier": 2,
+  "rarity": "uncommon",
+  "target": "enemy",
+  "icon": "icon_claw",
+  "text": "Deal 4 damage. Flank: +4 from the side or back. +3 more if the target has Bleed.",
+  "effects": [
+   {
+    "op": "damage",
+    "amount": 4,
+    "flank_bonus": 4,
+    "bleed_bonus": 3,
+    "facing": {
+     "front": 1.0,
+     "side": 1.0,
+     "back": 1.5
+    }
+   }
+  ],
+  "tags": [
+   "flank",
+   "bleed"
+  ],
+  "range": 1
+ },
+ "circle_strike": {
+  "name": "Circle Strike",
+  "cost": 1,
+  "type": "attack",
+  "tier": 2,
+  "rarity": "uncommon",
+  "target": "enemy",
+  "icon": "icon_leap",
+  "text": "Leap 2-4 tiles (not at melee range) behind the target and strike for 5 (Backstab x1.75).",
+  "effects": [
+   {
+    "op": "pounce",
+    "behind": true
+   },
+   {
+    "op": "damage",
+    "amount": 5,
+    "facing": {
+     "front": 1.0,
+     "side": 1.25,
+     "back": 1.75
+    }
+   }
+  ],
+  "tags": [
+   "flank",
+   "speed"
+  ],
+  "range": 4,
+  "min_range": 2
+ },
+ "tail_sweep": {
+  "name": "Tail Sweep",
+  "cost": 1,
+  "type": "attack",
+  "tier": 2,
+  "rarity": "uncommon",
+  "target": "self",
+  "icon": "icon_claw",
+  "text": "Area attack: deal 3 damage to ALL adjacent enemies. Cannot be dodged.",
+  "effects": [
+   {
+    "op": "damage_adjacent",
+    "amount": 3
+   }
+  ],
+  "tags": [
+   "hitrun",
+   "flank"
+  ]
+ },
+ "rending_charge": {
+  "name": "Rending Charge",
+  "cost": 1,
+  "type": "attack",
+  "tier": 1,
+  "rarity": "common",
+  "target": "enemy",
+  "icon": "icon_speed",
+  "text": "Deal 3 damage plus 1 per tile of Momentum (tiles moved this turn, max +6).",
+  "effects": [
+   {
+    "op": "damage",
+    "amount": 3,
+    "per_momentum": 1,
+    "momentum_max": 6
+   }
+  ],
+  "tags": [
+   "speed"
+  ],
+  "range": 1
+ },
+ "quicken": {
+  "name": "Quicken",
+  "cost": 1,
+  "type": "power",
+  "tier": 3,
+  "rarity": "rare",
+  "target": "self",
+  "icon": "icon_speed",
+  "text": "Power. Whenever you play a 0-cost card, gain +1 movement this turn.",
+  "effects": [
+   {
+    "op": "quicken"
+   }
+  ],
+  "tags": [
+   "speed"
+  ]
+ },
+ "second_wind": {
+  "name": "Second Wind",
+  "cost": 0,
+  "type": "skill",
+  "tier": 3,
+  "rarity": "uncommon",
+  "target": "self",
+  "icon": "icon_stamina",
+  "text": "Draw 1 card. If you have 3+ Momentum (tiles moved this turn), also gain 1 stamina.",
+  "effects": [
+   {
+    "op": "draw",
+    "amount": 1
+   },
+   {
+    "op": "gain_stamina",
+    "amount": 1,
+    "cond": {
+     "momentum_min": 3
+    }
+   }
+  ],
+  "tags": [
+   "speed"
+  ]
+ },
+ "blur": {
+  "name": "Blur",
+  "cost": 1,
+  "type": "skill",
+  "tier": 3,
+  "rarity": "rare",
+  "target": "self",
+  "icon": "icon_speed",
+  "text": "Gain 3 movement. +30% Evasion vs single-target attacks until your next turn.",
+  "effects": [
+   {
+    "op": "gain_mp",
+    "amount": 3
+   },
+   {
+    "op": "evade",
+    "amount": 30
+   }
+  ],
+  "tags": [
+   "speed",
+   "hitrun"
+  ]
+ },
+ "strike_and_fade": {
+  "name": "Strike and Fade",
+  "cost": 1,
+  "type": "attack",
+  "tier": 2,
+  "rarity": "uncommon",
+  "target": "enemy",
+  "icon": "icon_claw",
+  "text": "Deal 3 damage, retreat up to 3 tiles. If you end in tall grass, draw 1 card.",
+  "effects": [
+   {
+    "op": "damage",
+    "amount": 3
+   },
+   {
+    "op": "retreat",
+    "tiles": 3
+   },
+   {
+    "op": "draw_if_grass",
+    "amount": 1
+   }
+  ],
+  "tags": [
+   "hitrun"
+  ],
+  "range": 1
+ },
+ "dazing_blow": {
+  "name": "Dazing Blow",
+  "cost": 1,
+  "type": "attack",
+  "tier": 2,
+  "rarity": "uncommon",
+  "target": "enemy",
+  "icon": "icon_stun",
+  "text": "Deal 3 damage. Daze 2 turns (half damage and half movement).",
+  "effects": [
+   {
+    "op": "damage",
+    "amount": 3
+   },
+   {
+    "op": "daze",
+    "turns": 2
+   }
+  ],
+  "tags": [
+   "hitrun"
+  ],
+  "range": 1
+ },
+ "terrifying_roar": {
+  "name": "Terrifying Roar",
+  "cost": 2,
+  "type": "skill",
+  "tier": 3,
+  "rarity": "rare",
+  "target": "all_enemies",
+  "icon": "icon_bolt",
+  "text": "All enemies get Fear for 1 turn: they flee instead of attacking. Bosses resist.",
+  "effects": [
+   {
+    "op": "fear",
+    "turns": 1
+   }
+  ],
+  "tags": [
+   "hitrun"
+  ]
+ },
+ "savor": {
+  "name": "Savor",
+  "cost": 1,
+  "type": "skill",
+  "tier": 1,
+  "rarity": "common",
+  "target": "self",
+  "icon": "icon_meat",
+  "text": "Eat a morsel: +4 hunger. Draw 1 card per Diet tier (Fair 1, Good 2, Excellent 3).",
+  "effects": [
+   {
+    "op": "hunger",
+    "amount": 4
+   },
+   {
+    "op": "draw_diet",
+    "amount": 1
+   }
+  ],
+  "tags": [
+   "scavenger"
+  ]
+ },
+ "ravenous_strike": {
+  "name": "Ravenous Strike",
+  "cost": 2,
+  "type": "attack",
+  "tier": 3,
+  "rarity": "rare",
+  "target": "enemy",
+  "icon": "icon_meat",
+  "text": "Deal 5 damage plus 3 per Diet tier. If it kills: heal 4 and eat +8 hunger.",
+  "effects": [
+   {
+    "op": "damage",
+    "amount": 5,
+    "per_diet": 3,
+    "on_kill": [
+     {
+      "op": "heal",
+      "amount": 4
+     },
+     {
+      "op": "hunger",
+      "amount": 8
+     }
+    ]
+   }
+  ],
+  "tags": [
+   "scavenger"
+  ],
+  "range": 1
+ },
+ "well_fed": {
+  "name": "Well-Fed",
+  "cost": 2,
+  "type": "power",
+  "tier": 3,
+  "rarity": "rare",
+  "target": "self",
+  "icon": "icon_meat",
+  "text": "Power. At the start of your turn, if your Diet is Good or better: +1 stamina.",
+  "effects": [
+   {
+    "op": "well_fed"
+   }
+  ],
+  "tags": [
+   "scavenger"
+  ]
+ }
+}

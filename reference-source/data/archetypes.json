@@ -1,0 +1,42 @@
+{
+ "_doc": "ARCHETYPES (build styles). Cards, items and evolution-branch items carry 'tags' (archetype ids). RunState.synergy_counts() counts deck cards (1 each) and items (2 each) per archetype; a card/item whose tag count >= synergy_threshold is highlighted as a SYNERGY in drafts. Each archetype has payoff cards that scale with its own mechanics.",
+ "synergy_threshold": 3,
+ "archetypes": {
+  "ambush": {
+   "name": "Ambush",
+   "short": "AMB",
+   "color": "#8fd070",
+   "desc": "Stay unspotted in tall grass; the first hit is free and hits hard (unaware bonus, Stalker, Mark)."
+  },
+  "bleed": {
+   "name": "Bleed",
+   "short": "BLD",
+   "color": "#e05a4a",
+   "desc": "Stack Bleed / Poison, then cash it in (Gore, Death Roll, Open Vein) or amplify it."
+  },
+  "flank": {
+   "name": "Flank",
+   "short": "FLK",
+   "color": "#e8b030",
+   "desc": "Facing matters: strike from the side or back for big multipliers; cards and items that reward positioning."
+  },
+  "speed": {
+   "name": "Tempo",
+   "short": "TMP",
+   "color": "#6fc8f0",
+   "desc": "Cheap fast cards, extra moves and turns; Momentum (tiles moved this turn) powers your attacks."
+  },
+  "hitrun": {
+   "name": "Hit & Run",
+   "short": "H&R",
+   "color": "#c890f0",
+   "desc": "Strike, then retreat; use grass, water and evasion; Daze and Fear keep enemies off you."
+  },
+  "scavenger": {
+   "name": "Scavenger",
+   "short": "SCV",
+   "color": "#d8a060",
+   "desc": "Eat well: a good diet powers your cards (Savor, Ravenous Strike, Well-Fed) and items."
+  }
+ }
+}

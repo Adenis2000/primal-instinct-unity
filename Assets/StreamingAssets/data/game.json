@@ -1,0 +1,9 @@
+{
+ "doc": "Single source of the game's (placeholder) name. Change it here, then run tools/apply_title.py to sync project.godot, export_presets.cfg and the README. The first screen and the window title read it at runtime (Game.title()).",
+ "title": "Primal Instinct",
+ "tagline": "a dinosaur roguelike deckbuilder  -  prototype",
+ "slug": "PrimalInstinct",
+ "zip_slug": "primal-instinct",
+ "version": "0.1.0",
+ "placeholder": true
+}

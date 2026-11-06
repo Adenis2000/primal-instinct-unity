@@ -1,0 +1,271 @@
+{
+ "clear": {
+  "name": "Clear Skies",
+  "icon": "icon_clear",
+  "color": "#f2d36b",
+  "weight": 2,
+  "desc": "Everyone sees farther. Hard to hide, but warm sun wakes the insects.",
+  "global": {
+   "perception_mult": 1.25,
+   "sneak_bonus": -0.1
+  },
+  "by_tag": {
+   "insect": {
+    "speed_mult": 1.1
+   }
+  },
+  "sky": {
+   "top": "#3f8fe0",
+   "bottom": "#bfe6ff",
+   "clouds": {
+    "count": 7,
+    "color": "#ffffff",
+    "shade": "#b9cfe8",
+    "alpha": 0.95,
+    "speed": 7,
+    "size": [
+     3,
+     5
+    ],
+    "band": [
+     0.06,
+     0.5
+    ]
+   },
+   "sun": {
+    "color": "#fff3b0",
+    "x": 0.74,
+    "y": 0.24,
+    "r": 30
+   }
+  }
+ },
+ "fog": {
+  "name": "Thick Fog",
+  "icon": "icon_fog",
+  "color": "#aebcc6",
+  "weight": 2,
+  "desc": "Sight range shrinks, a gift to ambushers. Scent hunters ignore it.",
+  "global": {
+   "perception_mult": 0.6,
+   "sneak_bonus": 0.15
+  },
+  "by_tag": {
+   "scent": {
+    "perception_mult": 1.65
+   },
+   "stealthy": {
+    "damage_mult": 1.15
+   },
+   "ambusher": {
+    "damage_mult": 1.15
+   }
+  },
+  "sky": {
+   "top": "#8d9ba5",
+   "bottom": "#cfd7dc",
+   "clouds": {
+    "count": 4,
+    "color": "#e1e8ec",
+    "shade": "#aab6bd",
+    "alpha": 0.55,
+    "speed": 4,
+    "size": [
+     4,
+     6
+    ],
+    "band": [
+     0.1,
+     0.55
+    ]
+   },
+   "fog": 0.55
+  }
+ },
+ "rain": {
+  "name": "Steady Rain",
+  "icon": "icon_rain",
+  "color": "#5f8fd0",
+  "weight": 2,
+  "desc": "Rain muffles sight and sound, but sodden wings are slow.",
+  "global": {
+   "perception_mult": 0.8,
+   "sneak_bonus": 0.08
+  },
+  "by_tag": {
+   "flying": {
+    "speed_mult": 0.8
+   },
+   "insect": {
+    "speed_mult": 0.9
+   }
+  },
+  "sky": {
+   "top": "#273140",
+   "bottom": "#586779",
+   "clouds": {
+    "count": 11,
+    "color": "#6a7683",
+    "shade": "#38424f",
+    "alpha": 1.0,
+    "speed": 9,
+    "size": [
+     4,
+     7
+    ],
+    "band": [
+     0.0,
+     0.5
+    ]
+   },
+   "precip": {
+    "type": "rain",
+    "count": 260,
+    "speed": 560,
+    "slant": -0.2
+   }
+  }
+ },
+ "storm": {
+  "name": "Thunderstorm",
+  "icon": "icon_storm",
+  "color": "#8a6fd0",
+  "weight": 1,
+  "desc": "Chaos masks you, but the wind grounds flyers and the cold wet saps your food.",
+  "global": {
+   "perception_mult": 0.7,
+   "sneak_bonus": 0.1,
+   "hunger_extra": 1
+  },
+  "by_tag": {
+   "flying": {
+    "speed_mult": 0.7
+   },
+   "mammal": {
+    "speed_mult": 0.95
+   }
+  },
+  "sky": {
+   "top": "#16192b",
+   "bottom": "#3b4060",
+   "clouds": {
+    "count": 13,
+    "color": "#4b5170",
+    "shade": "#202339",
+    "alpha": 1.0,
+    "speed": 16,
+    "size": [
+     4,
+     7
+    ],
+    "band": [
+     0.0,
+     0.55
+    ]
+   },
+   "precip": {
+    "type": "rain",
+    "count": 380,
+    "speed": 680,
+    "slant": -0.38
+   },
+   "lightning": true
+  }
+ },
+ "heat": {
+  "name": "Scorching Heat",
+  "icon": "icon_heat",
+  "color": "#e8803a",
+  "weight": 1,
+  "desc": "Burns food fast. Cold-blooded reptiles thrive; thick-furred ice-age beasts wilt.",
+  "global": {
+   "hunger_extra": 3
+  },
+  "by_tag": {
+   "reptile": {
+    "speed_mult": 1.15,
+    "damage_mult": 1.1
+   },
+   "iceage": {
+    "speed_mult": 0.8
+   },
+   "insect": {
+    "speed_mult": 1.1
+   }
+  },
+  "sky": {
+   "top": "#e0702c",
+   "bottom": "#ffd691",
+   "clouds": {
+    "count": 2,
+    "color": "#ffe6c0",
+    "shade": "#f0b878",
+    "alpha": 0.6,
+    "speed": 3,
+    "size": [
+     3,
+     5
+    ],
+    "band": [
+     0.1,
+     0.4
+    ]
+   },
+   "sun": {
+    "color": "#fff2c8",
+    "x": 0.5,
+    "y": 0.3,
+    "r": 50
+   },
+   "shimmer": true
+  }
+ },
+ "cold": {
+  "name": "Bitter Cold",
+  "icon": "icon_cold",
+  "color": "#9fd8f0",
+  "weight": 1,
+  "desc": "Reptiles and insects slow to a crawl. Ice-age beasts are right at home.",
+  "global": {
+   "hunger_extra": 2
+  },
+  "by_tag": {
+   "reptile": {
+    "speed_mult": 0.8,
+    "damage_mult": 0.9
+   },
+   "insect": {
+    "speed_mult": 0.8
+   },
+   "iceage": {
+    "speed_mult": 1.1,
+    "damage_mult": 1.1
+   }
+  },
+  "sky": {
+   "top": "#74a0c6",
+   "bottom": "#dcebf6",
+   "clouds": {
+    "count": 6,
+    "color": "#f3f9fd",
+    "shade": "#b2c6d9",
+    "alpha": 0.95,
+    "speed": 5,
+    "size": [
+     3,
+     6
+    ],
+    "band": [
+     0.05,
+     0.5
+    ]
+   },
+   "precip": {
+    "type": "snow",
+    "count": 170,
+    "speed": 38,
+    "slant": 0.1
+   }
+  }
+ }
+}

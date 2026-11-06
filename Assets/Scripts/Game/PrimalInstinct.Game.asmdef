@@ -1,0 +1,16 @@
+{
+  "name": "PrimalInstinct.Game",
+  "rootNamespace": "PrimalInstinct.Game",
+  "references": [
+    "PrimalInstinct.Rules"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

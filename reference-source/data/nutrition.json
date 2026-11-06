@@ -1,0 +1,288 @@
+{
+ "_doc": "NUTRITION. Every creature (enemies.json 'nutrition') and forage food (events.json forage.<id>.nutrition) has a profile of nutrient points. Each meal is rated against the species diet weights: Great / Okay / Poor / Harmful ('fit_labels', per-meal score = sum(weight*nutrient)). DIET QUALITY is a ROLLING score over your last 'rolling.window' meals (recent meals weigh more; empty slots count 0; monoculture is penalised; harmful or junk meals subtract), so eating everything gives a mediocre diet - only selective eating earns the growth bonus and unlocks branches. Eating modes (per kill): 'Eat' = savour it (nutrients + rating count, but only eat_hunger_mult of its hunger) or 'Just fill up' = full hunger, no nutrients, logged as junk (fill_pts). There are NO stat penalties for a poor diet: it only keeps stronger evolution branches LOCKED. requires: nutrient minimums (lifetime meters), 'max_toxin', 'diet_score'.",
+ "nutrients": {
+  "protein": {
+   "name": "Protein",
+   "short": "P",
+   "color": "#e05a4a"
+  },
+  "fat": {
+   "name": "Fat",
+   "short": "F",
+   "color": "#e8b030"
+  },
+  "minerals": {
+   "name": "Minerals",
+   "short": "M",
+   "color": "#9ab8e0"
+  },
+  "fiber": {
+   "name": "Plant fiber",
+   "short": "Fb",
+   "color": "#6fc24e"
+  },
+  "toxin": {
+   "name": "Toxins",
+   "short": "T",
+   "color": "#b060e0"
+  }
+ },
+ "order": [
+  "protein",
+  "fat",
+  "minerals",
+  "fiber",
+  "toxin"
+ ],
+ "meter_cap": 60,
+ "toxin_hp": 1,
+ "diets": {
+  "carnivore": {
+   "name": "Carnivore",
+   "prefers": [
+    "protein",
+    "fat",
+    "minerals"
+   ],
+   "weights": {
+    "protein": 1.0,
+    "fat": 1.0,
+    "minerals": 0.6,
+    "fiber": 0.0,
+    "toxin": -1.5
+   },
+   "desc": "Thrives on meat: protein, fat and minerals. Plant matter does nothing for you; toxins undo good meals."
+  },
+  "herbivore": {
+   "name": "Herbivore",
+   "prefers": [
+    "fiber",
+    "minerals"
+   ],
+   "weights": {
+    "protein": 0.0,
+    "fat": 0.3,
+    "minerals": 0.8,
+    "fiber": 1.0,
+    "toxin": -1.5
+   },
+   "desc": "Thrives on plants and minerals."
+  }
+ },
+ "fit_labels": [
+  [
+   6.0,
+   "Great"
+  ],
+  [
+   3.0,
+   "Okay"
+  ],
+  [
+   0.0,
+   "Poor"
+  ],
+  [
+   -999.0,
+   "Harmful"
+  ]
+ ],
+ "quality_labels": [
+  [
+   58,
+   "Excellent"
+  ],
+  [
+   44,
+   "Good"
+  ],
+  [
+   26,
+   "Fair"
+  ],
+  [
+   -999,
+   "Poor"
+  ]
+ ],
+ "branches": {
+  "carnivore": {
+   "2": [
+    {
+     "id": "swift_stalker",
+     "name": "Swift Stalker",
+     "text": "Light, fast bones. +1 move, enemies see you 1 tile less. An extra rare card pick.",
+     "requires": {
+      "protein": 5,
+      "diet_score": 28
+     },
+     "item": "br_swift_stalker",
+     "extra_drafts": [
+      "elite"
+     ]
+    },
+    {
+     "id": "thick_boned",
+     "name": "Thick-Boned",
+     "text": "Dense, mineral-rich bones. +14 max HP and 2 block every turn.",
+     "requires": {
+      "minerals": 3,
+      "protein": 2,
+      "diet_score": 24
+     },
+     "item": "br_thick_boned",
+     "extra_drafts": []
+    }
+   ],
+   "3": [
+    {
+     "id": "apex_predator",
+     "name": "Apex Predator",
+     "text": "A killer's build. +4 damage from behind, +1 stamina. An extra rare card pick.",
+     "requires": {
+      "protein": 12,
+      "fat": 6,
+      "diet_score": 38
+     },
+     "item": "br_apex_predator",
+     "extra_drafts": [
+      "elite"
+     ]
+    },
+    {
+     "id": "armored_hunter",
+     "name": "Armored Hunter",
+     "text": "Heavy plating. +20 max HP, 3 block every turn.",
+     "requires": {
+      "minerals": 7,
+      "diet_score": 34
+     },
+     "item": "br_armored_hunter",
+     "extra_drafts": []
+    }
+   ],
+   "4": [
+    {
+     "id": "alpha_raptor",
+     "name": "Alpha Raptor",
+     "text": "The pack's peak: +1 stamina, +1 move, +12 max HP and two extra rare card picks.",
+     "requires": {
+      "diet_score": 48,
+      "max_toxin": 8
+     },
+     "item": "br_alpha_raptor",
+     "extra_drafts": [
+      "elite",
+      "elite"
+     ]
+    },
+    {
+     "id": "shadow_hunter",
+     "name": "Shadow Hunter",
+     "text": "Fat-fuelled ghost. Enemies see you 1 tile less, +5 damage vs unaware enemies, an extra rare card pick.",
+     "requires": {
+      "fat": 10,
+      "protein": 14,
+      "diet_score": 42
+     },
+     "item": "br_shadow_hunter",
+     "extra_drafts": [
+      "elite"
+     ]
+    }
+   ]
+  },
+  "herbivore": {
+   "2": [
+    {
+     "id": "sturdy_grazer",
+     "name": "Sturdy Grazer",
+     "text": "+14 max HP.",
+     "requires": {
+      "fiber": 8
+     },
+     "item": "br_thick_boned",
+     "extra_drafts": []
+    }
+   ],
+   "3": [
+    {
+     "id": "plated_grazer",
+     "name": "Plated Grazer",
+     "text": "+20 max HP, 3 block every turn.",
+     "requires": {
+      "fiber": 18,
+      "minerals": 8
+     },
+     "item": "br_armored_hunter",
+     "extra_drafts": []
+    }
+   ],
+   "4": [
+    {
+     "id": "gentle_giant",
+     "name": "Gentle Giant",
+     "text": "+1 stamina, +12 max HP, extra card pick.",
+     "requires": {
+      "diet_score": 40
+     },
+     "item": "br_alpha_raptor",
+     "extra_drafts": [
+      "elite"
+     ]
+    }
+   ]
+  }
+ },
+ "xp_bonus": {
+  "Excellent": 0.25,
+  "Good": 0.15,
+  "Fair": 0.1,
+  "Poor": 0.0
+ },
+ "_doc_xp": "Growth bonus: XP from every fight is multiplied by 1 + xp_bonus[diet quality] (modest, +0..25%). Poor eating never reduces XP below normal.",
+ "rolling": {
+  "window": 6,
+  "recency": [
+   1.0,
+   0.85,
+   0.7,
+   0.55,
+   0.4,
+   0.3
+  ],
+  "pts_min": -6.0,
+  "pts_max": 12.0,
+  "scale": 10.0,
+  "balance": {
+   "min_meals": 3,
+   "threshold": 0.7,
+   "scale": 60.0,
+   "max_penalty": 18
+  }
+ },
+ "eat_hunger_mult": 0.6,
+ "fill_pts": -3.0,
+ "meal_mult": {
+  "_doc": "Per meal-fit label: heal = food/4 x heal, and the nutrients that go into your meters x nutrients. Great meals are worth more; junk is mostly empty calories, so eating everything buys survival but not growth.",
+  "Great": {
+   "heal": 1.5,
+   "nutrients": 1.25
+  },
+  "Okay": {
+   "heal": 1.0,
+   "nutrients": 1.0
+  },
+  "Poor": {
+   "heal": 0.4,
+   "nutrients": 0.35
+  },
+  "Harmful": {
+   "heal": 0.0,
+   "nutrients": 0.15
+  },
+  "fill": {
+   "heal": 0.5
+  }
+ }
+}

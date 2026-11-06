@@ -1,0 +1,126 @@
+{
+ "order": [
+  "welcome",
+  "movement",
+  "facing",
+  "evasion",
+  "stamina",
+  "turn_order",
+  "stealth",
+  "search",
+  "ambush",
+  "hunger",
+  "weather",
+  "draft",
+  "hide",
+  "locked_exits",
+  "exits",
+  "secret",
+  "poison_web",
+  "items",
+  "nutrition",
+  "branches",
+  "intent",
+  "telegraph",
+  "keywords",
+  "synergy"
+ ],
+ "hints": {
+  "welcome": {
+   "title": "Welcome, hatchling",
+   "text": "Gates on the edges of the battlefield show where you can go next, but they stay sealed until the area is cleared. Each gate shows its reward, never what waits behind it. Each room costs hunger."
+  },
+  "movement": {
+   "title": "Movement",
+   "text": "Press the Move button (or M), then click a lit tile to walk there. Each tile costs move points: 1 on open ground and tall grass, 2 in water; obstacles block. Move mode ends by itself when you run out."
+  },
+  "facing": {
+   "title": "Facing",
+   "text": "Everyone faces a direction (the arrow on the tile). Clicking a tile turns you toward it for free. Hits from behind do much more damage, side hits a bit more; enemies see poorly to the side and not at all behind them."
+  },
+  "stamina": {
+   "title": "Stamina",
+   "text": "Cards cost stamina (the amber orbs). It refills completely at the start of each of your turns."
+  },
+  "turn_order": {
+   "title": "Turn order",
+   "text": "The list on the right shows who acts next. Faster creatures act more often, and very fast ones can act twice in a row."
+  },
+  "stealth": {
+   "title": "Stealth",
+   "text": "Idle enemies show a dim eye and wander around their post. Tall grass halves how far they can see you; hover an enemy for its sight range. Enemies cannot see behind them."
+  },
+  "ambush": {
+   "title": "Ambush",
+   "text": "Starting a fight unseen gives you a free first strike with bonus damage. Killing an unaware enemy is silent."
+  },
+  "hunger": {
+   "title": "Hunger",
+   "text": "Hunger drops every room. When low you lose stamina and speed; at zero you take damage. Eat defeated enemies and forage."
+  },
+  "weather": {
+   "title": "Weather",
+   "text": "Weather is set for the whole stage. It can help or hurt you and your enemies depending on species. Hover the weather icon."
+  },
+  "draft": {
+   "title": "Drafting",
+   "text": "Add one card to your deck after victories. Stronger cards unlock as you grow. Coloured tags (AMB, BLD, FLK, TMP, H&R, SCV) are build styles: cards that match what you already have glow gold as a SYNERGY."
+  },
+  "hide": {
+   "title": "Hiding",
+   "text": "Cards like Crouch let you vanish from enemies 2+ tiles away while you stand in tall grass. Then ambush again."
+  },
+  "search": {
+   "title": "Searching",
+   "text": "A yellow '?' means an enemy lost you. It walks to where it last saw you, looks around for ~2 turns, then goes back to wandering - alone, without calling others. Ambush it!"
+  },
+  "exits": {
+   "title": "Choose your path",
+   "text": "1 to 3 paths lead out of the area, each a gap in the trees beyond an edge tile (the forward one points up-screen). They show once the area is cleared, with the reward on the path. Click a path or walk onto the edge tile next to it."
+  },
+  "secret": {
+   "title": "Secret cave",
+   "text": "A rock rolled away and revealed a glowing cave mouth inside the area. It is optional and rare: a den of spiders that is harder than a normal room, but pays rare cards, extra food and an item. It costs hunger like any room."
+  },
+  "poison_web": {
+   "title": "Poison & webs",
+   "text": "Poison hurts 2 a turn for as many turns as it has stacks and ignores block. Webbed creatures lose 2 move points on their turns. Spiders use both: kill the spitters first."
+  },
+  "items": {
+   "title": "Items",
+   "text": "Items are rare finds from cleared areas, secret caves and bosses (a boss always offers a choice of 3). They stay for the whole run and show in the row under your health: hover one for details. Some are ACTIVE: click them during a fight, once per battle."
+  },
+  "nutrition": {
+   "title": "What you eat matters",
+   "text": "Each fallen creature is rated for your species: Great, Okay, Poor or Harmful. Diet quality is a rolling average of your LAST few meals, so eating everything gives a mediocre diet. Eat selectively for growth (up to +25% XP) and stronger evolution paths. Eat savours a meal (nutrients count, but only part of its hunger). Fill up gives all the hunger but counts as junk and drags your diet down. Hunger or growth: you cannot always have both. Poor eating never weakens you."
+  },
+  "branches": {
+   "title": "Evolution paths",
+   "text": "Steady Growth is always yours. Stronger branches need a good diet; locked ones show what they needed. Next time, eat more of what suits you."
+  },
+  "evasion": {
+   "title": "Tall grass: 25% evasion",
+   "text": "Anyone standing in tall grass - you or an enemy - dodges 1 attack in 4 (a 'Dodge' pops up and the attack's bleed/poison/web does not land). Area attacks (like a mammoth stomp) cannot be dodged, and enemies that have not noticed you can't dodge, so ambushes always land."
+  },
+  "locked_exits": {
+   "title": "Slip away",
+   "text": "Nobody has noticed you, so the paths out show as gaps in the trees. Walk onto the edge tile next to one to sneak away (no fight, no spoils). Once an enemy spots you the gaps close until the area is cleared."
+  },
+  "intent": {
+   "title": "Enemy intent",
+   "text": "The icon above each enemy shows what it will do on its next turn: a number is the damage, a bolt is a ranged shot, a leap is a pounce, a flashing sign is an area or charged attack."
+  },
+  "telegraph": {
+   "title": "Telegraphed attacks",
+   "text": "Bosses and heavy hitters charge a big attack first: the danger tiles turn red and the blow lands NEXT turn. Step out of the red tiles and it is wasted. Stun or Fear an enemy to interrupt a charge."
+  },
+  "keywords": {
+   "title": "Keywords",
+   "text": "Bold coloured words (Bleed, Poison, Ambush, Backstab...) are game terms. Hover one for a moment to see exactly what it does, with numbers. Hovering a card in battle also lists its keywords."
+  },
+  "synergy": {
+   "title": "Build synergy",
+   "text": "Stealth/Ambush, Bleed, Flank, Tempo, Hit & Run and Scavenger: pick cards and items that reinforce each other. Gold-framed cards in a draft match your build."
+  }
+ }
+}

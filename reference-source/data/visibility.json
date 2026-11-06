@@ -1,0 +1,12 @@
+{
+ "doc": "Unit readability on the battle board (BattleBoard.gd). Alphas are 0..1 (1 = opaque). 'border' sprites are the background / border trees, bushes, foliage and ground decoration drawn around and over the arena (outer ring). A border sprite whose (shrunk) screen rect overlaps the playable tiles is drawn at border_alpha; if a unit is behind it (the sprite is drawn after the unit and their rects overlap) it fades to border_behind_alpha. Sprites completely outside the board stay opaque. Blocking obstacles on the board stay solid and only fade to obstacle_behind_alpha while a unit is directly behind them; small decoration on the board fades to decor_behind_alpha. Tall grass cover is left as it is. fade_speed = how fast alphas tween (per second, exponential): ~8 = about 0.12 s.",
+ "border_alpha": 0.42,
+ "border_behind_alpha": 0.28,
+ "obstacle_behind_alpha": 0.5,
+ "decor_behind_alpha": 0.45,
+ "fade_speed": 9.0,
+ "overlap": {"shrink_x": 0.2, "shrink_top": 0.12, "shrink_bottom": 0.0, "core": 0.5},
+ "unit_outline": {"enabled": true, "px": 1.0, "player": "#fff4c8", "player_alpha": 0.6, "enemy": "#ff9a88", "enemy_alpha": 0.55},
+ "exit_path": {"width": 3, "length": 6, "fade_time": 0.9, "glow_at": 3, "dirt_chance": 0.45, "dirt_variants": {"jungle": [1, 4], "tundra": [], "cave": []}},
+ "unit_ring": {"enabled": true, "player": "#7fe8ff", "enemy": "#ff6a5a", "alpha": 0.6, "radius": 0.3}
+}

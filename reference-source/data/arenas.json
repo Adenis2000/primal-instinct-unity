@@ -1,0 +1,102 @@
+{
+ "_doc": "ARENA SIZES. Every fought room gets a seeded arena size/shape (ArenaGen.pick): w/h ranges per room type, minus ambush_shrink for ambush rooms, plus stage_grow[stage_idx] on the upper bound, plus big_bonus if any enemy has >= big_hp max HP (clamped to min/max). Shapes cut tiles into 'void' (never drawn, never walkable): rect, chamfer (all four corners cut), L (one corner block cut). Terrain blob/obstacle counts scale with area / ref_area. camera: the board is auto-fit to the view band at the largest zoom step that fits (sprites are 4x pixel art: 1.0 = 4x, 0.75 = 3x, 0.5 = 2x), the player can change zoom with the mouse wheel and pan with the arrow keys / middle-drag.",
+ "types": {
+  "tutorial": {
+   "w": [
+    8,
+    9
+   ],
+   "h": [
+    6,
+    7
+   ]
+  },
+  "battle": {
+   "w": [
+    8,
+    11
+   ],
+   "h": [
+    6,
+    8
+   ]
+  },
+  "event": {
+   "w": [
+    7,
+    10
+   ],
+   "h": [
+    6,
+    8
+   ]
+  },
+  "elite": {
+   "w": [
+    10,
+    13
+   ],
+   "h": [
+    7,
+    10
+   ]
+  },
+  "boss": {
+   "w": [
+    12,
+    14
+   ],
+   "h": [
+    10,
+    12
+   ]
+  },
+  "cave": {
+   "w": [
+    6,
+    8
+   ],
+   "h": [
+    6,
+    7
+   ]
+  }
+ },
+ "ambush_shrink": 1,
+ "stage_grow": [
+  0,
+  1,
+  1,
+  2
+ ],
+ "big_hp": 40,
+ "big_bonus": 2,
+ "min": [
+  6,
+  6
+ ],
+ "max": [
+  14,
+  12
+ ],
+ "ref_area": 84,
+ "shapes": {
+  "rect": 4,
+  "chamfer": 3,
+  "L": 2
+ },
+ "camera": {
+  "zoom_out_margin": 0.12,
+  "zoom_steps": [
+   3,
+   2,
+   1
+  ],
+  "view": [
+   20,
+   14,
+   600,
+   280
+  ]
+ }
+}
